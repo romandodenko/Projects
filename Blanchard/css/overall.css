@@ -1,0 +1,26 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-search-header: rgba(255, 255, 255, 0.85);
+  --color-purple: #9D5CD0;
+  --color-black: #333333;
+  --color-gray: #999999;
+  --color-purple-2: #7943A4;  
+  --color-purple-hover: #C283F3;
+}
+
+body {
+  font-family: 'OpenSans400';
+  overflow-x: hidden;
+}
+
+
+.container {
+  max-width: 1601px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
+}

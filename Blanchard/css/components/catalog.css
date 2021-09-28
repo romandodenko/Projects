@@ -1,0 +1,321 @@
+.catalog {
+  margin-bottom: 83px;
+}
+
+.catalog__content {
+  padding: 0 10px;
+}
+
+.catalog__head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.catalog__title  {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.catalog__list {
+  display: flex;
+  margin: 0;
+  padding: 11px 0 0 0;
+}
+
+.catalog__list-item {
+  list-style: none;
+  margin-right: 45px;
+  height: max-content;
+  width: max-content;
+}
+
+.tabs__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: max-content;
+  width: max-content;
+}
+
+.tabs__btn:hover {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+  border-radius: 29px;
+}
+
+.tabs__btn:focus {
+  outline: none;
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+  border-radius: 29px;
+}
+
+.tabs__btn:active img {
+  border: 2px solid #7943A4;
+  border-radius: 36px;
+} 
+
+.catalog__text {
+  width: 67%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 0 37px 0;
+  color: var(--color-black);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content-active {
+  display: block;
+}
+
+.tab-content__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-content__left {
+  width: 50%;
+}
+
+.italy-description {
+  background-image: url(/img/Domeniko-Girlandaio.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 59px;
+}
+
+.catalog__content-italy {
+  display: flex;
+}
+.catalog__icon-active {
+  border: 2px solid #7943A4;
+  border-radius: 50px; 
+  padding: 6px 6px 4px 6px;
+  margin-top: -10px;
+}
+
+
+.italy-description {
+  width: 47%;
+}
+
+.catalog__subtitle {
+  color: var(--color-black);
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 505px;
+  width: max-content;
+  margin: 0 0 10px 0;
+}
+
+.italy-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;  
+  color: var(--color-gray);
+  margin: 6px 0 0 0;
+}
+
+.date-life {  
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.catalog__content-unknowm {
+  display: flex;
+}
+
+.unknowm-description {
+  background-image: url(/img/catalog-unknown-2.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 57px;
+  width: 47%;
+}
+
+.unknowm__subtitle {
+  color: var(--color-black);
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 505px;
+  width: max-content;
+  margin: 0 0 16px 0;
+}
+
+.unknowm-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;  
+  color: var(--color-gray);
+  margin: 0 0 16px 0;
+}
+
+.unknown-link  {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-purple) !important;
+  text-decoration: none;
+}
+
+.catalog__accordion {
+  width: 50%;
+}
+
+.italy-painter-list {
+  display: flex;
+}
+
+.italy-painter {
+  padding: 0;
+  margin: 17px 66px 0 0;
+}
+
+.italy-painter:last-child {
+  margin-right: 0;
+}
+
+.name-italy-painter {
+  font-size: 16px;
+  font-weight: 400;
+  list-style: none;
+  color: var(--color-black);
+  padding: 0 0 12px 5px;
+}
+
+.name-italy-painter a {
+  text-decoration: none;
+}
+
+.italy-name-active a {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.name-italy-painter a:hover {
+  border-bottom: 2px solid var(--color-purple-hover);
+  color: var(--color-purple-hover);
+}
+
+.name-italy-painter a:active {
+  border-bottom: none;
+  color: var(--color-purple-2);
+}
+
+.name-italy-painter a:focus {
+  outline: none;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.ui-state-default {
+  border: 0;
+  border-top: 1px solid #CACACA;
+  border-bottom: 1px solid #CACACA;
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.ui-accordion .ui-accordion-header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 32px 0;
+}
+
+.ui-state-hover:hover:hover {
+  border-top: 1px solid var(--color-purple-2);
+  border-bottom: 1px solid var(--color-purple-2);
+  color: var(--color-purple-2);
+}
+
+.ui-state-hover:hover svg path {
+  fill: #D1A9F0;
+}
+
+.ui-accordion-header-active {
+  border-top: 1px solid var(--color-purple-2);
+  border-bottom: 1px solid var(--color-purple-2);
+  color: var(--color-purple-2);
+}
+
+.ui-accordion-header-active svg path {
+  fill: #D1A9F0;
+}
+
+.ui-accordion-header-active svg .stroke {
+  transform: rotate(-181deg) translateX(-50px) translateY(-51px);
+}
+
+.ui-accordion .ui-accordion-content {
+  padding-left: 0;
+}
+
+.ui-widget-content {
+  border: 0;
+  padding-left: 0;
+}
+
+.ui-icon {
+  display: none;
+}
+
+.catalog-content-unknown {
+  display: flex;
+}
+
+.catalog-content-unknown img {
+  padding: 12px;
+  border: 2px solid #B7B7B7;
+}
+
+.content-unknown-text {
+  margin-left: 20px;
+}
+
+.content-unknown-text h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin: 35px 0 5px 0;
+}
+
+.content-unknown-text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-black);
+  margin: 0 0 5px 0;
+}
+
+.content-unknown-text a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-purple);
+  text-decoration: none;
+}
+
+.content-unknown-text a:hover {
+  border-bottom: 2px solid var(--color-purple-hover);
+  color: var(--color-purple-hover);
+}
+
+.content-unknown-text a:active {
+  border-bottom: none;
+  color: var(--color-purple-2);
+}
+
+.content-unknown-text a:focus {
+  outline: 0;
+  color: var(--color-white);
+  background-color: var(--color-purple-hover);
+}
