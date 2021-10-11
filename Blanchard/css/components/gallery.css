@@ -416,6 +416,13 @@
   height: 350px;
 }
 
+.gallery-two-slide-7,
+.gallery-two-slide-8,
+.gallery-three-slide-7,
+.gallery-three-slide-8 {
+  display: none;
+}
+
 .gallery-slider-three {
   width: 71%;
   overflow: hidden;

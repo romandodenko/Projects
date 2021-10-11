@@ -143,7 +143,17 @@
 .slide-3 {
   background-image: url(/img/hero-3-1024.png);
 }
-  /* Catalog*/ 
+
+/* Gallery */
+
+.gallery-two-slide-7,
+.gallery-two-slide-8,
+.gallery-three-slide-7,
+.gallery-three-slide-8 {
+  display: block;
+}
+
+/* Catalog*/ 
 
 .italy-painter {
   display: none;
