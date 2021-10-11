@@ -1,5 +1,5 @@
 .footer {
-  max-width: 1920px;
+  width: 100%;
   background-color: #000000;
   margin: 0 auto;
   min-height: 130px;
@@ -9,35 +9,68 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0 0 0;
+  padding: 42px 10px 0 10px;
 }
 
-.footer__logo {
-  padding: 0 0 0 10px;
-}
-
-.social__links-item {
+.footer__social-item-blanchard {
   text-decoration: none;
 }
 
-.social__links-item:not(:last-child) {
-  margin-right: 10px;
+.footer__social-item-blanchard:not(:last-child) {
+  margin-right: 12px;
 }
 
-.social__links-item:hover svg path  {
+.footer-svg-adaptive,
+.footer-svg-adaptive-320 {
+  display: none;
+}
+
+.footer__social-item-blanchard .footer-svg-decsp path {
+  transition: fill 0.2s ease-in-out;
+}
+
+.footer__social-item-blanchard:hover .footer-svg-decsp path  {
   fill: var(--color-white);
+  transition: fill 0.2s ease-in-out;
 }
 
-.social__links-item:active svg path  {
+.footer__social-item-blanchard:active .footer-svg-decsp path  {
   fill: var(--color-purple);
+  transition: fill 0.2s ease-in-out;
 }
 
-.social__links-item:focus ,
-.social__links-item:focus svg path  {
+.footer__social-item-blanchard:focus-visible ,
+.footer__social-item-blanchard:focus-visible .footer-svg-decsp path  {
   fill: var(--color-white);
+  transition: fill 0.2s ease-in-out;
   outline: none;
 }
 
-.footer__logo:focus {
+.footer__social-item-blanchard .footer-svg-adaptive path {
+  transition: fill 0.2s ease-in-out;
+}
+
+.footer__social-item-blanchard:hover .footer-svg-adaptive path  {
+  fill: var(--color-white);
+  transition: fill 0.2s ease-in-out;
+}
+
+.footer__social-item-blanchard:active .footer-svg-adaptive path  {
+  fill: var(--color-purple);
+  transition: fill 0.2s ease-in-out;
+}
+
+.footer__social-item-blanchard:focus-visible ,
+.footer__social-item-blanchard:focus-visible .footer-svg-adaptive path  {
+  fill: var(--color-white);
+  transition: fill 0.2s ease-in-out;
+  outline: none;
+}
+
+.footer__logo-320 {
+  display: none;
+}
+
+.footer__logo:focus-visible {
   outline: 2px solid var(--color-purple-2);
 }

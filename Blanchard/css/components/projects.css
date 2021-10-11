@@ -1,15 +1,14 @@
 .projects {
   min-height: 563px;
-  margin-bottom: 80px;
+  margin-bottom: 72px;
 }
 
 .projects__content {
-  position: relative;
   padding: 0 10px;
 }
 
 .projects__title {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .projects__subtitle {
@@ -19,13 +18,18 @@
   margin: 0 0 24px 0;
 }
 
+.projects__text-wrapper {
+  position: relative;
+  width: 66%;
+  margin: 0 0 23px 0;
+  z-index: 1;
+}
+
 .projects__text {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
   color: var(--color-black);
-  width: 66%;
-  margin: 0 0 23px 0;
 }
 
 .projects__link {
@@ -34,26 +38,30 @@
   font-weight: 600;
   color: var(--color-purple);
   text-decoration: none;
+  padding: 2px 5px 2px 5px;
+  transition: background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .projects__link:after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 97%;
   height: 2px;
   background: var(--color-purple);
   bottom: 0;
-  left: 0;
+  left: 4px;
   opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .projects__link:hover:after {
   opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .projects__link:active {
   color: var(--color-purple-2);
-  
 }
 
 .projects__link:active:after {
@@ -61,34 +69,33 @@
   opacity: 1;
 }
 
-.projects__link:focus {
+.projects__link:focus-visible {
   outline: none;
-  background: var(--color-purple) ;
+  background-color: var(--color-purple) ;
   color: var(--color-white);
+  transition: background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .projects-tooltip-one {
-  position: absolute;
-  left: calc(10% + 13px);
-  bottom: calc(44% - 7px);
-  width: 263px;
-  height: 100%;
+  position: relative;
+  left: -1px;
+  bottom: 3px;
+  z-index: 22;
 }
 
 .projects-tooltip-two {
-  position: absolute;
-  left: calc(55% + 15px);
-  bottom: calc(35% - 3px);
-  width: 263px;
-  height: 100%;
+  position: relative;
+  left: 0;
+  bottom: 3px;
+  z-index: 22;
 }
 
 .projects-tooltip-three {
-  position: absolute;
-  left: calc(20% + 17px);
-  bottom: calc(27% - 6px);
-  width: 263px;
-  height: 100%;
+  position: relative;
+  left: 3px;
+  bottom: 3px; 
+  z-index: 22;
 }
 
 .marker {
@@ -96,14 +103,14 @@
   background: none;
   cursor: pointer;
   position: absolute;
-  bottom: 24px;
-  left: calc(50% - 16px);
+  bottom: 0;
   cursor: pointer;
   height: 16px;
   border: 0;
   padding: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 22;
 }
 
 .marker svg {
@@ -111,16 +118,22 @@
   border-radius: 36px;
 }
 
-.marker .path-color:hover {
-  fill: var(--color-purple-hover);
+.marker .path-color {
+  transition: fill 0.2s ease-in-out;
 }
 
-.marker:focus {
+.marker .path-color:hover {
+  fill: var(--color-purple-hover);
+  transition: fill 0.2s ease-in-out;
+}
+
+.marker:focus-visible {
   outline: none;
 }
 
-.marker:focus .path-color {
+.marker:focus-visible .path-color {
   fill: var(--color-purple-hover);
+  transition: fill 0.2s ease-in-out;
 }
 
 .marker .path-color:active {
@@ -133,7 +146,7 @@
 
 .tooltip-text {
   position: absolute;
-  bottom: 53px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   background: var( --color-purple);
@@ -146,8 +159,8 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  width: 100%;
-  box-sizing: border-box;
+  width: max-content;
+  z-index: 1;
 }
 
 .tooltip-text::after {
@@ -161,15 +174,16 @@
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .marker:hover + .tooltip-text,
-.marker:focus + .tooltip-text {
+.marker:focus-visible + .tooltip-text {
   opacity: 1;
 }
 
 .projects-slider {
-  width: 90%;
+  width: 92%;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -177,131 +191,49 @@
 
 .swiper-projects {
   position: relative;
+  padding: 0 10px;
 }
 
-.projects-slide-1 {
-  background-image: url(/img/project-img-1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
+.swiper-wrapper-projects {
+  padding: 4px 0;
 }
 
-.projects-slide-1:hover {
-  background-image: url(/img/project-imgColor-1.png);
+ .projects-partner-link {
+  display: inline-block;
+  border: 1px solid #CACACA;
+} 
+
+.projects-partner-img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  opacity: .3;
+  transition: opacity 0.2s ease-in-out;
+} 
+
+.projects-partner-img:hover{
+  filter: grayscale(0);
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.projects-slide-2 {
-  background-image: url(/img/project-img-2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
+.projects-partner-link:focus-visible {
+  border-color: var(--color-purple-hover);
+  outline:none;
 }
 
-.projects-slide-2:hover {
-  background-image: url(/img/project-imgColor-2.png);
-}
-
-.projects-slide-3 {
-  background-image: url(/img/project-img-3.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
-}
-
-.projects-slide-3:hover {
-  background-image: url(/img/project-imgColor-3.png);
-}
-
-.projects-slide-4 {
-  background-image: url(/img/project-img-4.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
-}
-
-.projects-slide-4:hover {
-  background-image: url(/img/project-imgColor-4.png);
-}
-
-.projects-slide-5 {
-  background-image: url(/img/project-img-5.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
-}
-
-.projects-slide-5:hover {
-  background-image: url(/img/project-imgColor-5.png);
-}
-
-.projects-slide-6 {
-  background-image: url(/img/project-img-6.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
-}
-
-.projects-slide-6:hover {
-  background-image: url(/img/project-imgColor-6.png);
-}
-
-.projects-slide-7 {
-  background-image: url(/img/project-img-7.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
-}
-
-.projects-slide-7:hover {
-  background-image: url(/img/project-imgColor-7.png);
-}
-
-.projects-slide-8 {
-  background-image: url(/img/project-img-8.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
-}
-
-.projects-slide-8:hover {
-  background-image: url(/img/project-imgColor-8.png);
-}
-
-.projects-slide-9 {
-  background-image: url(/img/project-img-9.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  height: 150px;
-}
-
-.projects-slide-9:hover {
-  background-image: url(/img/project-imgColor-9.png);
+.projects-partner-link:active,
+.projects-partner-img:active {
+  border-color: var(--color-purple-hover);
+  filter: grayscale(0);
 }
 
 .swiper-button-projects-prev { 
   position: absolute;
   width: max-content;
   height: max-content;
-  left: 9px;
-  top: 41%;
+  left: .4%;
+  top: 36%;
   cursor: pointer;
 }
 
@@ -309,37 +241,57 @@
   position: absolute;
   width: max-content;
   height: max-content;
-  right: -8px;
-  top: 41%;
+  right: -.5%;
+  top: 36%;
   cursor: pointer;
 } 
+
+.swiper-button-projects-next svg,
+.swiper-button-projects-prev svg {
+  border: 2px solid transparent;
+  border-radius: 100px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.swiper-button-projects-prev svg path 
+.swiper-button-projects-next svg path {
+  transition: fill 0.2s ease-in-out;
+}
 
 .swiper-button-projects-prev::after ,
 .swiper-button-projects-next::after {
   content: "";
 }
 
-.swiper-button-projects-prev:focus ,
-.swiper-button-projects-next:focus {
+.swiper-button-projects-prev:focus-visible ,
+.swiper-button-projects-next:focus-visible {
   outline: none;
 }
 
-.swiper-button-projects-prev:focus svg,
-.swiper-button-projects-next:focus svg {
+.swiper-button-projects-prev:focus-visible svg,
+.swiper-button-projects-next:focus-visible svg {
   outline: none;
-  border: 2px solid var(--color-purple);
+  border-color: var(--color-purple);
   border-radius: 100px;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .swiper-button-projects-prev:hover svg path,
 .swiper-button-projects-next:hover svg path {
   fill: #D1A9F0;
+  transition: fill 0.2s ease-in-out;
+}
+
+.swiper-button-projects-next:active svg,
+.swiper-button-projects-prev:active svg {
+  border-color: var(--color-purple);
+  border-radius: 100px;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .swiper-button-projects-prev:active svg path,
 .swiper-button-projects-next:active svg path{
   outline: none;
-  border: 2px solid var(--color-purple);
-  border-radius: 100px;
   fill: #D1A9F0;
+  transition: fill 0.2s ease-in-out;
 }

@@ -1,28 +1,32 @@
 .hero {
   position: relative;
-  min-height: 800px;
   z-index: 3;
-  margin-bottom: 85px;
+  margin-bottom: 3px;
   max-width: 1920px;
   left: 50%;
+  top: -82px;
   transform: translateX(-50%);
+  overflow: hidden;
 }
 
 .hero__content {
-  top: 30%;
-  left: 8.5%;
-  position: absolute;
+  position: relative;
+  padding: 9.5% 5% 9.2% .5%;
   z-index: 2;
 }
 
 .hero__title {
-  width: 45%;
+  width: 50%;
   font-family: 'OpenSans700';
   font-size: 72px;
   font-weight: 700;
   line-height: 83px;
   color: var(--color-white);
-  margin: 0 0 18px 0;
+  margin: 0 0 20px 0;
+}
+
+.hero__title-adaptive {
+  display: none;
 }
 
 .hero__text {
@@ -31,29 +35,54 @@
   font-weight: 700;
   line-height: 30px;
   color: var(--color-white);
-  width: 45%;
-  margin: 0 0 119px 0;
+  width: 40%;
+  padding: 0 0 7.6% 0;
+  margin: 0;
 }
 
 .hero__btn {
+  position: relative;
+  border: 3px solid transparent;
   font-family: 'OpenSans700';
   font-weight: 700;
   font-size: 18px;
-  padding: 22px 35px;
+  padding: 20px 32px;
   background: var(--color-purple);
   border-radius: 40px;
   color: var(--color-white);
   text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.hero__btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -11px;
+  left: -11px;
+  padding: 8px;
+  border: 3px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 40px;
 }
 
 .hero__btn:hover {
-  border: 3px solid #D1A9F0;
-  box-sizing: border-box;
-  padding: 25px 32px;
+  border-color: #D1A9F0;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.hero__btn:focus {
-  outline: 2px solid #C283F3;
+.hero__btn:focus-visible {
+  outline: none;
+}
+
+.hero__btn:focus-visible::before {
+  outline: none;
+  border-color: var(--color-purple-hover);
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 40px;
 }
 
 .hero__btn:active {
@@ -61,8 +90,18 @@
 }
 
 .swiper {
-  min-height: 800px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   z-index: 1;
+  animation-name: resize;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .slide-1 {
@@ -87,4 +126,14 @@
 	background-position: center;
 	background-repeat: no-repeat;
   min-height: 800px;
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(1.1);
+  }
 }

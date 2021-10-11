@@ -1,14 +1,8 @@
 /* Общие стили */
 @import url(../css/overall.css);
 
-
 /* Шрифты */
 @import url(../css/fonts.css);
-
-
-/* Media-запросы */
-@import url(../css/media.css);
-
 
 /* Контент сайта */
 @import url(../css/components/header.css);
@@ -21,3 +15,6 @@
 @import url(../css/components/projects.css);
 @import url(../css/components/contacts.css);
 @import url(../css/components/footer.css);
+
+/* Media-запросы */
+@import url(../css/media.css);
