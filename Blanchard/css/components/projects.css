@@ -154,7 +154,7 @@
   margin: 0;
   color: white;
   transition: opacity .3s ease-out;
-  opacity: 0;
+  display: none;
   text-align: center;
   font-size: 12px;
   font-weight: 400;
@@ -179,7 +179,7 @@
 
 .marker:hover + .tooltip-text,
 .marker:focus-visible + .tooltip-text {
-  opacity: 1;
+  display: block;
 }
 
 .projects-slider {

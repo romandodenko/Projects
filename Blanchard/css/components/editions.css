@@ -280,7 +280,7 @@ input[type=number]::-webkit-outer-spin-button {
 .editions-slider {
   width: 70.5%;
   overflow: hidden;
-  padding: 112px 24px 10px 0;
+  padding: 112px 23px 10px 0;
   display: none;
   margin: 0 0 0 auto;
 }

@@ -74,12 +74,15 @@
 }
  
 .header__adaptive-search {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 36%;
-  transform: translateX(300px);
-  transition: transform 0.2s ease-in-out;
+}
+
+.header__adaptive-search-active  {
+  display: block;
+  right: 8%;
 }
 
 .adaptive-search-btn {
@@ -115,11 +118,6 @@
   right: 0;
   background-color: var(--color-white);
   transform: rotate(-45deg);
-}
-
-.header__adaptive-search-active  {
-  transform: translateX(-100px);
-  transition: transform 0.2s ease-in-out;
 }
 
   /* hero */
@@ -581,7 +579,11 @@
 
   .header__adaptive-search-active {
     transform: translateX(-10px);
-}
+  }
+
+  .header__adaptive-search-active  {
+    right: 0;
+  }
 
   /* Hero */
 
@@ -1281,7 +1283,7 @@
     max-width: 500px;
   }
 
-  /* Header */
+ Header
 
   .header__top {
     flex-direction: row;
@@ -1335,7 +1337,8 @@
 
   .gallery__slider-buttons {
     position: absolute;
-    left: 35%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -20px;
 }
 
@@ -1414,32 +1417,32 @@
 
   .gallery-two-slide-1 { 
     background-image: url(/img/gallery-twoSwiper-img-1-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-two-slide-2 { 
     background-image: url(/img/gallery-twoSwiper-img-4-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-two-slide-3 { 
     background-image: url(/img/gallery-twoSwiper-img-2-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-two-slide-4 { 
     background-image: url(/img/gallery-twoSwiper-img-5-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-two-slide-5 { 
     background-image: url(/img/gallery-twoSwiper-img-3-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-two-slide-6 { 
     background-image: url(/img/gallery-twoSwiper-img-6-320.png);
-    height: 320px;
+    height: 367px;
   }
 
   .gallery-two-slide-7,
@@ -1449,32 +1452,32 @@
 
   .gallery-three-slide-1 { 
     background-image: url(/img/gallery-threeSwiper-img-1-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-three-slide-2 { 
     background-image: url(/img/gallery-threeSwiper-img-6-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-three-slide-3 { 
     background-image: url(/img/gallery-threeSwiper-img-2-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-three-slide-4 { 
     background-image: url(/img/gallery-threeSwiper-img-4-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-three-slide-5 { 
     background-image: url(/img/gallery-threeSwiper-img-3-320.png);
-    height: 320px;
+    height: 367px;
   }
   
   .gallery-three-slide-6 { 
     background-image: url(/img/gallery-threeSwiper-img-5-320.png);
-    height: 320px;
+    height: 367px;
   }
 
   .gallery-three-slide-7,
@@ -1955,7 +1958,7 @@
   }
 
   .contacts__form-content {
-    width: 100%;
+    width: 75%;
     order: 2;
     border: none;
     padding: 6%;
