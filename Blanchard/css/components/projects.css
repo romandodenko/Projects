@@ -1,6 +1,6 @@
 .projects {
   min-height: 563px;
-  margin-bottom: 72px;
+  margin-bottom: 75px;
 }
 
 .projects__content {
@@ -8,21 +8,14 @@
 }
 
 .projects__title {
-  margin-bottom: 24px;
+  margin-bottom: 21px;
 }
 
 .projects__subtitle {
   font-size: 24px;
   font-weight: 600;
   color: var(--color-black);
-  margin: 0 0 24px 0;
-}
-
-.projects__text-wrapper {
-  position: relative;
-  width: 66%;
-  margin: 0 0 23px 0;
-  z-index: 1;
+  margin: 0 0 22px 0;
 }
 
 .projects__text {
@@ -30,6 +23,8 @@
   font-weight: 400;
   line-height: 32px;
   color: var(--color-black);
+  width: 66%;
+  margin: 0 0 23px 0;
 }
 
 .projects__link {
@@ -77,93 +72,59 @@
   transition: color 0.2s ease-in-out;
 }
 
-.projects-tooltip-one {
+.tooltip-wrapper {
   position: relative;
-  left: -1px;
-  bottom: 3px;
-  z-index: 22;
+  display: inline-block;
+  height: 18px;
 }
 
-.projects-tooltip-two {
-  position: relative;
-  left: 0;
-  bottom: 3px;
-  z-index: 22;
-}
-
-.projects-tooltip-three {
-  position: relative;
-  left: 3px;
-  bottom: 3px; 
-  z-index: 22;
-}
-
-.marker {
-  border: 0;
-  background: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  cursor: pointer;
-  height: 16px;
-  border: 0;
-  padding: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 22;
-}
-
-.marker svg {
-  border: 1px solid var(--color-purple);
-  border-radius: 36px;
-}
-
-.marker .path-color {
-  transition: fill 0.2s ease-in-out;
-}
-
-.marker .path-color:hover {
-  fill: var(--color-purple-hover);
-  transition: fill 0.2s ease-in-out;
-}
-
-.marker:focus-visible {
-  outline: none;
-}
-
-.marker:focus-visible .path-color {
-  fill: var(--color-purple-hover);
-  transition: fill 0.2s ease-in-out;
-}
-
-.marker .path-color:active {
-  fill: var( --color-purple);
-}
-
-.marker:active svg .path-subcolor {
-  fill: var(--color-white);
-}
-
-.tooltip-text {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var( --color-purple);
-  padding: 8px 11px 12px 11px;
-  margin: 0;
-  color: white;
-  transition: opacity .3s ease-out;
+.project-svg-active,
+.project-svgTwo-active,
+.project-svgThree-active {
   display: none;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  width: max-content;
-  z-index: 1;
+  border: 1px solid var(--color-purple-2);
+  border-radius: 50%;
 }
 
-.tooltip-text::after {
+.project-svg-disabled{
+  display: none;
+}
+
+.project-svg-active-visible {
+  display: block;
+}
+
+#buttonOne,
+#buttonTwo,
+#buttonThree {
+  background-color: transparent;
+  display: inline;
+  border: none;
+  cursor: pointer;
+  padding: 0 !important;
+  width: max-content;
+  height: 18px;
+  position: relative;
+  top: 3px;
+}
+
+#tooltipOne,
+#tooltipTwo,
+#tooltipThree {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--color-white);
+  background: var(--color-purple);
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+}
+
+#tooltipOne::after,
+#tooltipTwo::after,
+#tooltipThree::after {
   content: "";
   position: absolute;
   width: 0;
@@ -177,9 +138,64 @@
   z-index: 1;
 }
 
-.marker:hover + .tooltip-text,
-.marker:focus-visible + .tooltip-text {
-  display: block;
+#buttonOne:hover + #tooltipOne,
+#buttonOne:focus-visible + #tooltipOne,
+#buttonTwo:hover + #tooltipTwo,
+#buttonTwo:focus-visible + #tooltipTwo,
+#buttonThree:hover + #tooltipThree,
+#buttonThree:focus-visible + #tooltipThree {
+  opacity: 1;
+  visibility: visible;
+}
+
+#buttonOne .project-svg,
+#buttonTwo .project-svgTwo,
+#buttonThree .project-svgThree {
+  border: 1px solid var(--color-purple-2);
+  border-radius: 50%;
+}
+
+#buttonOne .path-color,
+#buttonTwo .path-color,
+#buttonThree .path-color {
+  transition: fill 0.2s ease-in-out;
+}
+
+#buttonOne .path-color:hover,
+#buttonTwo .path-color:hover,
+#buttonThree .path-color:hover {
+  fill: var(--color-purple-hover);
+  transition: fill 0.2s ease-in-out;
+}
+
+#buttonOne:focus-visible,
+#buttonTwo:focus-visible,
+#buttonThree:focus-visible {
+  outline: none;
+}
+
+#buttonOne:focus-visible .path-color,
+#buttonTwo:focus-visible .path-color,
+#buttonThree:focus-visible .path-color {
+  fill: var(--color-purple-hover);
+  transition: fill 0.2s ease-in-out;
+}
+
+#buttonOne .path-color:active,
+#buttonTwo .path-color:active,
+#buttonThree .path-color:active {
+  fill: var( --color-purple);
+}
+
+#buttonOne:active .project-svg .path-subcolor,
+#buttonTwo:active .project-svgTwo .path-subcolor,
+#buttonThree:active .project-svgThree .path-subcolor {
+  fill: var(--color-white);
+}
+
+.tooltip-active {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .projects-slider {
@@ -233,7 +249,7 @@
   width: max-content;
   height: max-content;
   left: .4%;
-  top: 36%;
+  top: 37%;
   cursor: pointer;
 }
 
@@ -241,8 +257,8 @@
   position: absolute;
   width: max-content;
   height: max-content;
-  right: -.5%;
-  top: 36%;
+  right: -.6%;
+  top: 37%;
   cursor: pointer;
 } 
 

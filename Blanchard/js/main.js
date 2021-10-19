@@ -70,13 +70,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Burger menu в header
 
+// Search в header
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".adaptive-search-click").addEventListener("click" , function () {
     document.querySelector(".adaptive-search-click").classList.toggle("adaptive-search-click-active")
     document.querySelector(".header__adaptive-search").classList.toggle("header__adaptive-search-active")
+    document.querySelector(".header__logo-adaptive").classList.toggle("header__logo-adaptive-disabled")
+    document.querySelector(".header__logo-adaptive-320").classList.toggle("header__logo-adaptive-320-disabled")
+    document.querySelector(".header__burger").classList.toggle("header__burger-disabled")
+    // document.querySelector(".header__content").classList.toggle("header__content-active")header__content-bottom
   })
 });
-// Burger menu в header
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".adaptive-search-click-320").addEventListener("click" , function () {
+    document.querySelector(".adaptive-search-click-320").classList.toggle("adaptive-search-click-320-active")
+    document.querySelector(".header__search-320").classList.toggle("header__search-320-active")
+  })
+});
+// Search в header
 
             // Hero //
 
@@ -104,49 +116,207 @@ const swiper = new Swiper('.swiper', {
 
             // Gallery //
 
-// Фильтр в gallery 
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".gallery__dropdown-item").forEach(function (galleryDropdownItem) {
-    galleryDropdownItem.addEventListener("click", function (event) {
-      const path = event.currentTarget.dataset.path
-
-      document.querySelectorAll(".gallery-sliders").forEach(function (gallerySliders) {
-        gallerySliders.classList.remove("gallery-sliders-active")
-      })
-      document.querySelector(`[data-target="${path}"]`).classList.add("gallery-sliders-active")
-    })
-  })
-})
-
-function gallerySelect() {
-  document.getElementById("myDropdown").classList.toggle("show");
-  document.getElementById("gallerysel").classList.toggle("activ-gallery");
+function galleryOneSlide1() {
+  document.querySelector(".gallery-popup-slide1").classList.add("gallery-popup-slide-active")
 }
 
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
+ function galleryOneSlide2() {
+  document.querySelector(".gallery-popup-slide2").classList.add("gallery-popup-slide-active")
 }
-// Фильтр в gallery
+
+function galleryOneSlide3() {
+  document.querySelector(".gallery-popup-slide3").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide4() {
+  document.querySelector(".gallery-popup-slide4").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide5() {
+  document.querySelector(".gallery-popup-slide5").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide6() {
+  document.querySelector(".gallery-popup-slide6").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide7() {
+  document.querySelector(".gallery-popup-slide7").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide8() {
+  document.querySelector(".gallery-popup-slide8").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide9() {
+  document.querySelector(".gallery-popup-slide9").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide10() {
+  document.querySelector(".gallery-popup-slide10").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide11() {
+  document.querySelector(".gallery-popup-slide11").classList.add("gallery-popup-slide-active")
+}
+
+function galleryOneSlide12() {
+  document.querySelector(".gallery-popup-slide12").classList.add("gallery-popup-slide-active")
+}
+
+function removeModal1() {
+  document.querySelector(".gallery-popup-slide1").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal2() {
+  document.querySelector(".gallery-popup-slide2").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal3() {
+  document.querySelector(".gallery-popup-slide3").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal4() {
+  document.querySelector(".gallery-popup-slide4").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal5() {
+  document.querySelector(".gallery-popup-slide5").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal6() {
+  document.querySelector(".gallery-popup-slide6").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal7() {
+  document.querySelector(".gallery-popup-slide7").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal8() {
+  document.querySelector(".gallery-popup-slide8").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal9() {
+  document.querySelector(".gallery-popup-slide9").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal10() {
+  document.querySelector(".gallery-popup-slide10").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal11() {
+  document.querySelector(".gallery-popup-slide11").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModal12() {
+  document.querySelector(".gallery-popup-slide12").classList.remove("gallery-popup-slide-active")
+}
+
+function galleryTwoSlide1() {
+  document.querySelector(".gallery-popup-slidetwo1").classList.add("gallery-popup-slide-active")
+}
+
+function galleryTwoSlide2() {
+  document.querySelector(".gallery-popup-slidetwo2").classList.add("gallery-popup-slide-active")
+}
+
+function galleryTwoSlide3() {
+  document.querySelector(".gallery-popup-slidetwo3").classList.add("gallery-popup-slide-active")
+}
+
+function galleryTwoSlide4() {
+  document.querySelector(".gallery-popup-slidetwo4").classList.add("gallery-popup-slide-active")
+}
+
+function galleryTwoSlide5() {
+  document.querySelector(".gallery-popup-slidetwo5").classList.add("gallery-popup-slide-active")
+}
+
+function galleryTwoSlide6() {
+  document.querySelector(".gallery-popup-slidetwo6").classList.add("gallery-popup-slide-active")
+}
+
+function removeModalTwo1() {
+  document.querySelector(".gallery-popup-slidetwo1").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalTwo2() {
+  document.querySelector(".gallery-popup-slidetwo2").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalTwo3() {
+  document.querySelector(".gallery-popup-slidetwo3").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalTwo4() {
+  document.querySelector(".gallery-popup-slidetwo4").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalTwo5() {
+  document.querySelector(".gallery-popup-slidetwo5").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalTwo6() {
+  document.querySelector(".gallery-popup-slidetwo6").classList.remove("gallery-popup-slide-active")
+}
+
+function galleryThreeSlide1() {
+  document.querySelector(".gallery-popup-slidethree1").classList.add("gallery-popup-slide-active")
+}
+
+function galleryThreeSlide2() {
+  document.querySelector(".gallery-popup-slidethree2").classList.add("gallery-popup-slide-active")
+}
+
+function galleryThreeSlide3() {
+  document.querySelector(".gallery-popup-slidethree3").classList.add("gallery-popup-slide-active")
+}
+
+function galleryThreeSlide4() {
+  document.querySelector(".gallery-popup-slidethree4").classList.add("gallery-popup-slide-active")
+}
+
+function galleryThreeSlide5() {
+  document.querySelector(".gallery-popup-slidethree5").classList.add("gallery-popup-slide-active")
+}
+
+function galleryThreeSlide6() {
+  document.querySelector(".gallery-popup-slidethree6").classList.add("gallery-popup-slide-active")
+}
+
+function removeModalThree1() {
+  document.querySelector(".gallery-popup-slidethree1").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalThree2() {
+  document.querySelector(".gallery-popup-slidethree2").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalThree3() {
+  document.querySelector(".gallery-popup-slidethree3").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalThree4() {
+  document.querySelector(".gallery-popup-slidethree4").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalThree5() {
+  document.querySelector(".gallery-popup-slidethree5").classList.remove("gallery-popup-slide-active")
+}
+
+function removeModalThree6() {
+  document.querySelector(".gallery-popup-slidethree6").classList.remove("gallery-popup-slide-active")
+}
+
+// Селект в gallery
+const element = document.querySelector('.gallery__dropdown-select');
+const choices = new Choices(element, {
+  searchEnabled: false,
+});
+// Селект в gallery
 
 // Слайдер в gallery 1
-const swiper3 = new Swiper(".gallery-slider", {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 55,
-  grid: {
-    rows: 2
-  },  
+const swiper3 = new Swiper(".gallery-slider", { 
   breakpoints: {
     319: {
       slidesPerView: 1,
@@ -164,10 +334,10 @@ const swiper3 = new Swiper(".gallery-slider", {
         rows: 2
       },
     },
-    1320: {
+    1323: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-      spaceBetween: 55,
+      spaceBetween: 45,
       grid: {
         rows: 2
       },
@@ -181,6 +351,7 @@ const swiper3 = new Swiper(".gallery-slider", {
   navigation: {
     nextEl: '.swiper-button-next-gallery',
     prevEl: '.swiper-button-prev-gallery',
+    hideOnClick: false,
   },
 });
 // Слайдер в gallery 1
@@ -220,13 +391,13 @@ const swiper4 = new Swiper(".gallery-slider-two", {
     },
   },
   pagination: {
-    el: '.swiper-pagination-gallery',
+    el: '.swiper-pagination-gallery-two',
     clickable: true,
-    type: 'fraction',
+    // type: 'fraction',
   },
   navigation: {
-    nextEl: '.swiper-button-next-gallery',
-    prevEl: '.swiper-button-prev-gallery',
+    nextEl: '.swiper-button-next-gallery-two',
+    prevEl: '.swiper-button-prev-gallery-two',
   },
 });
 // Слайдер в gallery 2
@@ -266,13 +437,13 @@ const swiper5 = new Swiper(".gallery-slider-three", {
     },
   },
   pagination: {
-    el: '.swiper-pagination-gallery',
+    el: '.swiper-pagination-gallery-three',
     clickable: true,
     type: 'fraction',
   },
   navigation: {
-    nextEl: '.swiper-button-next-gallery',
-    prevEl: '.swiper-button-prev-gallery',
+    nextEl: '.swiper-button-next-gallery-three',
+    prevEl: '.swiper-button-prev-gallery-three',
   },
 });
 // Слайдер в gallery 3
@@ -413,15 +584,15 @@ window.addEventListener('DOMContentLoaded', function () {
 // Слайдер в editions
 const swiper2 = new Swiper('.editions-slider', {
   breakpoints: {
-    1320: {
+    1025: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-      spaceBetween: 30,
+      spaceBetween: 40,
     },
     590: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 25,
+      spaceBetween: 49,
     },
   },
   pagination: {
@@ -438,18 +609,151 @@ const swiper2 = new Swiper('.editions-slider', {
 // Слайдер в editions
 
 // Editions input
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".editions-category").forEach(function (editionsCategory) {
-    editionsCategory.addEventListener("click", function (event) {
-      const path = event.currentTarget.dataset.path
 
-      document.querySelectorAll(".editions-category").forEach(function (editionsCategory) {
-        editionsCategory.classList.remove("editions-category-active")
-      })
-      document.querySelector(`[data-target="${path}"]`).classList.add("editions-category-active")
-    })
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".bestsellers").addEventListener("click", function() {
+    document.querySelector(".bestsellers").classList.toggle("editions-category-active")
   })
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".art").addEventListener("click", function() {
+    document.querySelector(".art").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".architecture").addEventListener("click", function() {
+    document.querySelector(".architecture").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".design").addEventListener("click", function() {
+    document.querySelector(".design").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".fashion").addEventListener("click", function() {
+    document.querySelector(".fashion").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".child").addEventListener("click", function() {
+    document.querySelector(".child").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".imaginativeliterature").addEventListener("click", function() {
+    document.querySelector(".imaginativeliterature").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".journalism").addEventListener("click", function() {
+    document.querySelector(".journalism").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".guidebook").addEventListener("click", function() {
+    document.querySelector(".guidebook").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".philosophy").addEventListener("click", function() {
+    document.querySelector(".philosophy").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".educationalliterature").addEventListener("click", function() {
+    document.querySelector(".educationalliterature").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".newspapers").addEventListener("click", function() {
+    document.querySelector(".newspapers").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".bestsellers-adaptive").addEventListener("click", function() {
+    document.querySelector(".bestsellers-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".art-adaptive").addEventListener("click", function() {
+    document.querySelector(".art-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".architecture-adaptive").addEventListener("click", function() {
+    document.querySelector(".architecture-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".design-adaptive").addEventListener("click", function() {
+    document.querySelector(".design-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".fashion-adaptive").addEventListener("click", function() {
+    document.querySelector(".fashion-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".child-adaptive").addEventListener("click", function() {
+    document.querySelector(".child-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".imaginativeliterature-adaptive").addEventListener("click", function() {
+    document.querySelector(".imaginativeliterature-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".journalism-adaptive").addEventListener("click", function() {
+    document.querySelector(".journalism-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".guidebook-adaptive").addEventListener("click", function() {
+    document.querySelector(".guidebook-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".philosophy-adaptive").addEventListener("click", function() {
+    document.querySelector(".philosophy-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".educationalliterature-adaptive").addEventListener("click", function() {
+    document.querySelector(".educationalliterature-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".newspapers-adaptive").addEventListener("click", function() {
+    document.querySelector(".newspapers-adaptive").classList.toggle("editions-category-active")
+  })
+})
+
 // Editions input
 
 // Фильтр в editions 
@@ -472,14 +776,6 @@ function filterFunction() {
     }
   }art
 }
-
-function designSlider() {
-  document.querySelector(".editions-slider").classList.add("editions-slider-active")
-}
-function designSliderDelete() {
-  document.querySelector(".editions-slider").classList.remove("editions-slider-active")
-}
-
 
 function bestsellers() {
   document.getElementById("editions-dropdown").classList.remove("editions__dropdown-list-active");
@@ -766,16 +1062,25 @@ function newspapersActiveClose() {
 // Слайдер в projects
 const swiper1 = new Swiper('.projects-slider', {
   breakpoints: {
+    250: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      },
     592: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 35,
       },
-    1320: {
+    1025: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 25,
+    },
+    1324: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 45,
-      },
+    },
   },
   pagination: {
     el: '.swiper-pagination-projects',
@@ -789,21 +1094,95 @@ const swiper1 = new Swiper('.projects-slider', {
 });
 // Слайдер в projects
 
+// Tooltip в projects
+const buttonOne = document.querySelector('#buttonOne');
+const tooltipOne = document.querySelector('#tooltipOne');
+const buttonTwo = document.querySelector('#buttonTwo');
+const tooltipTwo = document.querySelector('#tooltipTwo');
+const buttonThree = document.querySelector('#buttonThree');
+const tooltipThree = document.querySelector('#tooltipThree');
+
+Popper.createPopper(buttonOne, tooltipOne, {
+  placement: 'top',
+  modifiers: [
+    {
+      name: 'offset',
+      options: {
+        offset: [0, 10],
+      },
+    },
+  ],
+});
+Popper.createPopper(buttonTwo, tooltipTwo, {
+  placement: 'top',
+  modifiers: [
+    {
+      name: 'offset',
+      options: {
+        offset: [0, 10],
+      },
+    },
+  ],
+});
+Popper.createPopper(buttonThree, tooltipThree, {
+  placement: 'top',
+  modifiers: [
+    {
+      name: 'offset',
+      options: {
+        offset: [0, 10],
+      },
+    },
+  ],
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector("#buttonOne").addEventListener("click" , function () {
+    document.querySelector(".project-svg").classList.toggle("project-svg-disabled")
+    document.querySelector(".project-svg-active").classList.toggle("project-svg-active-visible")
+    document.querySelector("#tooltipOne").classList.toggle("tooltip-active")
+  })
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector("#buttonTwo").addEventListener("click" , function () {
+    document.querySelector(".project-svgTwo").classList.toggle("project-svg-disabled")
+    document.querySelector(".project-svgTwo-active").classList.toggle("project-svg-active-visible")
+    document.querySelector("#tooltipTwo").classList.toggle("tooltip-active")
+  })
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector("#buttonThree").addEventListener("click" , function () {
+    document.querySelector(".project-svgThree").classList.toggle("project-svg-disabled")
+    document.querySelector(".project-svgThree-active").classList.toggle("project-svg-active-visible")
+    document.querySelector("#tooltipThree").classList.toggle("tooltip-active")
+  })
+});
+
+// Tooltip в projects
+
             // Contacts //
 
-
 // Валидация и маскирование формы
+
+// Маскирование формы
 var selector = document.querySelector("input[type='tel']");
 var im = new Inputmask("+7 (999)-999-99-99");
 
 im.mask(selector);
+// Маскирование формы
 
+// Валидация формы
 new JustValidate('.contacts__form', {
+  colorWrong: '#D11616',
   rules: {
     name: {
       required: true,
       minLength: 2,
-      maxLength: 10
+      strength: {
+        custom: '[а-яА-Я\d]',
+     },
     },
     tel: {
       required: true,
@@ -812,12 +1191,36 @@ new JustValidate('.contacts__form', {
         return Number(phone) && phone.length === 10
       }
     },
-    mail: {
-      required: true,
-      email: true,
-    },
   },
+  messages: {
+    name: {
+      required: 'Введите ваше имя',
+      minLength: 'Минимальное количество букв - 2',
+      strength: 'Недопустимый формат',
+    },
+    tel: 'Введите ваш телефон'
+  },
+  submitHandler: function(form, values, ajax) {
+    let formData = new FormData(form);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log("Отправлено");
+        }
+      }
+    }
+
+    xhr.open("POST", "mail.php", true);
+    xhr.send(formData)
+
+    form.reset();
+  }
 });
+// Валидация формы
+
 // Валидация и маскирование формы
 
 // Maps в contacts
@@ -838,5 +1241,4 @@ function init() {
 
   myMap.geoObjects.add(myPlacemark);
 }
-
 // Maps в contacts

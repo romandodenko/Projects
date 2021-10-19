@@ -24,6 +24,15 @@
   align-items: center;
 } 
 
+.header__burger {
+  width: 36px;
+  height: 28px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+
 .header__burger::before {
   position: absolute;
   content: "";
@@ -46,15 +55,6 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.header__burger {
-  width: 36px;
-  height: 28px;
-  background-color: transparent;
-  position: relative;
-  cursor: pointer;
-  border: none;
-}
-
 .header__burger:focus-visible {
   outline: 2px solid var(--color-purple-2);
 }
@@ -70,25 +70,36 @@
 }
 
 .header__burger-active .burger-line {
-  background-color: var(--color-purple-2);
-  transition: background-color 0.2s ease-in-out;
- }
+    display: none;
+  }
  
  .header__burger-active::before {
-   background-color: var(--color-purple-2);
-   transition: background-color 0.2s ease-in-out;
+   top: 12px;
+   transform: rotate(45deg);
+   width: 90%;
+   z-index: 33;
  }
  
  .header__burger-active::after {
-   background-color: var(--color-purple-2);
-   transition: background-color 0.2s ease-in-out;
+   transform: rotate(-45deg);
+   bottom: 13px;
+   width: 90%;
+   z-index: 33;
  }
 
 .header__logo-adaptive:focus-visible {
   outline: 2px solid var(--color-purple-2);
 }
 
-.adaptive-search-click {
+.search-svg-320,
+.header__logo-adaptive-320-disabled,
+.adaptive-search-click-320,
+.header__search-320 {
+  display: none;
+}
+
+.adaptive-search-click,
+.adaptive-search-click-320 {
   display: none;
   cursor: pointer;
   border: none;
@@ -116,7 +127,9 @@
 }
 
 .adaptive-search-click:active .adaptive-search-click-svg rect,
-.adaptive-search-click:active .adaptive-search-click-svg path {
+.adaptive-search-click:active .adaptive-search-click-svg path,
+.adaptive-search-click-320:active .adaptive-search-click-svg rect,
+.adaptive-search-click-320:active .adaptive-search-click-svg path {
   fill: var(--color-purple-2);
   transition: fill 0.2s ease-in-out;
 }
@@ -152,7 +165,8 @@
 }
 
 .adaptive-search-click-svg-1024,
-.adaptive-search-click-svg-320 {
+.adaptive-search-click-svg-320,
+.header__adaptive-search-320 {
   display: none;
 }
 
@@ -303,6 +317,22 @@
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
+
+.header__menu-wrap:focus-visible {
+  outline: 1px solid var(--color-purple);
+}
+
+.simplebar-content-wrapper {
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.simplebar-content-wrapper:focus-visible {
+  outline: none;
+  border-color: var(--color-purple);
+  transition: border-color 0.2s ease-in-out;
+}
+
 
 .header__link svg {
   margin: 2px 5px 0 0;
@@ -557,11 +587,212 @@
   border: 2px solid transparent;
   font-size: 14px;
   color: #fff;
-  background-image: url(/img/header-custom-menu.png);
-  background-repeat: no-repeat;
-  background-color: transparent;
   transition: border-color .3s ease;
   text-decoration: none;
+}
+
+.tintoretto {
+  background-image: url(/img/tintoretto.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.tintoretto:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/tintoretto.png);
+}
+
+.fridrih {
+  background-image: url(/img/fridrih.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.fridrih:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/fridrih.png);
+}
+
+.leonardo {
+  background-image: url(/img/leonardo.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.leonardo:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/leonardo.png);
+}
+
+.verokuy {
+  background-image: url(/img/verroku.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.verokuy:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/verroku.png);
+}
+
+.mone {
+  background-image: url(/img/mone.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.mone:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/mone.png);
+}
+
+.sisley {
+  background-image: url(/img/sisley.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.sisley:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/sisley.png);
+}
+
+.mane {
+  background-image: url(/img/mane.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.mane:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/mane.png);
+}
+
+.renyar {
+  background-image: url(/img/renyar.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.renyar:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/renyar.png);
+}
+
+.vangog {
+  background-image: url(/img/vangog.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.vangog:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/vangog.png);
+}
+
+.sezann {
+  background-image: url(/img/sezan.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.sezann:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/sezan.png);
+}
+
+.gogen {
+  background-image: url(/img/gogen.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.gogen:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/gogen.png);
+}
+
+.sera {
+  background-image: url(/img/sera.png);
+  background-repeat: no-repeat;
+  background-color: transparent; 
+}
+
+.sera:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/sera.png);
+}
+
+.kandinskiy {
+  background-image: url(/img/kandinskiy.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.kandinskiy:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/kandinskiy.png);
+}
+
+.marinetti {
+  background-image: url(/img/marinetti.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.marinetti:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/marinetti.png);
+}
+
+.malevich {
+  background-image: url(/img/malevich.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.malevich:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/malevich.png);
+}
+
+.pikasso {
+  background-image: url(/img/pikasso.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.pikasso:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/pikasso.png);
+}
+
+.kappa {
+  background-image: url(/img/kappa.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.kappa:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/kappa.png);
+}
+
+.pratella {
+  background-image: url(/img/praterri.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.pratella:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/praterri.png);
+}
+
+.severini {
+  background-image: url(/img/severenni.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.severini:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/severenni.png);
+}
+
+.balla {
+  background-image: url(/img/baala.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.balla:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/baala.png);
+}
+
+.unknown:active {
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
 .header__menu-link:focus-visible {
@@ -571,10 +802,6 @@
 
 .header__menu-link:hover {
   border-color: #9D5CD0;
-}
-
-.header__menu-link:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(/img/header-custom-menu.png);
 }
 
 .header__menu-dropdown .simplebar-track.simplebar-vertical {

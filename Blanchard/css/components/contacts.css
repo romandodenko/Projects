@@ -10,14 +10,14 @@
 }
 
 .contacts__title {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   padding: 0 10px;
 }
 
 .contacts__form-content {
   width: 22.7%;
   border: 1px solid #CACACA;
-  padding: 6.4% 6.4% 5.5% 8.3%;
+  padding: 6.5% 6.4% 5.5% 8.3%;
 }
 
 .contacts__form {
@@ -26,18 +26,23 @@
   position: relative;
 }
 
+.form-label {
+  position: relative;
+  margin: 0 0 3px 0;
+}
+
 .js-validate-error-label {
-  font-size: 12px;
   position: absolute;
-  top: 10%;
-  left: 3%;
+  left: 15px;
+  top: 0;
+  font-size: 12px;
 }
 
 .contacts__form input {
   padding: 10px 10px 10px 23px;
   border-radius: 100px;
   width: 92%;
-  margin-bottom: 22px;
+  margin: 20px 0 0 0;
   border: 1px solid var(--color-black);
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
@@ -89,10 +94,11 @@
   font-style: normal;
   font-weight: 400;
   color: var(--color-black);
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
 .contacts__form-btn {
+  position: relative;
   font-size: 18px;
   font-weight: 700;
   color: var(--color-purple);
@@ -101,31 +107,49 @@
   width: max-content;
   padding: 18px 37px;
   border-radius: 50px;
-  margin-bottom: 40px;
+  margin: 17px 0 40px 0;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   transition: border-color 0.2s ease-in-out;
+}
+
+.contacts__form-btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -7px;
+  left: -7px;
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.contacts__form-btn:hover {
+  border-color: var(--color-purple);
+  background-color: var(--color-purple);
+  outline: none;
+  color: var(--color-white);
+  transition: color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .contacts__form-btn:focus-visible {
   outline: none;
-  color: var(--color-purple-2);  
-  border-color: var(--color-purple-2);
-  transition: color 0.2s ease-in-out;
-  transition: border-color 0.2 ease-in-out;
 }
 
-.contacts__form-btn:hover {
-  background-color: var(--color-purple);
-  color: var(--color-white);
-  transition: color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+.contacts__form-btn:focus-visible::before {
+  border-color: var(--color-purple-hover);
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .contacts__form-btn:active {
+  border-color: var(--color-purple-hover);
   background-color: var(--color-purple-2);
   color: var(--color-white);
+  transition: color 0.2s ease-in-out;
 }
 
 .contacts__subtitle {
