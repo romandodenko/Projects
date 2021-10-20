@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Слайдер в hero
 const swiper = new Swiper('.swiper', {
-  allowTouchMove: false,
+    allowTouchMove: false,
     loop: true,
     effect: 'fade',
     speed: 5000,
@@ -316,7 +316,7 @@ const choices = new Choices(element, {
 // Селект в gallery
 
 // Слайдер в gallery 1
-const swiper3 = new Swiper(".gallery-slider", { 
+const swiper3 = new Swiper(".gallery-slider", {
   breakpoints: {
     319: {
       slidesPerView: 1,
@@ -358,12 +358,6 @@ const swiper3 = new Swiper(".gallery-slider", {
 
 // Слайдер в gallery 2
 const swiper4 = new Swiper(".gallery-slider-two", {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 55,
-  grid: {
-    rows: 2
-  },
   breakpoints: {
     319: {
       slidesPerView: 1,
@@ -404,12 +398,6 @@ const swiper4 = new Swiper(".gallery-slider-two", {
 
 // Слайдер в gallery 3
 const swiper5 = new Swiper(".gallery-slider-three", {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 55,
-  grid: {
-    rows: 2
-  },
   breakpoints: {
     319: {
       slidesPerView: 1,
