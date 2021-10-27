@@ -2,22 +2,32 @@
   width: 100%;
   background-color: #000000;
   margin: 0 auto;
-  min-height: 130px;
+  min-height: 140px;
 }
 
 .footer__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 10px 0 10px;
+  padding: 45px 0 0 0;
+}
+
+.footer__social-links-blanchard {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer__social-links-blanchard li {
+  list-style: none;
 }
 
 .footer__social-item-blanchard {
   text-decoration: none;
 }
 
-.footer__social-item-blanchard:not(:last-child) {
-  margin-right: 12px;
+.footer__social-links-blanchard li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .footer-svg-adaptive,

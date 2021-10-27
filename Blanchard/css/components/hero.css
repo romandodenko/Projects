@@ -11,7 +11,7 @@
 
 .hero__content {
   position: relative;
-  padding: 9.5% 5% 9.2% .5%;
+  padding: 9.5% 5% 9.2% 0;
   z-index: 2;
 }
 
@@ -89,7 +89,7 @@
   background-color: var(--color-purple-2);
 }
 
-.swiper {
+.hero__swiper {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -104,7 +104,7 @@
   animation-direction: alternate;
 }
 
-.slide-1 {
+.hero-swiper-slide-1 {
   background-image: url(/img/hero-1.png);
   background-size: cover;
 	background-position: center;
@@ -112,7 +112,7 @@
   min-height: 800px;
 }
 
-.slide-2 {
+.hero-swiper-slide-2 {
   background-image: url(/img/hero-2.png);
   background-size: cover;
 	background-position: center;
@@ -120,7 +120,7 @@
   min-height: 800px;
 }
 
-.slide-3 {
+.hero-swiper-slide-3 {
   background-image: url(/img/hero-3.png);
   background-size: cover;
 	background-position: center;

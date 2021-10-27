@@ -5,7 +5,6 @@
 .developments__content {
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
 }
 
 .developments__title {
@@ -44,8 +43,8 @@
   background-position: top left;
   background-repeat: no-repeat;
   list-style: none;
-  flex: 0 1 31.5%;
-  margin: 0 2.5% 2.5% 0;
+  flex: 0 1 31.1%;
+  margin: 0 3.1% 2.5% 0;
   border: 1px solid #CACACA;
 }
 
@@ -84,10 +83,15 @@
 .developments__date {
   font-size: 12px;
   font-weight: 400;
+  line-height: 15px;
   color: #999999;
   margin-left: auto;
   text-align: end;
-  margin: 63.2% 11px 8px 0;
+  margin: 63% 17px 5px 0;
+}
+
+.one-date {
+  letter-spacing: .3px;
 }
 
 .developments__subtitle {
@@ -95,7 +99,8 @@
   font-weight: 600;
   line-height: 32px;
   color: var(--color-black);
-  margin: 0 30px 3px 57px;
+  margin: 0 26px 3px 51px;
+  letter-spacing: .6px;
 }
 
 .developments__text {
@@ -103,7 +108,7 @@
   font-weight: 400;
   line-height: 32px;
   color: var(--color-black);
-  margin: 0 40px 84px 57px;
+  margin: 0 40px 84px 50px;
   flex: 1 1 auto;
 }
 
@@ -113,7 +118,7 @@
   font-weight: 400;
   line-height: 25px;
   color: var(--color-purple);
-  margin: 0 0 36px 58px;
+  margin: 0 0 36px 47px;
   padding: 2px 3px 5px 3px;
   text-decoration: none;
   width: max-content;
@@ -172,7 +177,7 @@
   border: 2px solid var(--color-purple);
   border-radius: 30px;
   background-color: transparent;
-  margin: .8% 0 0 .8%;
+  margin: .7% 0 0 0;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;

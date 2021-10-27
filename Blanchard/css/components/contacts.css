@@ -4,6 +4,11 @@
   height: max-content;
 }
 
+.container-contacts {
+  max-width: 1920px;
+  padding: 0;
+}
+
 .contacts__content {
   display: flex;
   height: 100%;
@@ -11,13 +16,13 @@
 
 .contacts__title {
   margin-bottom: 20px;
-  padding: 0 10px;
+  padding-left: 8.3%;
 }
 
 .contacts__form-content {
-  width: 22.7%;
-  border: 1px solid #CACACA;
-  padding: 6.5% 6.4% 5.5% 8.3%;
+   width: 22.5%; 
+   border: 1px solid #CACACA;
+    padding: 6.5% 6.4% 5.4% 8.3%; 
 }
 
 .contacts__form {
@@ -68,7 +73,7 @@
   text-align: left;
   color: var(--color-black);
   font-style: normal;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 .contacts__address-adaptive {
@@ -83,6 +88,7 @@
   color: var(--color-black);
   text-align: left;
   font-style: normal;
+  letter-spacing: .4px;
 }
 
 .contacts__address-item-adaptive {
