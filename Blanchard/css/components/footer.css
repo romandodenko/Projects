@@ -9,11 +9,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 0 0 0;
+  padding: 47px 0 0 0;
 }
 
 .footer__social-links-blanchard {
-  margin: 0;
+  margin: -2px 0 0 0;
   padding: 0;
   display: flex;
 }

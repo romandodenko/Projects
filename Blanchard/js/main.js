@@ -324,40 +324,6 @@ $(function () {
 });
 // Accordion в catalog
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".bottom-line").forEach(function (accordion) {
-    accordion.addEventListener("click", function (accord) {
-      const accordion = accord.currentTarget.dataset.accordion
-
-      document.querySelectorAll(".catalog__accordion-item").forEach(function (accordActive) {
-        accordActive.classList.remove("accord-active")
-      })
-      document.querySelector(`[data-target-accordion="${accordion}"]`).classList.add("accord-active")
-    })
-  })
-})
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".top-line").forEach(function (accordionTopLine) {
-    accordionTopLine.addEventListener("click", function () {
-      document.querySelectorAll(".top-line").forEach(function (accordTopLine) {
-        accordTopLine.classList.add("top-line-active")
-        accordionTopLine.classList.remove("accord-active")
-      })
-    })
-  })
-  
-  document.querySelectorAll(".remove-top-line").forEach(function (remTopLine) {
-    remTopLine.addEventListener("click", function () {
-      document.querySelectorAll(".top-line").forEach(function (deleteTopLine) {
-        deleteTopLine.classList.remove("top-line-active")
-        remTopLine.classList.remove("accord-active")
-      })
-    
-    })
-  })
-})
-
 // Tabs в cataloge
 
   // Tabs связывает флажки и контент

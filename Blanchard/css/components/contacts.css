@@ -15,14 +15,14 @@
 }
 
 .contacts__title {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   padding-left: 8.3%;
 }
 
 .contacts__form-content {
    width: 22.5%; 
    border: 1px solid #CACACA;
-    padding: 6.5% 6.4% 5.4% 8.3%; 
+    padding: 6.5% 6.4% 5.3% 8.3%; 
 }
 
 .contacts__form {
@@ -113,7 +113,7 @@
   width: max-content;
   padding: 18px 37px;
   border-radius: 50px;
-  margin: 17px 0 40px 0;
+  margin: 17px 0 42px 0;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;

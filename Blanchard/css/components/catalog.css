@@ -1,5 +1,5 @@
 .catalog {
-  margin-bottom: 87px;
+  margin-bottom: 85px;
 }
 
 .catalog__head {
@@ -115,6 +115,7 @@
 
 .catalog__content-italy {
   display: flex;
+  justify-content: space-between;
 }
 
 .catalog__list-item {
@@ -161,6 +162,7 @@
 
 .catalog__content-unknowm {
   display: flex;
+  justify-content: space-between;
 }
 
 .catalog-unknowm-description {
@@ -239,7 +241,7 @@
 }
 
 .catalog__accordion {
-  width: 51%;
+  width: 50%;
   margin: 0;
   padding: 0;
 }
@@ -263,7 +265,11 @@
 
 .italy-painter {
   padding: 0;
-  margin: 4% 5.4% 2% 1.3%;
+  margin: 4.2% 7% 2.3% -2px;
+}
+
+.margin-right {
+  margin-right: 0;
 }
 
 .italy-painter-adaptive {
@@ -340,62 +346,68 @@
   border-radius: 0;
 }
 
-.catalog__accordion-item:first-child {
-  border-top: 1px solid #CACACA;
-}
-
 .catalog__accordion-item {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid #CACACA;
-  margin-top: -1px;
   list-style: none;
-  transition: border-color 0.2s ease-in-out; 
 }
 
-.catalog__accordion-item:hover{
-  border-top: 1px solid var(--color-purple);
-  border-bottom: 1px solid var(--color-purple);
-  transition: border-color 0.2s ease-in-out;
-}
-
-.top-line-active:first-child {
-  border-top-color: var(--color-purple-2);
-}
-
-.top-line-active:first-child .ui-accordion-header-active {
-  border-top-color: transparent;
-}
-
-.accord-active {
-  border-bottom-color: transparent;
-}
-
-.remove-top-line:first-child {
-  border-top-color:#CACACA;
-}
-
-.ui-accordion .ui-accordion-header {
+.catalog__accordion-elem {
   margin: 0;
   display: flex;  
   justify-content: space-between;
   align-items: center;
-  font-size: 24px;
-  font-weight: 600;
   padding: 30px 0;
   cursor: pointer;
+  margin-top: -1px;
+  border-top: 1px solid #CACACA;
+  border-bottom: 1px solid #CACACA;
+  transition: border-color .2s ease-in-out;
 }
 
-.catalog__accordion button:focus-visible {
+.catalog__accorion-title,
+.france-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  transition: color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+  margin: 0;
+}
+
+.catalog__accordion-elem:hover, 
+.catalog__accordion-elem:focus-visible {
+  border-color: var(--color-purple);
+  position: relative;
+  z-index: 1;
+  transition: border-color .2s ease-in-out;
   outline: none;
+}
+
+.catalog__accordion-elem .catalog__accorion-title,
+.catalog__accordion-elem .france-title {
+  transition: color .2s ease-in-out;
+}
+
+.catalog__accordion-elem:hover .catalog__accorion-title,
+.catalog__accordion-elem:hover .france-title {
+  color: var(--color-purple);
+  transition: color .2s ease-in-out;
+}
+
+.catalog__accordion-elem:focus-visible .catalog__accorion-title,
+.catalog__accordion-elem:focus-visible .france-title {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  transition: background-color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+  outline: none;
+}
+
+.ui-accordion-header-active + .bottom-line {
+  border-bottom: 1px solid #CACACA;
 }
 
 .ui-state-focus:focus-visible {
   outline: none;
-}
-
-.ui-state-focus:focus-visible button {
-  background-color: var(--color-purple);
-  color: var(--color-white);
 }
 
 .ui-state-focus:focus-visible .catalog-svg path {
@@ -407,15 +419,6 @@
   fill: #D1A9F0;
   transition: fill 0.2s ease-in-out;
 }
-
-.ui-state-default button {
-  transition: color 0.2s ease-in-out;
-}
-
-.ui-state-hover:hover button {
-  color: var(--color-purple);
-  transition: color 0.2s ease-in-out;
-}
  
 .ui-accordion-header:active {
   border-top-color: var(--color-purple-2);
@@ -423,12 +426,7 @@
   transition: border-color 0.2s ease-in-out;
 }
 
-.ui-accordion-header:active button {
-  color: var(--color-purple-2);
-  transition: color 0.2s ease-in-out;
-}
-
-.ui-state-hover .catalog-svg path {
+.ui-state-hover .catalog-svg path { 
   transition: fill 0.2s ease-in-out;
 }
 
@@ -457,6 +455,11 @@
 .ui-accordion-header-active {
   border-top: 1px solid var(--color-purple-2);
   border-bottom: 1px solid var(--color-purple-2);
+  color: var(--color-purple-2);
+}
+
+.ui-accordion-header-active .catalog__accorion-title,
+.ui-accordion-header-active .france-title {
   color: var(--color-purple-2);
 }
 
