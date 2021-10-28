@@ -479,3 +479,7 @@ input[type=number]::-webkit-outer-spin-button {
 .editions__list-adaptive {
   display: none;
 }
+
+.editions-slide-3 {
+  margin-right: 62px !important;
+}
