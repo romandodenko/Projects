@@ -442,7 +442,7 @@ const swiper2 = new Swiper('.editions-slider', {
       slidesPerGroup: 2,
       spaceBetween: 50,
     },
-    1251: {
+    1431: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
@@ -523,7 +523,7 @@ const swiper1 = new Swiper('.projects-slider', {
       slidesPerView: 1,
       spaceBetween: 50,
       },
-    592: {
+    756: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
@@ -531,7 +531,7 @@ const swiper1 = new Swiper('.projects-slider', {
     1251: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 45,
+      spaceBetween: 48,
     },
     1431: {
       slidesPerView: 3,
@@ -623,15 +623,17 @@ new JustValidate('.contacts__form', {
     },
     tel: 'Введите ваш телефон'
   },
+
   submitHandler: function(form, values, ajax) {
     let formData = new FormData(form);
 
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
+
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log("Отправлено");
+          console.log("Отправлено")
         }
       }
     }
@@ -656,12 +658,24 @@ window.addEventListener("scroll", function () {
     ymaps.ready(init);
 
       function init() {
-
-      var myMap = new ymaps.Map("map", {
-        center: [55.759861, 37.610557],
-        zoom: 14,
-      });
-
+      const myMap = new ymaps.Map(
+        "map",
+        { 
+          center: [55.759861, 37.610557],
+          zoom: 14, 
+          controls: ['geolocationControl', 'zoomControl']
+        },
+        { 
+          suppressMapOpenBlock: true,
+          geolocationControlSize: "large",
+          geolocationControlPosition:  { top: "200px", right: "20px" },
+          geolocationControlFloat: 'none',
+          zoomControlSize: "small",
+          zoomControlFloat: "none",
+          zoomControlPosition: { top: "120px", right: "20px" }
+        }
+      );
+      
       var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
         iconLayout: 'default#image',
         iconImageHref: '../img/marker-map.svg',
@@ -675,3 +689,4 @@ window.addEventListener("scroll", function () {
 
 })
 // Maps в contacts
+
