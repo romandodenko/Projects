@@ -290,8 +290,8 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 110px 0 10px 0;
-  margin: 0 0 0 9.9%;
+  padding: 110px 0 10px 5px;
+  margin: 0 0 0 9.6%;
 }
 
 .editions-slider {
@@ -301,11 +301,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .editions-slides {
-  width: 350px !important;
+  width: 350px;
+  margin-right: 50px;
 }
 
 .editions-slide-6 {
-  margin-right: 80px !important;
+  margin-right: 70px;
+}
+
+.editions-slide-7 {
+  margin-right: 0;
 }
 
 .editions-card-body {
@@ -481,5 +486,5 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .editions-slide-3 {
-  margin-right: 62px !important;
+  margin-right: 62px;
 }

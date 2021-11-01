@@ -393,8 +393,7 @@ $(function () {
 
 // Слайдер в developments
 const swiper6 = new Swiper('.swiper-developments', {
-  slidesPerView: 1,
-  spaceBetween: 20,
+  slidesPerView: "auto",
   pagination: {
     el: '.swiper-pagination-developments',
     clickable: true,
@@ -426,26 +425,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Слайдер в editions
 const swiper2 = new Swiper('.editions-slider', {
+  slidesPerView: "auto",
   breakpoints: {
-    0: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 34,
-    },
     590: {
-      slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 34,
-    },
-    1024: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 50,
     },
     1431: {
-      slidesPerView: 3,
       slidesPerGroup: 3,
-      spaceBetween: 50,
     },
   },
   pagination: {
@@ -518,25 +504,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Слайдер в projects
 const swiper1 = new Swiper('.projects-slider', {
+  slidesPerView: "auto",
   breakpoints: {
     250: {
-      slidesPerView: 1,
-      spaceBetween: 50,
+      slidesPerGroup: 1,
       },
     756: {
-      slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 34,
       },
-    1251: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 48,
-    },
     1431: {
-      slidesPerView: 3,
       slidesPerGroup: 3,
-      spaceBetween: 50,
     },
   },
   pagination: {
@@ -668,11 +645,11 @@ window.addEventListener("scroll", function () {
         { 
           suppressMapOpenBlock: true,
           geolocationControlSize: "large",
-          geolocationControlPosition:  { top: "200px", right: "20px" },
+          geolocationControlPosition:  { top: "330px", right: "20px" },
           geolocationControlFloat: 'none',
           zoomControlSize: "small",
           zoomControlFloat: "none",
-          zoomControlPosition: { top: "120px", right: "20px" }
+          zoomControlPosition: { top: "250px", right: "20px" }
         }
       );
       

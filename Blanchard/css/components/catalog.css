@@ -199,7 +199,7 @@
   position: relative;
   font-size: 16px;
   font-weight: 600;
-  color: var(--color-purple) !important;
+  color: var(--color-purple);
   text-decoration: none;
   transition: color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
@@ -224,7 +224,7 @@
 }
 
 .catalog-unknown-link:active {
-  color: var(--color-purple-2) !important;
+  color: var(--color-purple-2);
   transition: color 0.2s ease-in-out;
 }
 
@@ -236,7 +236,7 @@
 .catalog-unknown-link:focus-visible {
   outline: none;
   background-color: var(--color-purple);
-  color: var(--color-white) !important;
+  color: var(--color-white);
   transition: color 0.2s ease-in-out;
 }
 
@@ -244,6 +244,9 @@
   width: 50%;
   margin: 0;
   padding: 0;
+ -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
 }
 
 .catalog__accordion button {
@@ -339,7 +342,7 @@
 }
 
 .italy-painter-link-active {
-  color: var(--color-purple-2) !important;
+  color: var(--color-purple-2);
 }
 
 .ui-corner-top {
@@ -361,6 +364,9 @@
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
   transition: border-color .2s ease-in-out;
+ -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
 }
 
 .catalog__accorion-title,

@@ -242,6 +242,9 @@
   text-align: left;
   color: var(--color-white);
   transition: border-color 0.2s ease-in-out;
+  -webkit-appearance: none;
+   border-radius: 0;
+   outline: none;
 }
 
 .adaptive-search-item:hover {
@@ -475,6 +478,9 @@
   text-align: left;
   color: var(--color-white);
   transition: border-color 0.2s ease-in-out;
+  -webkit-appearance: none;
+   border-radius: 0;
+   outline: none;
 }
 
 .header__search-item:hover {

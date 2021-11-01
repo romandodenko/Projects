@@ -165,13 +165,14 @@
 }
 
 .projects-slides {
-  width: 450px !important;
-  height: 150px !important;
+  width: 450px;
+  height: 150px;
+  margin-right: 50px;
 }
 
 .projects-slide-3,
 .projects-slide-6 {
-  margin-right: 52px !important;
+  margin-right: 52px;
 }
 
  .projects-partner-link {
@@ -195,6 +196,10 @@
 .img-2,
 .img-3 {
   top: 8px;
+}
+
+.projects-slide-5 .projects-partner-img {
+  top: 4px;
 }
 
 .projects-partner-img:hover{

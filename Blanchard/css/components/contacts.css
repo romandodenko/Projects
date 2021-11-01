@@ -52,6 +52,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   background-color: transparent;
+  -webkit-appearance: none;
+   outline: none;
 }
 
 .contacts__form input:hover {
@@ -250,14 +252,12 @@
 }
 
 .ymaps-2-1-79-map {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
 }
 
-/* .ymaps-2-1-79-zoom,
-.ymaps-2-1-79-controls__control_toolbar, 
-.ymaps-2-1-79-map-copyrights-promo, 
-.ymaps-2-1-79-copyright, 
-.ymaps-2-1-79-controls__control {
-  display: none !important;
-} */
+.ymaps-2-1-79-copyright,
+.ymaps-2-1-79-copyright__link,
+.ymaps-2-1-79-copyright__layout .ymaps-2-1-79-copyright__logo {
+  display: none;
+}
