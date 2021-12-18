@@ -1,49 +1,49 @@
 @font-face {
-  font-family: 'Roboto400';
+  font-family: 'Montserrat400';
   font-style: normal;
   font-weight: 400;
   display: swap;
-  src: local('Roboto-Regular'),
-       url("../fonts/Roboto-Regular.woff2") format("woff2"),
-       url("../fonts/Roboto-Regular.woff") format("woff");
+  src: local('Montserrat-Regular'),
+       url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+       url("../fonts/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto700';
-  font-style: normal;
-  font-weight: 700;
-  display: swap;
-  src: local('Roboto-Bold'),
-       url("../fonts/Roboto-Bold.woff2") format("woff2"),
-       url("../fonts/Roboto-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'TTFirsNeue400';
-  font-style: normal;
-  font-weight: 400;
-  display: swap;
-  src: local('TTFirsNeue-Regular'),
-       url("../fonts/TTFirsNeue-Regular.woff2") format("woff2"),
-       url("../fonts/TTFirsNeue-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'TTFirsNeue500';
+  font-family: 'Montserrat500';
   font-style: normal;
   font-weight: 500;
   display: swap;
-  src: local('TTFirsNeue-Medium'),
-       url("../fonts/TTFirsNeue-Medium.woff2") format("woff2"),
-       url("../fonts/TTFirsNeue-Medium.woff") format("woff");
+  src: local('Montserrat-Medium'),
+       url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+       url("../fonts/Montserrat-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'TTFirsNeue700';
+  font-family: 'Montserrat600';
+  font-style: normal;
+  font-weight: 600;
+  display: swap;
+  src: local('Montserrat-SemiBold'),
+       url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+       url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Montserrat700';
   font-style: normal;
   font-weight: 700;
   display: swap;
-  src: local('TTFirsNeue-Bold'),
-       url("../fonts/TTFirsNeue-Bold.woff2") format("woff2"),
-       url("../fonts/TTFirsNeue-Bold.woff") format("woff");
+  src: local('Montserrat-Bold'),
+       url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+       url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Montserrat800';
+  font-style: normal;
+  font-weight: 800;
+  display: swap;
+  src: local('Montserrat-ExtraBold'),
+       url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+       url("../fonts/Montserrat-ExtraBold.woff") format("woff");
 }
