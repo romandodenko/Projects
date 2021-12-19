@@ -12,6 +12,7 @@ const ttf2woff = require("gulp-ttf2woff")
 const ttf2woff2 = require("gulp-ttf2woff2")
 const sourcemaps = require("gulp-sourcemaps")
 const del = require("del")
+const webp = require("gulp-webp")
 const browserSync = require("browser-sync").create()
 
 const clean = () => {
@@ -88,32 +89,45 @@ const watchFiles = () => {
   })
 }
 
-const images = () => {
+const images = () => { 
+  src([
+    "src/images/**/*.jpg",
+    "src/images/**/*.png",
+    "src/images/*.svg",
+    "src/images/**/*.jpeg",
+  ])
+  .pipe(webp({
+    quality: 70,
+  }))
+  .pipe(dest("dist/images"))
   return src([
     "src/images/**/*.jpg",
     "src/images/**/*.png",
     "src/images/*.svg",
     "src/images/**/*.jpeg",
-    "src/images/**/*.webp",
   ])
-  .pipe(image())
   .pipe(dest("dist/images"))
 }
 
 watch("src/**/*.html", htmlMinify)
 watch(('src/css/**/*.scss'), styles)
 watch("src/images/svg/**/*.svg", svgSprites)
+watch("src/images/**/*.png", images)
+watch("src/images/**/*.jpeg", images)
+watch("src/images/**/*.jpg", images)
+watch("src/images/**/*.webp", images)
 watch("src/js/**/*.js", scripts)
 watch("src/resources/**", resources)
 watch("src/fonts/**.ttf", fonts)
 
 exports.clean = clean
 exports.styles = styles
+exports.images = images
 exports.scripts = scripts
 exports.fonts = fonts
 exports.htmlMinify = htmlMinify
 
-exports.default = series(clean, resources, htmlMinify, fonts, scripts, styles, images, svgSprites, watchFiles)
+exports.default = series(clean, resources, htmlMinify, fonts, scripts, styles, svgSprites, images, watchFiles)
 
 const cleanBuild = () => {
   return del(["build"])
@@ -121,7 +135,6 @@ const cleanBuild = () => {
 
 const stylesBuild = () => {
   return src("dist/css/style.css")
-  .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixes({
     grid: true,
@@ -131,16 +144,14 @@ const stylesBuild = () => {
     level: 2
   }))
   .pipe(concat("style.css"))
-  .pipe(sourcemaps.write())
   .pipe(dest("build/css"))
 }
 
 const fontsBuild = () => {
-  src("src/fonts/**.ttf")
-  .pipe(ttf2woff())
-  .pipe(dest("build/fonts"))
-  return  src("src/fonts/**.ttf")
-  .pipe(ttf2woff2())
+  return src([
+    "dist/fonts/**.woff", 
+    "dist/fonts/**.woff2",
+  ])
   .pipe(dest("build/fonts"))
 }
 
@@ -158,12 +169,16 @@ const svgSpritesBuild = () => {
 }
 
 const imagesBuild = () => {
+   src([
+    "dist/images/**/*.jpg",
+    "dist/images/**/*.png",
+    "dist/images/*.svg",
+    "dist/images/**/*.jpeg",
+  ])
+  .pipe(image())
+  .pipe(dest("build/images"))
   return src([
-    "src/images/**/*.jpg",
-    "src/images/**/*.png",
-    "src/images/*.svg",
-    "src/images/**/*.jpeg",
-    "src/images/**/*.webp",
+    "dist/images/**/*.webp",
   ])
   .pipe(image())
   .pipe(dest("build/images"))
@@ -171,24 +186,20 @@ const imagesBuild = () => {
 
 const scriptsBuild = () => {
   src("dist/js/components/**.js")
-  .pipe(sourcemaps.init())
   .pipe(babel({
     presets: ["@babel/env"]
   }))
   .pipe(uglify({
     toplevel: true,
   }).on("error", notify.onError()))
-  .pipe(sourcemaps.write())
   .pipe(dest("build/js/components/"))
   return src("dist/js/**.js")
-  .pipe(sourcemaps.init())
   .pipe(babel({
     presets: ["@babel/env"]
   }))
   .pipe(uglify({
     toplevel: true,
   }).on("error", notify.onError()))
-  .pipe(sourcemaps.write())
   .pipe(dest("build/js/"))
 }
 

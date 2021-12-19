@@ -1,0 +1,376 @@
+.footer {
+  position: relative;
+  background-color: #eaeaea;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: var(--color-white);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 23px 15px 51px 15px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 27px;
+  }
+  &__icon {
+    margin-top: -2px;
+    margin-left: -4px;
+    & a {
+      display: block;
+      width: 38px;
+      height: 38px;
+      padding: 4px;
+      transition: all .2s ease-in-out;
+      &:hover {
+        & svg {
+          fill: var(--color-purple);
+        }
+      }
+      &:focus-visible {
+        background-color: var(--color-purple-hover);
+        & svg {
+          fill: var(--color-white);
+        }
+      }
+      &:active {
+        & svg {
+          fill: var(--color-dark-purple);
+          transition-duration: .1s;
+        }
+      }
+      & svg  {
+        transition: all .2s ease-in-out;
+        fill: #999999;
+      }
+    }
+  }
+  &__icon:not(:last-child) {
+    margin-right: 16px;
+  }
+  &__lists {
+    width: 65.7%;
+    margin-right: 2px;
+    margin-top: 4px;
+  }
+
+  &__list {
+    display: flex;
+  }
+  &__link {
+    font-family: "OpenSans400";
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-gray);
+    padding: 1px 3px 1px 3px;
+    margin-left: -3px;
+    transition: all .2s ease-in-out;
+    &:hover {
+      color: var(--color-purple);
+    }
+    &:focus-visible {
+      color: var(--color-black);
+      background-color: var(--color-purple-hover);
+    }
+    &:active {
+      color: var(--color-dark-purple);
+      transition-duration: .1s;
+    }
+  }
+  &__copy {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  &__copyt {
+    font-family: "OpenSans400";
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--color-gray);
+    & span {
+      margin-left: 7px;
+    }
+  }
+}
+
+.footer-list {
+  width: 100%;
+  flex-wrap: wrap;
+  &__title {
+    font-family: "OpenSans400";
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-black);
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__item:nth-child(1) {
+    margin-bottom: 7px;
+  }
+}
+
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    display: flex;
+    width: 49%;
+  }
+  &__right {
+    display: flex;
+    width: 49%;
+  }
+}
+
+.list-second {
+  margin-left: 26.4%;
+}
+
+.list-third {
+  margin-left: 8%;
+}
+
+.list-four {
+  margin-left: auto;
+}
+
+
+
+@media (max-width: 1325px) {
+  .footer {
+    &__container {
+      padding: 25px 35px 48px 35px;
+    }
+    &__pic {
+      margin-top: -1px;
+    }
+    &__lists {
+      width: 76.7%;
+      margin-top: 3px;
+    }
+    &__copy {
+      bottom: 5px;
+    }
+  }
+  .footer-list{
+    &__item:nth-child(1) {
+      margin-bottom: 7px;
+    }
+  }
+
+  .list-second {
+    margin-left: 20%;
+  }
+
+  .list-third {
+    margin-left: 4%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .footer {
+    &__top {
+      flex-direction: column;
+      & .icon-list {
+        margin-top: -3px;
+        margin-right: -5px;
+      }
+    }
+    &__pic {
+      display: flex;
+      justify-content: space-between  ;
+    }
+    &__lists {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0;
+    }
+    &__item:nth-child(4) {
+      margin-right: 2px;
+    }
+  }
+  .footer-lists {
+    &__left {
+      width: 50%;
+      justify-content: space-between;
+    }
+    &__right {
+      width: 50%;
+      justify-content: space-between;
+    }
+  }
+  .list-second {
+    margin-left: 0;
+    margin-right: 13%;
+  }
+
+  .list-third {
+    margin-left: 13%;
+  }
+
+  .list-four {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__container {
+      padding: 27px 72px 54px 72px;
+    }
+    &__top {
+      & .icon-list {
+        margin-top: -4px;
+      }
+    }
+    &__icon {
+      margin-top: -2px;
+      margin-left: -4px;
+      & a {
+        display: block;
+        width: 38px;
+        height: 38px;
+        padding: 4px;
+        transition: all .2s ease-in-out;
+        &:hover {
+          & svg {
+            fill: #999999;
+          }
+        }
+        &:active {
+          & svg {
+            fill: var(--color-dark-purple);
+            transition-duration: .1s;
+          }
+        }
+      }
+    }
+    &__link {
+      &:hover {
+        color: var(--color-gray);
+      }
+      &:active {
+        color: var(--color-dark-purple);
+      }
+    }
+  }
+  .footer-lists {
+    &__left {
+      justify-content: space-between;
+    }
+    &__right {
+      width: 50%;
+      margin-left: 2%;
+      justify-content: space-between;
+    }
+  }
+  .list-second  {
+    margin-right: 15%;
+  }
+  .list-third  {
+    margin-left: -3px;
+  }
+  .list-four {
+    margin-right: 3px;
+  }
+  .footer-list__item:nth-child(1) {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer {
+    &__container {
+      padding: 27px 50px 54px 50px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-lists {
+    flex-direction: column;
+    &__left {
+      width: 100%;
+      margin-bottom: 29px;
+    }
+    &__right {
+      width: 100%;
+      margin-left: 0;
+      padding-bottom: 15px;
+    }
+  }
+  .list-second {
+    margin-right: -2px;
+  }
+  .list-third {
+    margin-left: 0;
+  }
+  .list-four {
+    margin-right: 9px;
+  }
+}
+
+@media (max-width: 530px) {
+  .footer {
+    &__container {
+      padding-right: 13px;
+      padding-left: 13px;
+      padding-bottom: 26px;
+    }
+    &__pic {
+      margin-bottom: 23px;
+    }
+    &__item {
+      margin-bottom: 27px;
+    }
+    &__item:nth-child(3) {
+      margin-left: -2px;
+    }
+    &__item:nth-child(4) {
+      margin-right: 11px;
+    }
+  } 
+  .footer-list {
+    width: 99%;
+  }
+  .footer-lists {
+    &__right {
+      padding-bottom: 27px;
+    }
+  }
+}
+
+@media (max-width: 445px) {
+  .footer {
+    &__container {
+      padding: 25px 13px 27px 13px;
+    }
+    &__pic {
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 22px;
+    }
+    &__logo {
+      margin-bottom: 25px;
+    }
+    &__item:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+  .list-third {
+    margin-left: -2px;
+  }
+}

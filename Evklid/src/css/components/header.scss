@@ -1,0 +1,106 @@
+.header {
+  padding: 14px 0;
+  background-color: var(--color-white);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right {
+    position: relative;
+    display: flex;
+  }
+  &__nav {
+    margin-top: 3px;
+    margin-right: 74px;
+  }
+  &__link {
+    position: relative;
+    font-family: "Montserrat600";
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-black);
+    padding: 1px 3px;
+    border: 2px solid transparent;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      width: 95%;
+      height: 2px;
+      background-color: transparent;
+      transform: translateX(-50%);
+      transition: all .2s linear;
+      opacity: 0;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 75px;
+  }
+  &__btn {
+    padding: 1px 3px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    margin-right: -3px;
+  }
+}
+.searchwrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 539px;
+  height: 60px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: var(--color-white);
+  border-radius: 18px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  transition: all .2s ease-in-out;
+  & input {
+    width: 412px;
+    font-family: "Montserrat500";
+    font-size: 18px;
+    line-height: 22px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-left: 30px;
+    padding-bottom: 5px;
+    margin-right: 12px;
+    &::placeholder {
+      font-family: "Montserrat500";
+      font-size: 18px;
+      line-height: 22px;
+      color: #adadad;
+    }
+  }
+  &__exit {
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 1px 3px;
+  }
+  &__search {
+    background-color: transparent;
+    margin-right: 12px;
+    padding: 1px 3px;
+    border: 2px solid transparent;
+    transition: all .2s ease-in-out;
+    & svg path {
+      stroke: var(--color-orange);
+    }
+    & svg rect {
+      fill: var(--color-orange);
+    }
+  }
+}
+
+.search-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: visible;
+}

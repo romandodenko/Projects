@@ -1,0 +1,81 @@
+:root {
+  --color-purple :#a65cf0;
+  --color-purple-hover: #c998fb;
+  --color-dark-purple: #7033ac;
+  --color-black: #333333;
+  --color-gray: #999999;
+  --color-dark-gray: #666666;
+  --color-white: #ffffff;
+  --color-orange: #ff862f;
+  --color-orange-hover: #ffBd59;
+  --color-dark-orange: #bb370e;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'OpenSans400';
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-family: "OpenSans400";
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--color-black);
+}
+
+.subtitle {
+  font-family: "OpenSans400";
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--color-black);
+}
+
+.text {
+  font-family: "OpenSans400";
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--color-black);
+}
+
+.btn {
+  font-family: "OpenSans700";
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-purple);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 19px 48px;
+}
+
+.btn-color {
+  font-family: "OpenSans600";
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--color-purple);
+  text-align: center;
+  border: 2px solid var(--color-purple);
+  border-radius: 10px;
+  background-color: transparent;
+  border-color: var(--color-purple);
+  align-self: flex-start;
+  padding: 16px 34px 18px 34px;
+}
+
+.body-block {
+  overflow: hidden;
+  padding-right: 17px;
+}

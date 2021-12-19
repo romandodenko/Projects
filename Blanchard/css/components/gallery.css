@@ -463,16 +463,18 @@
   transition: all 0.4s ease-in-out 0s;
   overflow-y: auto;
   overflow-x: hidden;
-  display: none;
-  animation-name: popup;
+  pointer-events: hidden;
+  transition: all .2s linear;
+  /* display: none; */
+  /* animation-name: popup;
   animation-timing-function: ease-in-out;
-  animation-duration: 0.5s;
+  animation-duration: 0.5s; */
 }
 
 .slide-popup-active {
   opacity: 1;
   visibility: visible;
-  display: block;
+  pointer-events: visible;
 }
 
 .popup-wrapper {

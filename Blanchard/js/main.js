@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const element = document.querySelector('.gallery__dropdown-select');
 const adaptive = document.querySelector('.gallery__dropdown-select-adaptive');
 
-const choices = new Choices(element, {
+const choices1 = new Choices(element, {
   searchEnabled: false,
 });
 

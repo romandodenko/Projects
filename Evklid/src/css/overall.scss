@@ -1,36 +1,155 @@
+:root {
+  --color-black: #333333;
+  --color-dark-black: #000000;
+  --color-gray: #666666;
+  --color-white: #ffffff;
+  --color-orange: #ff9900;
+  --color-dark-orange: #e1670e;
+  --color-light-orange: #f7b045;
+}
+
 .container {
-  max-width: 1320px;
-  padding: 0 15px;
+  max-width: 1830px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
 body {
-  font-family: 'Roboto400';
+  font-family: 'Montserrat400';
 }
 
 .text {
-  font-family: "Roboto400";
+  font-family: "Montserrat400";
   font-size: 16px;
-  line-height: 22px;
-  color: #202020;;
+  line-height: 20px;
+  color: var(--color-black);
 }
 
 .title {
-  font-family: "TTFirsNeue400";
+  font-family: "Montserrat400";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 59px;
+  color: var(--color-black);
+}
+
+.subtitle {
+  font-family: "Montserrat700";
   font-size: 24px;
-  line-height: 22px;
-  color: #202020;
+  line-height: 29px;
+  color: var(--color-black);
 }
 
 .btn {
-  font-family: "Roboto700";
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
-  background-color: #FF6E30;
-  padding: 15px 21px;
-  border: 2px solid transparent;
-  transition: all .2s ease-in-out;
-  display: inline-block;
+  font-family: "Montserrat700";
+  font-size: 23px;
+  line-height: 29px;
+  color: var(--color-white);
+  padding: 19px, 37px, 19px, 37px;
+  border: 1px;
+  background-color: var(--color-orange);
 }
 
+@media (min-width: 1024px) {
+  .header {
+    &__link {
+      transition: all .2s ease-in-out;
+      &:hover {
+        &::before {
+          background-color: var(--color-orange);
+          opacity: 1;
+        }
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+      &:active {
+        color: var(--color-dark-orange);
+        transition-duration: .1s;
+        &::before {
+          background-color: var(--color-dark-orange);
+          opacity: 1;
+        }
+      }
+    }
+    &__btn {
+      & svg path {
+        transition: all .2s ease-in-out;
+      }
+      & svg rect {
+        transition: all .2s ease-in-out;
+      }
+      &:hover svg path {
+        stroke: var(--color-orange);
+      }
+      &:hover svg rect {
+        fill: var(--color-orange);
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+      &:active svg path {
+        stroke: var(--color-dark-orange);
+      }
+      &:active svg rect {
+        fill: var(--color-dark-orange);
+      }
+    }
+  }
+  .searchwrapper {
+    &__search {
+      & svg path {
+        transition: all .2s ease-in-out;
+      }
+      & svg rect {
+        transition: all .2s ease-in-out;
+      }
+      &:focus-visible  {
+        border-color: var(--color-orange);
+        & svg path {
+          stroke: var(--color-black);
+        }
+        & svg rect {
+          fill: var(--color-black);
+        }
+      }
+      &:active {
+        & svg path {
+          stroke: var(--color-dark-orange);
+        }
+        & svg rect {
+          fill: var(--color-dark-orange);
+        }
+      } 
+    }
+    &__exit {
+      & svg circle {
+        transition: all .2s ease-in-out;
+      }
+      & svg rect {
+        fill: #999999;
+        transition: all .2s ease-in-out;
+      }
+      &:hover {
+        & svg circle {
+          stroke: var(--color-orange);
+        }
+        & svg rect {
+          fill: var(--color-orange);
+        }
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+      &:active {
+        & svg circle {
+          stroke: var(--color-black);
+        }
+        & svg rect  {
+          fill: var(--color-black);
+        }
+      }
+    }
+  }
+}

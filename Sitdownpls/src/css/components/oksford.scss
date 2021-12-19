@@ -1,0 +1,92 @@
+.oksford {
+  background-image: url(/images/oksfordImg.webp), url(/images/oksfordImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-black);
+  padding: 153px 0 150px 0;
+  margin-bottom: 72px;
+  &__title {
+    font-family: "PlayfairDisplay900";
+    font-size: 60px;
+    line-height: 120%;
+    color: #D5B986;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    font-family: "OpenSans400";
+    font-size: 48px;
+    line-height: 120%;
+    color: var(--color-white);
+    margin-bottom: 50px;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 19px 30px;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: var(--color-purple-hover);
+    }
+    &:focus-visible {
+      background-color: var(--color-purple-hover);
+      border-color: var(--color-dark-purple);
+    }
+    &:active {
+      background-color: var(--color-dark-purple);
+      transition-duration: .1s;
+    }
+  }
+}
+
+@media (max-width: 1325px) {
+  .oksford {
+    padding-top: 153px;
+    background-image: url(/images/oksfordImg-1024.webp), url(/images/oksfordImg-1024.png);
+    &__container {
+      padding: 0 35px;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .oksford {
+    background-image: url(/images/oksford-768.webp), url(/images/oksford-768.png);
+    &__text {
+      margin-bottom: 50px;
+    }
+    &__btn {
+      &:hover {
+        background-color: var(--color-purple);
+      }
+      &:active {
+        background-color: var(--color-dark-purple);
+      }
+    }
+  }
+}
+
+@media (max-width: 605px) {
+  .oksford {
+    position: relative;
+    padding: 31px 0 62px 0;
+    margin-bottom: 161px;
+    &__container {
+      padding: 0 12px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__btn {
+      position: absolute;
+      bottom: -90px;
+      width: 92.5%;
+      left: 4%;
+    }
+  }
+}

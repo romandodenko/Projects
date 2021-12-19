@@ -1,0 +1,282 @@
+.useful {
+  margin-bottom: 70px;
+  &__container {
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 26px;
+  }
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+  }
+  &__text {
+    font-size: 24px;
+    line-height: 33px;
+    flex: 1 1 auto;
+    margin-bottom: 37px;
+    align-self: flex-start;
+  }
+  &__link {
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: var(--color-purple);
+      color: var(--color-white);
+    }
+    &:focus-visible {
+      background-color: var(--color-purple-hover);
+      color: var(--color-white);
+    }
+    &:active {
+      background-color: var(--color-dark-purple);
+      border-color: var(--color-dark-purple);
+      color: var(--color-white);
+      transition-duration: .1s;
+    }
+  }
+  & br {
+    display: none;
+  }
+  &__item {
+    display: flex;
+    width: 48.7%;
+    height: auto;
+    margin-right: 32px;
+    padding: 456.5px 30px 30px 30px;
+    border-radius: 10px;
+    background-color: #F7F7F7;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__item:nth-child(1) {
+    background-image: url(/images/usefulImg-1.webp), url(/images/usefulImg-1.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  &__item:nth-child(2) {
+    background-image: url(/images/usefulImg-2.webp), url(/images/usefulImg-2.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  &__item:nth-child(3) {
+    background-image: url(/images/usefulImg-3.webp), url(/images/usefulImg-3.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  &__item:nth-child(4) {
+    background-image: url(/images/usefulImg-4.webp), url(/images/usefulImg-4.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  &__item:nth-child(5) {
+    background-image: url(/images/usefulImg-5.webp), url(/images/usefulImg-5.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  &__buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: max-content;
+    margin-right: 15px;
+  }
+  & br {
+    display: block;
+  }
+  &__button {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 30px;
+    transition: all .2s ease-in-out;
+    & svg path {
+      transition: all .2s ease-in-out;
+    }
+    & svg circle {
+      transition: all .2s ease-in-out;
+    }
+    &:hover  {
+      background-color: var(--color-purple);
+    }
+    &:hover svg path {
+      stroke: var(--color-white);
+    }
+    &:focus-visible {
+      background-color: var(--color-purple-hover);
+    }
+    &:focus-visible svg path {
+      stroke: var(--color-white);
+    }
+    &:active  {
+      background-color: var(--color-dark-purple);
+    }
+    &:active svg path {
+      stroke: var(--color-white);
+    }
+    &:active svg circle {
+      stroke: var(--color-dark-purple);
+    }
+  }
+    &__button:not(:last-child) {
+      margin-right: 13px;
+  }
+}
+
+.swiper-button-disabled:hover {
+  background-color: transparent;
+  & svg path  {
+  stroke: #999999;
+  }
+}
+
+.swiper-button-disabled:active {
+  & svg circle {
+    stroke: #999999;
+  }
+}
+
+@media (max-width: 1325px) {
+  .useful {
+    &__container {
+      padding: 0 35px;
+    }
+    &__buttons {
+      margin-right: 35px;
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  .useful {
+    margin-bottom: 68px;
+    &__item {
+      width: 31%;
+      padding-top: 24.3%;
+      padding-left: 31px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 31px;
+    }
+    &__item:nth-child(1) {
+      background-image: url(/images/usefulImg-1-768.webp), url(/images/usefulImg-1-768.png);
+      background-size: contain;
+    }
+    &__item:nth-child(2) {
+      background-image: url(/images/usefulImg-2-768.webp), url(/images/usefulImg-2-768.png);
+      background-size: contain;
+    }
+    &__item:nth-child(3) {
+      background-image: url(/images/usefulImg-3-768.webp), url(/images/usefulImg-3-768.png);
+      background-size: contain;
+    }
+    &__item:nth-child(4) {
+      background-image: url(/images/usefulImg-4-768.webp), url(/images/usefulImg-4-768.png);
+      background-size: contain;
+    }
+    &__item:nth-child(5) {
+      background-image: url(/images/usefulImg-5-768.webp), url(/images/usefulImg-5-768.png);
+      background-size: contain;
+    }
+  }
+}
+
+@media (max-width: 965px) {
+  .useful {
+    &__item {
+      width: 48%;
+      padding-top: 37.5%;
+    }
+  }  
+}
+
+@media (max-width: 768px) {
+  .useful {
+    &__container {
+      padding: 0 72px;
+    }
+    &__item {
+      width: 47.4%;
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+    &__buttons {
+      margin-right: 72px;
+    }
+    &__button {
+      &:hover  {
+        background-color: transparent;
+      }
+      &:hover svg path {
+        stroke: var(--color-purple);
+      }
+      &:active  {
+        background-color: var(--color-dark-purple);
+      }
+      &:active svg path {
+        stroke: var(--color-white);
+      }
+      &:active svg circle {
+        stroke: var(--color-dark-purple);
+      }
+    }
+    &__link {
+      padding: 16px 34px 18px 32px;
+      &:hover {
+        color: var(--color-purple);
+        background-color: transparent;
+      }
+      &:active {
+       color: var(--color-white);
+       background-color: var(--color-dark-purple);
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .useful {
+    &__container {
+      padding: 0 50px;
+    }
+  }
+}
+
+@media (max-width: 605px) {
+  .useful {
+    &__title {
+      font-size: 24px;
+      line-height: 100%;
+    }
+    &__item {
+      width: 100%;
+      padding-top: 78.5%;
+      padding-left: 29px;
+    }
+    &__buttons {
+      top: 103%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__text {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .useful {
+    margin-bottom: 118px;
+    &__container {
+      padding: 0 13px;
+    }
+  }
+}

@@ -1107,6 +1107,9 @@
 
   .header__content-active  {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
   }
 
   .header__adaptive-search {

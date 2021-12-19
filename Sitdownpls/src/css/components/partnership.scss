@@ -1,0 +1,268 @@
+.partnership {
+  &__content {
+    max-width: 842px;
+  }
+  & .link-active {
+    color: var(--color-dark-purple);
+    margin-right: 0;
+    padding: 1px 4px 1px 4px;
+    &::before {
+      content: "";
+    }
+   }
+   &__title {
+     margin-bottom: 33px;
+   }
+   &__subtitle {
+     margin-bottom: 12px;
+   }
+   &__suppliers {
+    margin-bottom: 33px;
+   }
+   &__text {
+    font-family: "OpenSans400";
+    font-size: 16px;
+    line-height: 180%;
+    color: var(--color-dark-gray);
+   }
+   &__get {
+    margin-bottom: 32px;
+     & .partnership__list {
+      max-width: 624px;
+     }
+     & .partnership__item {
+      display: flex;
+     }
+     & .partnership__item:not(:last-child) {
+       margin-bottom: 13px;
+     }
+     & .partnership__text {
+      margin-left: 12px;
+      margin-bottom: 0;
+      margin-top: -2px;
+      line-height: 153%;
+     }
+  }
+  &__span {
+    display: inline-block;
+    font-family: "OpenSans600";
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-orange);
+    margin-bottom: 12px;
+  }
+  &__benefits {
+    margin-bottom: 32px;
+    & .partnership__text {
+      margin-bottom: 12px;
+    }
+  }
+  &__guarantees {
+    margin-bottom: 72px;
+    & .partnership__subtitle {
+      margin-bottom: 14px;
+    }
+    & .partnership__list {
+      margin-left: 18px;
+      margin-bottom: 31px;
+    }
+    & .partnership__item {
+      font-family: "OpenSans600";
+      font-size: 16px;
+      line-height: 180%;
+      color: var(--color-orange);
+      padding-left: 8px;
+    }
+    & .partnership__item:not(:last-child) {
+      margin-bottom: 13px;
+    }
+    & .partnership__text {
+      width: 99%;
+    }
+    .text-width {
+      width: 100%;
+    }
+  }
+  &__term {
+    display: flex;
+    align-items: center;
+    & .partnership__text {
+      font-family: "OpenSans400";
+      font-size: 24px;
+      line-height: 150%;
+      color: var(--color-black);
+      width: 60%;
+      margin-bottom: 0;
+      margin-left: 32px;
+    }
+  }
+  br {
+    display: none;
+  }
+}
+
+.partnership-links {
+  margin-top: 0;
+  margin-bottom: 31px;
+  margin-left: -4px;
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 7px;
+  }
+  &__link {
+    position: relative;
+    font-family: "OpenSans400";
+    font-size: 14px;
+    line-height: 100%;
+    padding: 1px 4px 1px 4px;
+    color: var(--color-gray);
+    transition: all .2s ease-in-out;
+    &::before {
+      content: "/";
+      position: absolute;
+      right: -8px;
+      top: 3px;
+      color: var(--color-gray);
+      margin-left: 10px;
+    }
+    &:hover {
+      color: var(--color-purple);
+    }
+    &:focus-visible {
+      color: var(--color-black);
+      background-color: var(--color-purple-hover);
+    }
+    &:active {
+      color: var(--color-dark-purple);
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .partnership {
+    &__container {
+      padding: 0 35px
+    }
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .partnership {
+    &__container {
+      padding: 0 72px
+    }
+    &__title {
+      margin-bottom: 34px;
+    }
+    &__guarantees {
+      margin-bottom: 69px;
+      & .partnership__list {
+        margin-bottom: 33px;
+      }
+    }
+    &__term {
+     & .partnership__text {
+        width: 85%;
+      }
+    }
+  } 
+
+  .partnership-links {
+    &__link {
+      &:hover {
+        color: var(--color-gray);
+      }
+      &:active {
+        color: var(--color-dark-purple);
+      }
+    }
+    .link-active {
+      &:hover {
+        color: var(--color-dark-purple);
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .partnership {
+    &__container {
+      padding: 0 12px;
+    }
+    &__links {
+      display: none;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 100%;
+      margin-top: 9px;
+      margin-bottom: 32px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 11px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 180%;
+    }
+    &__suppliers {
+      margin-bottom: 31px;
+    }
+    &__term {
+      & .partnership__text {
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+    &__get {
+      margin-bottom: 29px;
+      & .partnership__subtitle {
+        margin-bottom: 12px;
+      }
+    }
+    &__benefits {
+      margin-bottom: 29px;
+      & .partnership__subtitle {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+    &__guarantees {
+      margin-bottom: 65px;
+      & .partnership__list {
+        margin-bottom: 26px;
+      }
+      & .partnership__subtitle {
+        margin-bottom: 13px;
+      }
+      & .partnership__text {
+        position: relative;
+        top: -4px;
+      }
+      & .partnership__item:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+    &__term {
+      & .partnership__text {
+        margin-top: 4px;
+        margin-left: 16px;
+      }
+      & img {
+        position: relative;
+        top: -4px;
+        left: 0;
+      }
+    }
+    br {
+      display: block;
+    }
+  }
+ }
