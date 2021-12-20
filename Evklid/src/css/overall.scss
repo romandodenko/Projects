@@ -16,12 +16,14 @@
 
 body {
   font-family: 'Montserrat400';
+  overflow-x: hidden;
+  background-color: #eaeaea;
 }
 
 .text {
   font-family: "Montserrat400";
   font-size: 16px;
-  line-height: 20px;
+  line-height: 32px;
   color: var(--color-black);
 }
 
@@ -46,7 +48,7 @@ body {
   font-size: 23px;
   line-height: 29px;
   color: var(--color-white);
-  padding: 19px, 37px, 19px, 37px;
+  padding: 24px 40px 24px 40px;
   border: 1px;
   background-color: var(--color-orange);
 }
@@ -64,14 +66,6 @@ body {
       &:focus-visible {
         border-color: var(--color-orange);
       }
-      &:active {
-        color: var(--color-dark-orange);
-        transition-duration: .1s;
-        &::before {
-          background-color: var(--color-dark-orange);
-          opacity: 1;
-        }
-      }
     }
     &__btn {
       & svg path {
@@ -88,12 +82,6 @@ body {
       }
       &:focus-visible {
         border-color: var(--color-orange);
-      }
-      &:active svg path {
-        stroke: var(--color-dark-orange);
-      }
-      &:active svg rect {
-        fill: var(--color-dark-orange);
       }
     }
   }
@@ -114,21 +102,12 @@ body {
           fill: var(--color-black);
         }
       }
-      &:active {
-        & svg path {
-          stroke: var(--color-dark-orange);
-        }
-        & svg rect {
-          fill: var(--color-dark-orange);
-        }
-      } 
     }
     &__exit {
       & svg circle {
         transition: all .2s ease-in-out;
       }
       & svg rect {
-        fill: #999999;
         transition: all .2s ease-in-out;
       }
       &:hover {
@@ -142,14 +121,121 @@ body {
       &:focus-visible {
         border-color: var(--color-orange);
       }
-      &:active {
-        & svg circle {
-          stroke: var(--color-black);
-        }
-        & svg rect  {
-          fill: var(--color-black);
-        }
+    }
+  }
+  .hero {
+    &__btn {
+      &:hover {
+        background-color: var(--color-light-orange);
+      }
+      &:focus-visible {
+        background-color: var(--color-light-orange);
       }
     }
   }
+  .about {
+    &__btn {
+      &:hover {
+        background-color: var(--color-orange);
+      }
+      &:focus-visible {
+        background-color: var(--color-orange);
+      }
+    }
+  }
+  .work-tab {
+    &__button {
+      &:hover {
+        background-color: var(--color-light-orange);
+      }
+      &:focus-visible {
+        background-color: var(--color-light-orange);
+      }
+    }
+    &__but {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-gray);
+      }
+      &:focus-visible {
+        color: var(--color-white);
+        background-color: var(--color-gray);
+      }
+    }
+  }
+  .accordion {
+   &__heading {
+    &:hover {
+      border-color: orange;
+      position: relative;
+      z-index: 1;
+      & .accordion__title {
+        color: var(--color-orange);
+      }
+      & svg ellipse {
+        fill: var(--color-orange);
+      }
+      & svg path {
+        fill: var(--color-white);
+      }
+    }
+    &:focus-visible {
+      border-color: orange;
+      position: relative;
+      z-index: 1;
+      & .accordion__title {
+        color: var(--color-orange);
+      }
+      & svg ellipse {
+        fill: var(--color-orange);
+      }
+      & svg path {
+        fill: var(--color-white);
+      }
+    }
+   }
+   }
+   .footer {
+     &__btn {
+      &:hover {
+        background-color: var(--color-light-orange);
+      }
+      &:focus-visible {
+        background-color: var(--color-light-orange);
+      }
+    }
+    &__link {
+      &:hover {
+        color: var(--color-orange)
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+    }
+    &__icon {
+      &:hover {
+        & svg path {
+          fill: var(--color-orange);
+        }
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+    }
+    &__text {
+      &:hover {
+        background-color: var(--color-gray);
+      }
+    }
+    &__email {
+      &:hover {
+        background-color: var(--color-gray);
+      }
+    }
+    &__textarea {
+      &:hover {
+        background-color: var(--color-gray);
+      }
+    }
+   }
 }

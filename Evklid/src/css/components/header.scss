@@ -1,13 +1,14 @@
 .header {
-  padding: 14px 0;
   background-color: var(--color-white);
   &__container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
   &__right {
-    position: relative;
     display: flex;
   }
   &__nav {
@@ -34,6 +35,15 @@
       transition: all .2s linear;
       opacity: 0;
     }
+    &:active {
+      color: var(--color-dark-orange);
+      transition-duration: .1s;
+      &::before {
+        background-color: var(--color-dark-orange);
+        opacity: 1;
+        transition-duration: .1s;
+      }
+    }
   }
   &__list {
     display: flex;
@@ -46,23 +56,70 @@
     background-color: transparent;
     border: 2px solid transparent;
     margin-right: -3px;
+    &:active svg path {
+      stroke: var(--color-dark-orange);
+    }
+    &:active svg rect {
+      fill: var(--color-dark-orange);
+    }
+  }
+  &__burger {
+    position: relative;
+    width: 30px;
+    height: 23px;
+    background-color: transparent;
+    display: none;
+    z-index: 22;
+    transition: all .2s ease-in-out;
+    & span {
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-black);
+      transition: all .2s ease-in-out;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      top: 0;
+      left: 0;
+      background-color: var(--color-black);
+      transition: all .2s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-black);
+      transition: all .2s ease-in-out;
+    }
   }
 }
 .searchwrapper {
   display: flex;
   align-items: center;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 30px;
+  bottom: 50%;
   width: 539px;
   height: 60px;
   opacity: 0;
+  
+  transform: translateY(50%);
   visibility: hidden;
   pointer-events: none;
   background-color: var(--color-white);
   border-radius: 18px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
   transition: all .2s ease-in-out;
+  z-index: 23;
   & input {
     width: 412px;
     font-family: "Montserrat500";
@@ -83,6 +140,17 @@
     background-color: transparent;
     border: 2px solid transparent;
     padding: 1px 3px;
+    & svg rect {
+      fill: #999999;
+    }
+    &:active {
+      & svg circle {
+        stroke: var(--color-black);
+      }
+      & svg rect  {
+        fill: var(--color-black);
+      }
+    }
   }
   &__search {
     background-color: transparent;
@@ -96,6 +164,14 @@
     & svg rect {
       fill: var(--color-orange);
     }
+    &:active {
+      & svg path {
+        stroke: var(--color-dark-orange);
+      }
+      & svg rect {
+        fill: var(--color-dark-orange);
+      }
+    } 
   }
 }
 
@@ -103,4 +179,105 @@
   opacity: 1;
   visibility: visible;
   pointer-events: visible;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    &__container {
+      padding: 25px 50px;
+    }
+    &__nav {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      height: 420px;
+      padding: 100px 30px 30px 45px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      background-color: var(--color-white);
+      margin-right: 0;
+      transition: all .2s ease-in-out;
+      z-index: 999;
+    }
+    &__list {
+      display: block;
+    }
+    &__item {
+      margin: 0;
+    }
+    &__item:not(:last-child) {
+      margin: 0 0 40px 0;
+    }
+    &__logo {
+      order: 2;
+    }
+    &__burger {
+      display: block;
+      order: 1;
+      z-index: 1000;
+    }
+    &__right {
+      order: 3;
+    }
+  }
+  .nav-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+  }
+  .burger-active {
+    &::before {
+      transform: rotate(45deg) translate(10px,10px);
+    }
+    &::after {
+      transform: rotate(-45deg) translate(4px,-4px);
+    }
+    & span {
+      transform: translateX(-100px);
+    }
+  }
+}
+
+@media (max-width: 768px)  {
+  .header {
+    &__container {
+      padding-top: 9px;
+      padding-bottom: 12px;
+    }
+  }
+  .searchwrapper {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    padding-top: 17px;
+    transform: translateY(0);
+    & input {
+      width: 89%;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+    &__search {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 500px)  {
+  .header {
+    &__container {
+      padding: 17px 15px;
+    }
+    &__nav {
+      width: 100%;
+      padding-left: 20px;
+    }
+    &__link {
+      font-family: "Montserrat700";
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 }

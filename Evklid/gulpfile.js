@@ -21,7 +21,7 @@ const clean = () => {
  
 const resources = () => {
   return src("src/resources/**")
-  .pipe(dest("dist/js/resources"))
+  .pipe(dest("dist/resources"))
 }
 
 const fonts = () => {
@@ -203,4 +203,9 @@ const scriptsBuild = () => {
   .pipe(dest("build/js/"))
 }
 
-exports.build = series(cleanBuild, htmlBuild, fontsBuild, scriptsBuild, stylesBuild, imagesBuild, svgSpritesBuild)
+const resourcesBuild = () => {
+  return src("dist/resources/**")
+  .pipe(dest("build/resources"))
+}
+
+exports.build = series(cleanBuild, htmlBuild, fontsBuild, scriptsBuild, resourcesBuild, stylesBuild, imagesBuild, svgSpritesBuild)
