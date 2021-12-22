@@ -1,5 +1,5 @@
 .hero {
-  margin-bottom: 112px;
+  margin-bottom: 136px;
   &__content {
     position: relative;
   }
@@ -32,7 +32,7 @@
     font-size: 24px;
     line-height: 29px;
     color: var(--color-white);
-    margin-bottom: 90px;
+    margin-bottom: 113px;
   }
   &__btn {
     transition: all .2s ease-in-out;
@@ -93,7 +93,7 @@
         padding: 0 50px;
       }
       &__descr {
-        padding: 17.5% 2.9% 17.2% 8.4%;
+        padding: 17.5% 2.9% 20% 8.4%;
       }
       &__title {
         font-size: 60px;
@@ -104,7 +104,7 @@
         font-size: 20px;
         line-height: 24px;
         width: 90%;
-        margin-bottom: 61px;
+        margin-bottom: 85px;
       }
       &__btn {
         padding: 24px 39px 24px 39px;
@@ -126,7 +126,7 @@
   @media (max-width: 768px) {
     .hero {
       &__descr {
-        padding: 24% 2.9% 24% 5.9%;
+        padding: 24% 2.9% 27.5% 5.9%;
       }
       &__title {
         font-size: 50px;
@@ -182,6 +182,7 @@
         line-height: 15px;
         padding: 12px 28px 12px 28px;
         margin: 0 auto;
+        width: max-content;
       }
     }
     .hero-swiper {
