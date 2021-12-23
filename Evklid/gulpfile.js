@@ -138,6 +138,7 @@ const stylesBuild = () => {
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixes({
     grid: true,
+    overrideBrowserslist: ["last 3 versions"],
     cascade: false
   }))
   .pipe(cleanCSS({
