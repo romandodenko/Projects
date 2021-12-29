@@ -22,6 +22,9 @@
   }
   &__items {
     display: none;
+    animation-name: work-item;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
   }
   &__items:nth-child(1) {
     background-image: url(/images/workimg.webp), url(/images/workimg.png);
@@ -97,6 +100,15 @@
 
 .tab-content-active {
   display: block;
+}
+
+@keyframes work-item {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1380px) {
