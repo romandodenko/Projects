@@ -73,7 +73,7 @@
 .catalog__tab-content {
   opacity: 0;
   animation-name: catalog-tab;
-  animation-duration: 0.5s;
+  animation-duration: .6s;
   animation-timing-function: ease;
   display: none;
 }
@@ -123,12 +123,12 @@
   border-radius: 50px; 
   padding: 6px 6px 4px 6px;
   margin-top: -10px;
-  transition: border-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .catalog__list-item-active {
   border-color: var(--color-purple-2);
-  transition: border-color 0.2s ease-in-out;
+  /* transition: border-color 0.2s ease-in-out; */
 }
 
 .catalog__subtitle {
@@ -172,9 +172,6 @@
   background-size: contain;
   margin-right: 2.3%;
   width: 47%;
-  animation-name: italy-painter;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
 }
 
 .catalog__unknown-subtitle {
@@ -595,17 +592,6 @@
 }
 
 @keyframes catalog-tab {
-
-  0% {
-  opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes italy-painter {
 
   0% {
   opacity: 0;

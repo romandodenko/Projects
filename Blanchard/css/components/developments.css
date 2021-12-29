@@ -209,6 +209,9 @@
 
 .hidden {
   display: none;
+  animation-name: develop;
+  animation-duration: .6s;
+  animation-timing-function: ease;
 }
 
 .visible {
@@ -217,4 +220,14 @@
 
 .btn__disabled {
   display: none;
+}
+
+@keyframes develop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

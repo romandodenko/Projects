@@ -256,8 +256,8 @@
   height: 100%;
 }
 
-.ymaps-2-1-79-copyright,
-.ymaps-2-1-79-copyright__link,
-.ymaps-2-1-79-copyright__layout .ymaps-2-1-79-copyright__logo {
+ymaps.ymaps-2-1-79-copyright,
+ymaps.ymaps-2-1-79-copyright__link,
+ymaps.ymaps-2-1-79-copyright__layout .ymaps-2-1-79-copyright__logo {
   display: none;
 }

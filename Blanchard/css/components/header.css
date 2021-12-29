@@ -24,16 +24,6 @@
   align-items: center;
 } 
 
-.header__burger {
-  width: 36px;
-  height: 28px;
-  background-color: transparent;
-  position: relative;
-  cursor: pointer;
-  border: none;
-  z-index: 999;
-}
-
 .header__burger::before {
   position: absolute;
   content: "";
@@ -43,6 +33,10 @@
   left: 0;
   background-color: var(--color-white);
   transition:  all .2s ease-in-out;
+}
+
+.header__burger span {
+  transition: all .2s ease-in-out;
 }
 
 .header__burger::after {
@@ -56,12 +50,20 @@
   transition: all .2s ease-in-out;
 }
 
+.header__burger:hover span,
+.header__burger:hover::before,
+.header__burger:hover::after {
+  background-color: var(--color-purple);
+}
+
 .header__burger:focus-visible {
   outline: 2px solid var(--color-purple-2);
 }
 
 .header-dropdown {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -91,8 +93,14 @@
   transition: background-color 0.2s ease-in-out;
 }
 
+.header__burger-active {
+  transition: all .2s ease-in-out;
+}
+
 .header__burger-active .burger-line {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
  
  .header__burger-active::before {
@@ -122,6 +130,8 @@
 
 .adaptive-search-click,
 .adaptive-search-click-320 {
+  width: 29px;
+  height: 28px;
   display: none;
   cursor: pointer;
   border: none;
@@ -132,8 +142,10 @@
   outline: 2px solid var(--color-purple-2);
 }
 
-.adaptive-search-click .adaptive-search-click-svg {
-  transition: fill 0.2s ease-in-out;
+.adaptive-search-click .adaptive-search-click-svg,
+.adaptive-search-click .adaptive-search-click-svg rect,
+.adaptive-search-click .adaptive-search-click-svg path {
+  transition: all 0.2s ease-in-out;
 }
 
 .adaptive-search-click:focus-visible .adaptive-search-click-svg rect,
@@ -364,7 +376,6 @@
   transition: border-color 0.2s ease-in-out;
 }
 
-
 .header__link svg,
 .header-link svg  {
   margin: 2px 5px 0 0;
@@ -382,9 +393,9 @@
 }
 
 .header__link:hover svg path,
-.header-linklink:hover svg path  {
+.header-link:hover svg path  {
   fill: var(--color-purple-hover);
-  transition: fill 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .header__link:active {
