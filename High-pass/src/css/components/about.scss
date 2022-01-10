@@ -1,0 +1,186 @@
+.about {
+  background-color: #202020;
+  margin-bottom: 65px;
+  &__container {
+    display: flex;
+    padding-bottom: 70px;
+    padding-top: 30px;
+  }
+  &__left {
+    width: 49%;
+    margin-right: 28px;
+  }
+  &__title {
+    font-family: 'TTFirsNeue';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--color-white);
+    margin-bottom: 6px;
+  }
+  &__text {
+    width: 99%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #cacaca;
+  }
+  &__right {
+    width: 49%;
+    padding-top: 313px;
+    background-image: url(/img/about.png);
+    background-repeat: no-repeat;
+    background-position: left 33px;
+  }
+  &__subtitle {
+    font-family: 'TTFirsNeue';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    color: var(--color-white);
+    margin-bottom: 15px;
+  }
+  &__form {
+    display: flex;
+  }
+  &__input {
+    width: 100%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-white);
+    background-color: #4a4a4a;
+    padding: 15px 24px;
+    border: 1px solid transparent;
+    transition: all .2s ease-in-out;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 19px;
+      color: #cacaca;
+      background-color: #4a4a4a;
+      transition: all .2s ease-in-out;
+    }
+  }
+  &__btn {
+    transition: all .2s ease-in-out;
+    &:active {
+      background-color: var(--color-orange-dark);
+      transition-duration: .1s;
+    }
+  }
+}
+
+.label {
+  position: relative;
+  width: 76%;
+  margin-right: 4.1%;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+@media (max-width: 1320px) {
+  .about {
+    margin-bottom: 70px;
+    &__container {
+      padding-left: 31px;
+      padding-right: 31px;
+      padding-bottom: 58px;
+    }
+    &__form {
+      flex-direction: column;
+    }
+    &__btn {
+      align-self: flex-start;
+    }
+    &__right {
+      padding-top: 389px;
+      background-image: url(/img/about2.png);
+    }
+  }
+  .label {
+    width: 73.5%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 935px) {
+  .about {
+    &__container {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+    &__right {
+      padding-top: 626px;
+      background-image: url(/img/about3.png);
+    }
+  }
+  .label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 651px) {
+  .about {
+      &__container {
+        flex-direction: column;
+      }
+      &__left {
+        width: 100%;
+        margin-right: 0;
+      }
+      &__right {
+        width: 100%;
+        background-position: center 33px;
+      }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    margin-bottom: 51px;
+    &__container{
+      padding-right: 21px;
+      padding-left: 21px;
+      padding-bottom: 60px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 6px;
+    }
+    &__text {
+      width: 100%;
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 22px;
+      margin-left: -2px;
+      margin-bottom: 12px;
+    }
+    &__left {
+      margin-bottom: 23px;
+    }
+    &__right {
+      padding-top: 303px;
+      background-image: url(/img/about4.png);
+      background-position: top;
+    }
+    &__input {
+      padding: 11px 21px;
+    }
+    &__btn {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 9px 21px;
+    }
+  }
+}

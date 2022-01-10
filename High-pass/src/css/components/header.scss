@@ -1,0 +1,269 @@
+.header {
+  background-color: var(--color-black);
+  padding: 24px 0;
+  margin-bottom: 40px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    width: 100%;
+    margin-left: 10.6%;
+  }
+  &__svg {
+    fill: #ff6e30;
+  }
+  &__list {
+    display: flex;
+    width: 100%;
+  }
+  &__item:not(:last-child) {
+    margin-right: 10%;
+  }
+  &__link {
+    font-family: "TTFirsNeue";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--color-white);
+    padding: 0 2px 1px 2px;
+    transition: all .2s ease-in-out;
+    &:active {
+      color: var(--color-orange-dark);
+      transition-duration: .1s;
+    }
+  }
+  &__icons {
+    display: flex;
+    margin-left: 6.7%;
+  }
+  &__icon:not(:last-child) {
+    margin-right: 19px;
+  }
+  &__ic {
+    & svg {
+      fill: #cacaca;
+      transition: all .2s ease-in-out;
+    }
+    &:active svg {
+      fill: var(--color-orange-dark);
+      transition-duration: .1s;
+    }
+  }
+  &__loop {
+    background-color: transparent;
+    display: none;
+    &:active svg {
+      fill: var(--color-orange-dark);
+      transition-duration: .1s;
+    }
+  }
+  &__svg {
+    fill: #bcbcbc;
+    transition: all .2s ease-in-out;
+  }
+  &__svg320 {
+    display: none;
+    fill: var(--color-white);
+  }
+  &__wrap {
+    display: none;
+  }
+  &__burger {
+    position: relative;
+    width: 20px;
+    height: 18px;
+    background-color: transparent;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-white);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background-color: var(--color-white);
+    }
+  }
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: var(--color-white);
+    width: 100%;
+    height: 3px;
+  }
+  &__btn {
+    display: none;
+  }
+  &__tel {
+    display: none;
+  }
+}
+
+@media (max-width: 1320px) {
+  .header {
+    padding: 26px 0;
+    margin-bottom: 34px;
+    &__container {
+      padding: 0 31px;
+    }
+    &__icons {
+      display: none;
+    }
+    &__loop {
+      display: block;
+      order: 3;
+      margin-left: auto;
+    }
+    &__nav {
+      order: 2;
+      margin-left: 8.3%;
+    }
+    &__logo {
+      order: 1;
+    }
+    &__item:not(:last-child) {
+      margin-right: 4.2%;
+    }
+  }
+}
+
+@media (max-width: 935px) {
+  .header {
+    padding-bottom: 0;
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px 0;
+      grid-template-areas: 
+      "logo loop"
+       "nav nav";
+       padding: 0;
+    }
+    &__logo {
+      grid-area: logo;
+      width: max-content;
+      margin-left: 28px;
+    }
+    &__loop {
+      grid-area: loop;
+      margin-right: 28px;
+    }
+    &__nav {
+      position: relative;
+      grid-area: nav;
+      margin-left: 0;
+      z-index: 1;
+      padding: 12px 28px 12px 28px;
+      background-color: #4a4a4a;
+    }
+    &__item:not(:last-child) {
+      margin-right: 9.3%;
+    }
+  }
+}
+
+@media (max-width: 764px) {
+  .header {
+    &__container {
+      grid-template-areas: 
+      "logo loop"
+       "burger burger ";
+    }
+    &__wrap {
+      grid-area: burger;
+      padding: 12px 28px 12px 28px;
+      background-color: #4a4a4a;
+    }
+    &__wrap {
+      display: block;
+    }
+    &__nav {
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      padding: 20px;
+      background-color: #202020;
+      transition: all .2s ease-in-out;
+    }
+    &__btn {
+      display: block;
+    }
+    &__tel{
+      display: flex;
+      align-items: center;
+      font-family: "TTFirsNeue";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: var(--color-orange);
+      & svg {
+        display: block;
+        margin-right: 5px;
+      }
+    }
+    &__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 33px;
+    }
+    &__item:nth-child(6) {
+      margin-bottom: 190px;
+    }
+    &__list {
+      flex-direction: column;
+      margin-bottom: 150px;
+    }
+    &__btn {
+      background-color: transparent;
+      margin-bottom: 15px;
+    }
+  }
+  .nav-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    margin-bottom: 29px;
+    // &__container {
+      // padding: 0 21px;
+      // gap: 37px 0;
+    // }
+    &__logo {
+      margin-left: 21px;
+    }
+    &__loop {
+      margin-right: 21px;
+    }
+    &__nav {
+      bottom: -5px;
+    }
+    &__wrap {
+      padding-right: 21px;
+      padding-left: 21px;
+    }
+    &__svg {
+      display: none;
+    }
+    &__svg320 {
+      display: block;
+    }
+  }
+}

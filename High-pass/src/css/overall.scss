@@ -1,0 +1,189 @@
+:root {
+  --color-black: #202020;
+  --color-white: #ffffff;
+  --color-orange: #ff6e30;
+  --color-orange-hover: #bc572b;
+  --color-orange-dark: #ce4307;
+  --color-gray: #333333;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.btn {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  padding: 15px 21px;
+  border: 2px solid transparent;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    &__link {
+      &:hover {
+        color: var(--color-orange);
+      }
+      &:focus-visible {
+        background-color: var(--color-orange-hover);
+      }
+    }
+    &__ic {
+      &:hover svg {
+        fill: var(--color-orange);
+      }
+      &:focus-visible svg {
+        fill: var(--color-orange-hover);
+      }
+    }
+    &__loop {
+      &:hover svg {
+        fill: var(--color-orange);
+      }
+      &:focus-visible svg {
+        fill: var(--color-orange-hover);
+      }
+    }
+  }
+  .hero {
+    &__link {
+      &:hover {
+        color: var(--color-orange);
+      }
+      &:focus-visible {
+        background-color: var(--color-orange-hover);
+      }
+    }
+    &__btn {
+      &:hover {
+        background-color: var(--color-orange-hover);
+      }
+      &:focus-visible {
+        border-color: var(--color-orange-dark);
+      }
+    }
+  }
+  .about {
+    &__btn {
+      &:hover {
+        background-color: var(--color-orange-hover);
+      }
+      &:focus-visible {
+        border-color: var(--color-orange-dark);
+      }
+    }
+    &__input {
+      &:hover {
+        &::placeholder {
+          color: var(--color-orange);
+        }
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+    }
+  }
+  .projects {
+    &__link {
+      &:hover {
+        color: var(--color-orange);
+      }
+      &:focus-visible {
+        background-color: var(--color-orange-hover);
+      }
+    }
+    &__btn {
+      &:hover {
+        background-color: #ff6e30;
+      }
+      &:focus-visible {
+        background-color: var(--color-orange-hover);
+      }
+    }
+  }
+  .contacts {
+    &__btn {
+      &:hover {
+        background-color: var(--color-orange-hover);
+      }
+      &:focus-visible {
+        border-color: var(--color-orange-dark);
+      }
+    }
+    &__tel {
+      &:hover {
+        color: var(--color-orange);
+        & svg {
+          fill: var(--color-orange);
+        }
+      }
+      &:focus-visible {
+        color: var(--color-orange-hover);
+        & svg {
+          fill: var(--color-orange-hover);
+        }
+      }
+    }
+    &__close {
+      &:hover {
+        opacity: .6;
+      }
+      &:focus-visible {
+        opacity: .6;
+      }
+    }
+    &__input {
+      &:hover {
+        &::placeholder {
+          color: var(--color-orange);
+        }
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+    }
+    &__textarea {
+      &:hover {
+        &::placeholder {
+          color: var(--color-orange);
+        }
+      }
+      &:focus-visible {
+        border-color: var(--color-orange);
+      }
+    }
+  }
+  .footer {
+    &__icon {
+      &:hover {
+        & svg {
+          fill: var(--color-orange);
+        }
+      }
+      &:focus-visible {
+        & svg {
+          fill: var(--color-orange-hover);
+        }
+      }
+    }
+  }
+}

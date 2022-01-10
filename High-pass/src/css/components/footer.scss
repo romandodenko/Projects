@@ -1,0 +1,125 @@
+.footer {
+  background-color: var(--color-black);
+  padding: 26px 0;
+  &__container {
+    display: flex;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  &__copyright {
+    font-family: 'TTFirsNeue';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #e9e9e9;
+  }
+  &__blockquote {
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #cacaca;
+    margin-left: 15.8%;
+  }
+  &__span {
+    color: #666666;
+  }
+  &__right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+  }
+  &__text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #cacaca;
+    margin-bottom: 7px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 21px;
+  }
+  &__icon {
+    & svg {
+      fill: #cacaca;
+      transition: all .2s ease-in-out;
+    }
+    &:active {
+      & svg {
+        fill: var(--color-orange-dark);
+      }
+    }
+  }
+}
+
+@media (max-width: 1320px) {
+  .footer {
+    padding: 28px 0;
+    &__container {
+      padding: 0 31px;
+    }
+    &__blockquote {
+      width: 38%;
+      margin-top: -3px;
+      margin-left: 14%;
+    }
+    &__right {
+      margin-top: -3px;
+    }
+  }
+}
+
+@media (max-width: 935px) {
+  .footer {
+    &__container {
+      padding: 0 27px;
+    }
+    &__blockquote {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px)  {
+  .footer {
+    padding-top: 34px;
+    padding-bottom: 0;
+    &__container {
+      flex-direction: column;
+      padding: 0;
+    }
+    &__left {
+      align-items: center;
+      background-color: #4a4a4a;
+      order: 2;
+      padding: 14px 0 13px 0;
+    }
+    &__logo {
+      margin-bottom: 4px;
+    }
+    &__copyright {
+      font-size: 10px;
+      line-height: 13px;
+    }
+    &__right {
+      align-items: center;
+      order: 1;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
