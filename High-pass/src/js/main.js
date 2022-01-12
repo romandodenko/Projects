@@ -30,3 +30,9 @@ aosScr.aosScript()
 import * as gsapScr from './modules/gsap.js'
 
 gsapScr.gsapScript()
+
+
+import * as smoothScroll from './modules/smooth-scroll.js'
+
+smoothScroll.smoothScroll()
+
