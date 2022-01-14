@@ -8,7 +8,7 @@ export function smoothScroll() {
 function navbarTogglerClick() { 
   navbarToggler.classList.toggle("open-navbar-toggler");
   navbarMenu.classList.toggle("open");
-}
+}ы
 
 for(let i=0; i<navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", navbarLinkClick);
