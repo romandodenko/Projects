@@ -7,3 +7,5 @@ Sitdown - http://romand-sitdownpls.cn25355.tmweb.ru/ - Многостранич�
 
 High-pass - http://romand-highpass.cn25355.tmweb.ru/
 
+Funiro - http://romand-funiro.cn25355.tmweb.ru/
+
