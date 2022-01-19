@@ -1,3 +1,5 @@
+Сайты расположены по мере моего развития во Frontend.
+
 Blanchard - http://romand-blanchard.cn25355.tmweb.ru/
 
 Evklid - http://romand-evklid.cn25355.tmweb.ru/
