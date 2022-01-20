@@ -130,6 +130,10 @@ $maxWidthContainer: 1275;
   }
   &__slide {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
   & .slide-one {
     background-image: url(/img/main-slider-1.jpg);
@@ -183,10 +187,9 @@ $maxWidthContainer: 1275;
     }
   }
   &__descr {
-    position: absolute;
-    right: 44px;
-    bottom: 37px;
     width: 39.4%;
+    margin-right: 44px;
+    margin-bottom: 37px;
     @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
       background: rgba(255,255,255,0.72);
       backdrop-filter: blur(31px);
@@ -310,13 +313,13 @@ $maxWidthContainer: 1275;
       display: none;
     }
     &__slide {
-      padding-top: 100%;
+      display: block;
+      padding-top: 0;
+      padding-bottom: 100%;
     }
     &__descr {
       width: 100%;
-      top: 0;
-      right: 0;
-      bottom: auto;
+      margin: 0;
     }
     &__btn {
       font-size: 16px;

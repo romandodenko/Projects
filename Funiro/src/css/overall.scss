@@ -20,6 +20,10 @@ body {
   font-family: 'Gilroy';
 }
 
+.body-block {
+  overflow: hidden;
+}
+
 .text {
   font-style: normal;
   font-weight: 500;
@@ -292,10 +296,4 @@ body {
       }
     }
   }
-  // .furniture {
-  //   &__body {
-  //     overflow: auto;
-  //     -webkit-overflow-scrolling: touch;
-  //   }
-  // }
 }
