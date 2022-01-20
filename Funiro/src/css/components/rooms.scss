@@ -85,6 +85,7 @@ $maxWidthContainer: 1275;
     }
   }
   &__descr {
+    position: relative;
     margin-bottom: 26px;
     width: 66.4%;
     @include adaptive ("margin-left", 30, 100, 0);
@@ -265,6 +266,9 @@ $maxWidthContainer: 1275;
     &__button-next {
      top: 62%;
     }
+    &__descr {
+      margin-left: 20px;
+    }
     .swiper-pagination-bullets.swiper-pagination-horizontal {
       bottom: 0;
       right: 50%;
@@ -275,11 +279,24 @@ $maxWidthContainer: 1275;
 
 @media (max-width: 630px) {
   .rooms {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__left {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     &__title {
       font-size: 32px;
     }
     &__button-next {
       display: none;
+    }
+    &__slide {
+      & img {
+        height: 100%;
+      }
     }
     &__button-prev {
       display: none;
