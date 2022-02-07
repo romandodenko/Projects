@@ -278,7 +278,6 @@ $maxWidthContainer: 1630;
   &__content {
     position: relative;
     max-width: 900px;
-    @include adaptive ("min-height", 500, 300, 0);
     display: flex;
     flex-wrap: wrap;
     top: 50%;

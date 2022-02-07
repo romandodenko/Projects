@@ -1,6 +1,9 @@
 "use strict"
 
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, {
+  Navigation,
+  Pagination
+} from 'swiper';
 
 export function swiperHero() {
   Swiper.use([Navigation, Pagination]);

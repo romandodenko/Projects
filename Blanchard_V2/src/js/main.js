@@ -6,7 +6,6 @@ import * as smoothScroll from './modules/smooth-anchor.js'
 
 smoothScroll.smoothScroll()
 
-
 import * as dynamic from './modules/dynamic-adaptive.js'
 
 dynamic.dynamic()

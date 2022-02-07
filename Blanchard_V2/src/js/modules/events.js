@@ -1,7 +1,10 @@
 "use strict"
 
 import gsap from 'gsap';
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, {
+  Navigation,
+  Pagination
+} from 'swiper';
 
 const body = document.querySelector("body")
 const btnAll = document.querySelector(".events__all")
@@ -9,16 +12,28 @@ const btnCollapse = document.querySelector(".events__collapse")
 
 export function events() {
 
-  let productList = gsap.timeline({ paused: true })
+  let productList = gsap.timeline({
+    paused: true
+  })
 
   productList
-  .to(".hidden", {duration: .2, opacity: 1, visibility: "visible", display: "block"})
-  .to(".hidden-fade", {duration: .2, opacity: 1, visibility: "visible", display: "block"},"-=.2")
+    .to(".hidden", {
+      duration: .2,
+      opacity: 1,
+      visibility: "visible",
+      display: "block"
+    })
+    .to(".hidden-fade", {
+      duration: .2,
+      opacity: 1,
+      visibility: "visible",
+      display: "block"
+    }, "-=.2")
 
-    btnAll.addEventListener("click", () => {
-      btnCollapse.classList.add("collapse-btn-active")
-      btnAll.classList.add("open-btn-disabled")
-      productList.timeScale(1).play()
+  btnAll.addEventListener("click", () => {
+    btnCollapse.classList.add("collapse-btn-active")
+    btnAll.classList.add("open-btn-disabled")
+    productList.timeScale(1).play()
   })
 
   btnCollapse.addEventListener("click", () => {

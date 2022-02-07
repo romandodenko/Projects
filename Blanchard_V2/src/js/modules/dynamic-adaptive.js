@@ -4,7 +4,7 @@ export function dynamic() {
   function DynamicAdapt(type) {
     this.type = type;
   }
-  
+
   DynamicAdapt.prototype.init = function () {
     const _this = this;
     // массив объектов
@@ -12,7 +12,7 @@ export function dynamic() {
     this.daClassname = "_dynamic_adapt_";
     // массив DOM-элементов
     this.nodes = document.querySelectorAll("[data-da]");
-  
+
     // наполнение оbjects объктами
     for (let i = 0; i < this.nodes.length; i++) {
       const node = this.nodes[i];
@@ -27,9 +27,9 @@ export function dynamic() {
       оbject.index = this.indexInParent(оbject.parent, оbject.element);
       this.оbjects.push(оbject);
     }
-  
+
     this.arraySort(this.оbjects);
-  
+
     // массив уникальных медиа-запросов
     this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
       return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
@@ -37,7 +37,7 @@ export function dynamic() {
     this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
       return Array.prototype.indexOf.call(self, item) === index;
     });
-  
+
     // навешивание слушателя на медиа-запрос
     // и вызов обработчика при первом запуске
     for (let i = 0; i < this.mediaQueries.length; i++) {
@@ -45,7 +45,7 @@ export function dynamic() {
       const mediaSplit = String.prototype.split.call(media, ',');
       const matchMedia = window.matchMedia(mediaSplit[0]);
       const mediaBreakpoint = mediaSplit[1];
-  
+
       // массив объектов с подходящим брейкпоинтом
       const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
         return item.breakpoint === mediaBreakpoint;
@@ -56,7 +56,7 @@ export function dynamic() {
       this.mediaHandler(matchMedia, оbjectsFilter);
     }
   };
-  
+
   DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
     if (matchMedia.matches) {
       for (let i = 0; i < оbjects.length; i++) {
@@ -73,7 +73,7 @@ export function dynamic() {
       }
     }
   };
-  
+
   // Функция перемещения
   DynamicAdapt.prototype.moveTo = function (place, element, destination) {
     element.classList.add(this.daClassname);
@@ -87,7 +87,7 @@ export function dynamic() {
     }
     destination.children[place].insertAdjacentElement('beforebegin', element);
   }
-  
+
   // Функция возврата
   DynamicAdapt.prototype.moveBack = function (parent, element, index) {
     element.classList.remove(this.daClassname);
@@ -97,13 +97,13 @@ export function dynamic() {
       parent.insertAdjacentElement('beforeend', element);
     }
   }
-  
+
   // Функция получения индекса внутри родителя
   DynamicAdapt.prototype.indexInParent = function (parent, element) {
     const array = Array.prototype.slice.call(parent.children);
     return Array.prototype.indexOf.call(array, element);
   };
-  
+
   // Функция сортировки массива по breakpoint и place 
   // по возрастанию для this.type = min
   // по убыванию для this.type = max
@@ -114,18 +114,18 @@ export function dynamic() {
           if (a.place === b.place) {
             return 0;
           }
-  
+
           if (a.place === "first" || b.place === "last") {
             return -1;
           }
-  
+
           if (a.place === "last" || b.place === "first") {
             return 1;
           }
-  
+
           return a.place - b.place;
         }
-  
+
         return a.breakpoint - b.breakpoint;
       });
     } else {
@@ -134,29 +134,29 @@ export function dynamic() {
           if (a.place === b.place) {
             return 0;
           }
-  
+
           if (a.place === "first" || b.place === "last") {
             return 1;
           }
-  
+
           if (a.place === "last" || b.place === "first") {
             return -1;
           }
-  
+
           return b.place - a.place;
         }
-  
+
         return b.breakpoint - a.breakpoint;
       });
       return;
     }
   };
-  
+
   const da = new DynamicAdapt("max");
   da.init();
 }
 
- /*
+/*
        Как работает: 
        1) пишешь атрибут data-da в нём указываешь элемент куда он должен перейти 
        2) разрешение, на котором это должно произойти 

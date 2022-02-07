@@ -45,24 +45,24 @@ export function gallery() {
     })
   })
 
-  popupExit.forEach(function(popupExit) {
-    popupExit.addEventListener("click", function() {
-      popup.forEach(function(popup) {
+  popupExit.forEach(function (popupExit) {
+    popupExit.addEventListener("click", function () {
+      popup.forEach(function (popup) {
         popup.classList.remove("popup-active")
         body.classList.remove("body-hidden")
       })
     })
   })
-  popupBtn.forEach(function(popupBtn) {
-    popupBtn.addEventListener("click", function() {
-      popup.forEach(function(popup) {
+  popupBtn.forEach(function (popupBtn) {
+    popupBtn.addEventListener("click", function () {
+      popup.forEach(function (popup) {
         popup.classList.remove("popup-active")
         body.classList.remove("body-hidden")
       })
     })
   })
-  popupItem.forEach(function(popupItem) {
-    popupItem.addEventListener("click", function() {
+  popupItem.forEach(function (popupItem) {
+    popupItem.addEventListener("click", function () {
       body.classList.add("body-hidden")
     })
   })

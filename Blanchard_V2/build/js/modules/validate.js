@@ -9,7 +9,7 @@ export function validate() {
         minLength: 2,
         strength: {
           custom: '[а-яА-Я\d]',
-       },
+        },
       },
       tel: {
         required: true,
@@ -27,26 +27,26 @@ export function validate() {
       },
       tel: 'Введите ваш телефон'
     },
-  
+
 
     // Отправка на почту
-    submitHandler: function(form, values, ajax) {
+    submitHandler: function (form, values, ajax) {
       let formData = new FormData(form);
-  
+
       let xhr = new XMLHttpRequest();
-  
-      xhr.onreadystatechange = function() {
-  
+
+      xhr.onreadystatechange = function () {
+
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             console.log("Отправлено")
           }
         }
       }
-  
+
       xhr.open("POST", "mail.php", true);
       xhr.send(formData)
-  
+
       form.reset();
     }
   });
