@@ -20,6 +20,10 @@ body {
   font-weight: 400;
 }
 
+.body-scroll {
+  overflow: hidden;
+}
+
 main {
   flex: 1 1 auto;
 }
@@ -43,135 +47,191 @@ main {
       &:hover {
         color: var(--color-orange);
       }
+
       &:focus-visible {
         background-color: var(--color-orange-hover);
       }
     }
+
     &__ic {
       &:hover svg {
         fill: var(--color-orange);
       }
+
       &:focus-visible svg {
         fill: var(--color-orange-hover);
       }
     }
+
     &__loop {
       &:hover svg {
         fill: var(--color-orange);
       }
+
       &:focus-visible svg {
         fill: var(--color-orange-hover);
       }
     }
   }
+
   .hero {
     &__link {
       &:hover {
         color: var(--color-orange);
       }
+
       &:focus-visible {
         background-color: var(--color-orange-hover);
       }
     }
+
     &__btn {
       &:hover {
         background-color: var(--color-orange-hover);
       }
+
       &:focus-visible {
         border-color: var(--color-orange-dark);
       }
     }
   }
+
   .about {
     &__btn {
       &:hover {
         background-color: var(--color-orange-hover);
       }
+
       &:focus-visible {
         border-color: var(--color-orange-dark);
       }
     }
+
     &__input {
       &:hover {
         &::placeholder {
           color: var(--color-orange);
         }
       }
+
       &:focus-visible {
         border-color: var(--color-orange);
       }
     }
   }
+
   .projects {
     &__link {
       &:hover {
         color: var(--color-orange);
       }
+
       &:focus-visible {
         background-color: var(--color-orange-hover);
       }
     }
+
     &__btn {
       &:hover {
         background-color: #ff6e30;
       }
+
       &:focus-visible {
         background-color: var(--color-orange-hover);
       }
     }
   }
+
+  .header-form {
+    &__btn {
+      &:hover {
+        background-color: var(--color-orange-dark);
+      }
+
+      &:focus-visible {
+        background-color: var(--color-orange-dark);
+      }
+    }
+
+    &__input {
+      &:hover {
+        &::placeholder {
+          color: var(--color-orange-hover);
+        }
+      }
+
+      &:focus-visible {
+        &::placeholder {
+          color: var(--color-orange-hover);
+        }
+      }
+    }
+  }
+
   .contacts {
     &__btn {
       &:hover {
         background-color: var(--color-orange-hover);
       }
+
       &:focus-visible {
         border-color: var(--color-orange-dark);
       }
     }
+
     &__tel {
       &:hover {
         color: var(--color-orange);
+
         & svg {
           fill: var(--color-orange);
         }
       }
+
       &:focus-visible {
         color: var(--color-orange-hover);
+
         & svg {
           fill: var(--color-orange-hover);
         }
       }
     }
+
     &__close {
       &:hover {
         opacity: .6;
       }
+
       &:focus-visible {
         opacity: .6;
       }
     }
+
     &__input {
       &:hover {
         &::placeholder {
           color: var(--color-orange);
         }
       }
+
       &:focus-visible {
         border-color: var(--color-orange);
       }
     }
+
     &__textarea {
       &:hover {
         &::placeholder {
           color: var(--color-orange);
         }
       }
+
       &:focus-visible {
         border-color: var(--color-orange);
       }
     }
   }
+
   .footer {
     &__icon {
       &:hover {
@@ -179,6 +239,7 @@ main {
           fill: var(--color-orange);
         }
       }
+
       &:focus-visible {
         & svg {
           fill: var(--color-orange-hover);

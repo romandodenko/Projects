@@ -4,7 +4,7 @@ flsFunctions.isWebp()
 
 import * as burger from './modules/burger.js'
 
-burger.burgerOpen()
+burger.header()
 
 import * as aboutForm from './modules/about.js'
 

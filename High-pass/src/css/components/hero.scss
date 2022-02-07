@@ -1,10 +1,12 @@
 .hero {
   margin-bottom: 70px;
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 30px;
   }
+
   &__left {
     display: flex;
     flex-direction: column;
@@ -18,6 +20,7 @@
     padding-left: 59px;
     padding-right: 20px;
   }
+
   &__link {
     position: absolute;
     top: 15px;
@@ -30,14 +33,17 @@
     background-color: #333333;
     padding: 7px 15px;
     transition: all .2s ease-in-out;
+
     &:active {
       color: var(--color-orange-dark);
       transition-duration: .1s;
     }
   }
+
   &__descr {
     width: 79%;
   }
+
   &__span {
     display: inline-block;
     font-family: 'Roboto';
@@ -47,6 +53,7 @@
     color: var(--color-white);
     margin-bottom: 4px;
   }
+
   &__title {
     font-family: 'TTFirsNeue';
     font-weight: 700;
@@ -55,14 +62,17 @@
     margin-bottom: 14px;
     color: var(--color-white);
   }
+
   &__btn {
     padding: 15px 21px;
     transition: all .2s ease-in-out;
+
     &:active {
       background-color: var(--color-orange-dark);
       transition-duration: .1s;
     }
   }
+
   &__subtitle {
     font-family: 'TTFirsNeue';
     font-weight: 700;
@@ -70,16 +80,18 @@
     line-height: 104%;
     color: var(--color-black);
   }
+
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px,300px));
-    grid-template-areas: 
-    "item1 item1"
-    "item2 item2"
-    "item3 item4";
+    grid-template-columns: repeat(2, minmax(100px, 300px));
+    grid-template-areas:
+      "item1 item1"
+      "item2 item2"
+      "item3 item4";
     gap: 27px 30px;
     height: 100%;
   }
+
   &__item {
     & img {
       display: block;
@@ -88,17 +100,21 @@
       object-fit: cover;
     }
   }
+
   &__item:nth-child(1) {
     grid-area: item1;
     margin-top: -5px;
     margin-bottom: -3px;
   }
+
   &__item:nth-child(2) {
     grid-area: item2;
   }
+
   &__item:nth-child(3) {
     grid-area: item3;
   }
+
   &__item:nth-child(4) {
     grid-area: item4;
   }
@@ -107,27 +123,34 @@
 @media (max-width: 1320px) {
   .hero {
     margin-bottom: 67px;
+
     &__container {
       padding: 0 31px;
     }
+
     &__descr {
       width: 100%;
     }
+
     &__title {
       font-size: 34px;
       margin-bottom: 18px;
     }
+
     &__left {
       background-image: url(/img/hero1024.png);
       padding-bottom: 28px;
       padding-left: 29px;
     }
+
     &__span {
       margin-bottom: 8px;
     }
+
     &__list {
       gap: 29px 30px;
     }
+
     &__item:nth-child(1) {
       margin-top: 0;
       margin-bottom: -3px;
@@ -135,9 +158,10 @@
   }
 }
 
-@media (max-width: 935px)  {
+@media (max-width: 935px) {
   .hero {
     margin-bottom: 70px;
+
     &__container {
       padding: 0 28px;
     }
@@ -150,21 +174,26 @@
       font-size: 22px;
       line-height: 104%;
     }
+
     &__span {
       margin-bottom: 16px;
     }
+
     &__title {
       width: 82%;
       line-height: 90%;
       margin-bottom: 20px;
     }
+
     &__item:nth-child(1) {
       margin-top: 0;
       margin-bottom: -9px;
     }
+
     &__left {
       background-image: url(/img/hero768.png);
     }
+
     &__list {
       gap: 27px 30px;
     }
@@ -175,19 +204,22 @@
   .hero {
     &__container {
       grid-template-columns: 1fr;
-      grid-template-areas: 
-      "left"
-      "right";
+      grid-template-areas:
+        "left"
+        "right";
       gap: 35px 0;
     }
+
     &__left {
       width: 100%;
       grid-area: left;
       min-height: 422px;
     }
+
     &__title {
       width: 100%;
     }
+
     &__list {
       width: 100%;
       grid-area: right;
@@ -198,23 +230,28 @@
 @media (max-width: 500px) {
   .hero {
     margin-bottom: 52px;
+
     &__container {
       padding: 0 21px;
     }
+
     &__title {
       font-size: 24px;
       line-height: 110%;
       width: 74%;
       margin-bottom: 12px;
     }
+
     &__subtitle {
       font-size: 18px;
       line-height: 104%;
     }
+
     &__left {
       background-image: url(/img/hero320.png);
       padding-bottom: 29px;
     }
+
     &__link {
       top: 6px;
       right: 6px;
@@ -222,11 +259,13 @@
       line-height: 14px;
       padding: 5px 6px;
     }
+
     &__span {
       font-size: 14px;
       line-height: 16px;
       margin-bottom: 8px;
     }
+
     &__btn {
       font-size: 14px;
       line-height: 16px;
