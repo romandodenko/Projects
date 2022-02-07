@@ -1,0 +1,479 @@
+:root {
+  --colorBlack: #333333;
+  --colorBlackB:#000000;
+  --colorWhite: #FFFFFF;
+  --colorGray: #EAEAEA;
+  --colorPurple: #9D5CD0;
+  --colorPurpleHover: #C283F3;
+  --colorPurpleActive: #7943A4;
+}
+
+.container {
+  max-width: 1630px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans';
+}
+
+.body-hidden {
+  overflow: hidden;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--colorBlack);
+}
+
+.title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--colorBlack);
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--colorBlack);
+}
+
+.btn {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--colorPurple);
+  border: 2px solid var(--colorPurple);
+  padding: 17px 35px;
+  border-radius: 100px;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    &__logo {
+      &:hover {
+        opacity: .5;
+      }
+      &:focus-visible {
+        opacity: .5;
+      }
+    }
+    &__link {
+      &:hover {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleHover);
+      }
+    }
+    &__entrance {
+      &:hover {
+        color: var(--colorPurpleHover);
+      }
+      &:hover svg {
+        fill: var(--colorPurpleHover);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurpleHover);
+      }
+    }
+  }
+  .header-bottom {
+    &__btn {
+      &:hover .header-bottom__heading {
+        color: var(--colorPurpleHover);
+      }
+      &:hover::before {
+        border-color: var(--colorPurpleHover);
+      }
+      &:focus-visible .header-bottom__heading {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible::before {
+        border-color: var(--colorPurpleHover);
+      }
+    }
+    &__searchbtn {
+      & svg {
+        &:hover {
+          fill: var(--colorPurple);
+        }
+        &:focus-visible {
+          fill: var(--colorPurpleHover);
+        }
+      }
+    }
+    &__input {
+      &:hover {
+        border-color: var(--colorPurpleHover);
+      }
+      &:focus-visible {
+        border-color: var(--colorPurpleHover);
+      }
+    }
+  }
+  .header-link {
+    &:hover {
+      border-color: var(--colorPurpleHover);
+    }
+    &:focus-visible {
+      border-color: var(--colorPurpleHover);
+    }
+  }
+  .hero {
+    &__btn {
+      &:hover {
+        background-color: (var(--colorPurpleActive));
+      }
+      &:focus-visible {
+        background-color: (var(--colorPurpleActive));
+      }
+    }
+  }
+  .gallery {
+    &__link {
+      &:hover {
+        color: var(--colorPurpleActive);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleActive);
+      }
+    }
+    &__prev {
+      &:hover svg {
+        fill: var(--colorPurple);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurple);
+      }
+    }
+    &__next {
+      &:hover svg {
+        fill: var(--colorPurple);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurple);
+      }
+    }
+  }
+  .gallery-swiper {
+    &__popup {
+      &:hover::before {
+        opacity: 1;
+      }
+      &:focus-visible::before {
+        opacity: 1;
+      }
+    }
+  }
+  .gallery .swiper-button-disabled {
+    &:hover svg {
+      fill: #666666;
+    }
+    &:focus-visible svg {
+      fill: #666666;
+    }
+  }
+  .popup {
+    &__btn {
+      &:hover:before {
+        border-color: var(--colorPurpleHover);
+      }
+      &:hover:after {
+        border-color: var(--colorPurpleHover);
+      }
+      &:focus-visible:before {
+        border-color: var(--colorPurpleHover);
+      }
+      &:focus-visible:after {
+        border-color: var(--colorPurpleHover);
+      }
+    }
+  }
+  .choices {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    &:focus-visible {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .catalog-unknown {
+    &__link {
+      &:hover {
+        color: var(--colorPurpleActive);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleActive);
+      }
+    }
+  }
+  .catalog-accordion {
+    &__heading {
+      &:hover span {
+        color: var(--colorPurpleHover);
+      }
+      &:hover svg {
+        fill: var(--colorPurpleHover);
+      }
+      &:focus-visible span {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurpleHover);
+      }
+    }
+    &__link {
+      &:hover {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleHover);
+      }
+    }
+    &__unk {
+      &:hover {
+        color: var(--colorPurpleActive);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleActive);
+      }
+    }
+  }
+  .catalog-btn {
+    &:hover {
+      opacity: .5;
+    }
+    &:focus-visible {
+      opacity: .5;
+    }
+  }
+  .events {
+    &__all {
+      &:hover {
+        color: var(--colorWhite);
+        background-color: var(--colorPurple);
+      }
+      &:focus-visible {
+        color: var(--colorWhite);
+        background-color: var(--colorPurple);
+      }
+    }
+    &__collapse{
+      &:hover {
+        color: var(--colorWhite);
+        background-color: var(--colorPurple);
+      }
+      &:focus-visible {
+        color: var(--colorWhite);
+        background-color: var(--colorPurple);
+      }
+    }
+  }
+  .events-swiper {
+    &__link {
+      &:hover {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleHover);
+      }
+    }
+  }
+  .editions {
+    &__prev {
+      &:hover svg {
+        fill: var(--colorPurple);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurple);
+      }
+    }
+    &__next {
+      &:hover svg {
+        fill: var(--colorPurple);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurple);
+      }
+    }
+  }
+  .editions .swiper-button-disabled {
+    &:hover svg {
+      fill: #666666;
+    }
+    &:focus-visible svg {
+      fill: #666666;
+    }
+  }
+  .checkboxs {
+    &__input {
+      &:hover + .checkboxs__span {
+        color: var(--colorPurpleHover);
+      }
+      &:hover + .checkboxs__span::before {
+        border-color: var(--colorPurpleHover);
+      }
+      &:focus-visible + .checkboxs__span {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible + .checkboxs__span::before {
+        border-color: var(--colorPurpleHover);
+      }
+    }
+  }
+  .editions-price {
+    &__input {
+      &:hover {
+        background-color: var(--colorPurpleActive);
+      }
+      &:focus-visible {
+        background-color: var(--colorPurpleActive);
+      }
+    }
+  }
+  .editions-swiper {
+    &__btn {
+      &:hover {
+        border-color: var(--colorWhite);
+      }
+      &:focus-visible {
+        border-color: var(--colorWhite);
+      }
+    }
+  }
+  .projects {
+    &__link {
+      &:hover {
+        color: var(--colorPurpleHover);
+      }
+      &:focus-visible {
+        color: var(--colorPurpleHover);
+      }
+    }
+    &__tooltip {
+      &:hover {
+        opacity: .5;
+      }
+      &:focus-visible {
+        opacity: .5;
+      }
+    }
+    &__prev {
+      &:hover svg {
+        fill: var(--colorPurpleHover);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurpleHover);
+      }
+    }
+    &__next {
+      &:hover svg {
+        fill: var(--colorPurpleHover);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurpleHover);
+      }
+    }
+  }
+  .projects-swiper {
+    &__link {
+      &:hover img {
+        filter: grayscale(0);
+      }
+      &:focus-visible img {
+        filter: grayscale(0);
+      }
+    }
+    &__next {
+      &:hover svg {
+        fill: var(--colorPurpleHover);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurpleHover);
+      }
+    }
+    &__prev {
+      &:hover svg {
+        fill: var(--colorPurpleHover);
+      }
+      &:focus-visible svg {
+        fill: var(--colorPurpleHover);
+      }
+    }
+  }
+  .projects .swiper-button-disabled {
+    &:hover svg {
+      fill: #ECECEC;
+    }
+    &:focus-visible svg {
+      fill: #ECECEC;
+    }
+  }
+  .contacts {
+    &__link {
+      &:hover {
+        opacity: .5;
+      }
+      &:focus-visible {
+        opacity: .5;
+      }
+    }
+  }
+  .contacts-form {
+    &__input {
+      &:hover {
+        background-color: var(--colorGray);
+      }
+      &:focus-visible {
+        border-color: var(--colorPurpleActive);
+      }
+    }
+    &__btn {
+      &:hover {
+        color: var(--colorWhite);
+        background-color: #C283F3;
+      }
+      &:focus-visible {
+        color: var(--colorWhite);
+        background-color: #C283F3;
+      }
+    }
+  }
+  .footer {
+    &__logo {
+      &:hover {
+        opacity: .5;
+      }
+      &:focus-visible {
+        opacity: .5;
+      }
+    }
+    &__link {
+      &:hover svg {
+        fill: var(--colorWhite);
+      }
+      &:focus-visible svg {
+        fill: var(--colorWhite);
+      }
+    }
+  }
+}
