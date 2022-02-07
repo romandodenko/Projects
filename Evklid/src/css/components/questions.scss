@@ -1,5 +1,6 @@
 .questions {
   margin-bottom: 97px;
+
   &__title {
     margin-bottom: 43px;
   }
@@ -13,27 +14,33 @@
     border-bottom: 1px solid #cacaca;
     background: transparent;
     transition: all .2s ease-in-out;
+
     & svg ellipse {
       transition: all .2s ease-in-out;
     }
+
     & svg path {
       transition: all .2s ease-in-out;
     }
   }
+
   &__svg {
-   flex-shrink: 0;
-   transition: all .2s ease-in-out;
+    flex-shrink: 0;
+    transition: all .2s ease-in-out;
   }
+
   &__item:last-child {
     & .ui-accordion-content-active {
       border-bottom: 1px solid #cacaca;
     }
   }
+
   &__item:nth-child(3) {
-    & .ui-accordion-header  {
+    & .ui-accordion-header {
       padding-bottom: 27px;
     }
   }
+
   &__title {
     display: flex;
     justify-content: space-between;
@@ -43,39 +50,48 @@
     line-height: 32px;
     color: var(--color-black);
     transition: all .2s ease-in-out;
+
     & span {
       display: block;
       margin-right: 75px;
     }
   }
+
   &__text {
     font-family: "Montserrat400";
     font-size: 16px;
     line-height: 32px;
     color: var(--color-black);
   }
+
   &__svg320 {
     display: none;
   }
+
   &__content {
     border: none;
     background: transparent;
     padding: 0;
   }
 }
+
 .ui-accordion .ui-accordion-header {
   margin-top: -1px;
   padding: 32px 0 29px 0;
 }
+
 .ui-corner-all {
   border-radius: 0;
 }
+
 .ui-accordion .ui-accordion-content {
   padding: 30px 0;
 }
+
 .ui-state-active {
   border-radius: 0;
   border-bottom-color: transparent;
+
   & svg {
     transform: rotate(45deg);
   }
@@ -88,31 +104,37 @@
 @media (max-width: 1200px) {
   .questions {
     margin-bottom: 82px;
+
     &__container {
       padding: 0 50px;
     }
+
     &__title {
       margin-bottom: 32px;
     }
   }
+
   .accordion {
     &__title {
       font-size: 20px;
       line-height: 32px;
     }
-    &__item:nth-child(2) {  
+
+    &__item:nth-child(2) {
       & .accordion__title {
         & span {
           width: 70%;
         }
       }
     }
-    &__item:nth-child(3) {  
+
+    &__item:nth-child(3) {
       & .ui-accordion-header {
         padding-bottom: 32px;
       }
     }
   }
+
   .ui-accordion .ui-accordion-header {
     padding: 29px 0 30px 0;
   }
@@ -124,12 +146,14 @@
       margin-bottom: 31px;
     }
   }
+
   .accordion {
     &__title {
       & span {
         margin-right: 40px;
       }
     }
+
     &__item:nth-child(2) {
       & .accordion__title {
         & span {
@@ -137,6 +161,7 @@
         }
       }
     }
+
     &__item:nth-child(4) {
       & .accordion__title {
         & span {
@@ -150,43 +175,52 @@
 @media (max-width: 500px) {
   .questions {
     margin-bottom: 59px;
+
     &__container {
       padding: 0 15px;
     }
+
     &__title {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 17px;
     }
   }
+
   .accordion {
     &__title {
       font-size: 14px;
       line-height: 24px;
+
       & span {
         margin-right: 15px;
       }
     }
+
     &__text {
       font-size: 14px;
       line-height: 28px;
     }
+
     &__svg {
       display: none;
     }
+
     &__item:nth-child(2) {
       & .accordion__title {
-       & span {
+        & span {
           width: 85%;
         }
       }
     }
+
     &__svg320 {
       display: block;
       flex-shrink: 0;
       transition: all .2s ease-in-out;
     }
   }
+
   .ui-accordion .ui-accordion-header {
     padding: 29px 0 31px 0;
   }

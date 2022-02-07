@@ -1,22 +1,27 @@
 .footer {
   background-color: #222222;
   padding: 50px 0;
+
   &__container {
     display: flex;
   }
+
   &__logo {
     display: inline-block;
     margin-bottom: 22px;
   }
+
   &__left {
     display: flex;
     flex-direction: column;
     margin-right: 19.4%;
   }
+
   &__list {
     margin-bottom: 90px;
     margin-left: -5px;
   }
+
   &__link {
     font-family: "Montserrat600";
     font-size: 18px;
@@ -25,23 +30,28 @@
     padding: 0 4px 1px 4px;
     border: 2px solid transparent;
     transition: all .2s ease-in-out;
+
     &:active {
       transition-duration: .1s;
       color: var(--color-dark-orange);
     }
   }
+
   &__icons {
     display: flex;
     margin-top: -3px;
     margin-left: -5px;
   }
+
   &__icon {
     display: block;
     padding: 0 4px 1px 4px;
     border: 2px solid transparent;
+
     & svg path {
       transition: all .2s ease-in-out;
     }
+
     &:active {
       & svg path {
         transition-duration: .1s;
@@ -49,9 +59,11 @@
       }
     }
   }
+
   &__iconitem:not(:last-child) {
     margin-right: 13px;
-  } 
+  }
+
   &__title {
     font-family: "Montserrat400";
     font-size: 48px;
@@ -59,10 +71,12 @@
     color: #cacaca;
     margin-bottom: 25px;
   }
+
   &__form {
     width: 32.2%;
     margin-right: 13.3%;
   }
+
   &__text {
     width: 100%;
     height: 60px;
@@ -74,16 +88,19 @@
     margin-bottom: 26px;
     padding: 27px 25px 25px 25px;
     transition: all .2s ease-in-out;
+
     &::placeholder {
       font-family: "Montserrat400";
       font-size: 16px;
       line-height: 32px;
       color: #cacaca;
     }
+
     &:focus-visible {
       background-color: var(--color-gray);
     }
   }
+
   &__email {
     width: 100%;
     height: 60px;
@@ -95,16 +112,19 @@
     margin-bottom: 26px;
     padding: 27px 25px 25px 25px;
     transition: all .2s ease-in-out;
+
     &::placeholder {
       font-family: "Montserrat400";
       font-size: 16px;
       line-height: 32px;
       color: #cacaca;
     }
+
     &:focus-visible {
       background-color: var(--color-gray);
     }
   }
+
   &__textarea {
     width: 100%;
     height: 60px;
@@ -117,16 +137,19 @@
     margin-bottom: 28px;
     padding: 14px 25px 25px 25px;
     transition: all .2s ease-in-out;
+
     &::placeholder {
       font-family: "Montserrat400";
       font-size: 16px;
       line-height: 32px;
       color: #cacaca;
     }
+
     &:focus-visible {
       background-color: var(--color-gray);
     }
   }
+
   &__checkbox {
     position: absolute;
     top: 5px;
@@ -134,50 +157,57 @@
     width: 14px;
     height: 14px;
     opacity: 0;
-    &:checked + span::after {
+
+    &:checked+span::after {
       opacity: 1;
     }
   }
+
   &__label {
     position: relative;
-   & span {
-     position: relative;
-     top: 2px;
-     font-family: "Montserrat400";
-     font-size: 16px;
-     line-height: 32px;
-     padding-left: 17px;
-     color: #cacaca;
-     white-space: nowrap;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 0;
-      width: 14px;
-      height: 14px;
-      border: 1px solid #cacaca;
-      cursor: pointer;
+
+    & span {
+      position: relative;
+      top: 2px;
+      font-family: "Montserrat400";
+      font-size: 16px;
+      line-height: 32px;
+      padding-left: 17px;
+      color: #cacaca;
+      white-space: nowrap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #cacaca;
+        cursor: pointer;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        width: 4px;
+        height: 6px;
+        border-right: 1px solid rgb(12, 207, 12);
+        border-bottom: 1px solid rgb(12, 207, 12);
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: all .2s ease-in-out;
+      }
     }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 5px;
-      width: 4px;
-      height: 6px;
-      border-right: 1px solid rgb(12, 207, 12);
-      border-bottom: 1px solid rgb(12, 207, 12);
-      transform: rotate(45deg);
-      opacity: 0;
-      transition: all .2s ease-in-out;
-    }
-   }
   }
+
   &__wrp {
     display: flex;
     align-items: center;
   }
+
   &__btn {
     font-size: 16px;
     line-height: 20px;
@@ -185,16 +215,20 @@
     margin-right: 23px;
     white-space: nowrap;
     transition: all .2s ease-in-out;
+
     &:active {
       background-color: var(--color-dark-orange);
     }
   }
+
   &__svg320 {
     display: none;
   }
+
   &__right {
     width: 20%;
   }
+
   &__descr {
     font-family: "Montserrat400";
     font-size: 16px;
@@ -209,14 +243,17 @@
     &__right {
       display: none;
     }
+
     &__left {
       margin-right: 5%;
     }
+
     &__label {
       & span {
         white-space: break-spaces;
       }
     }
+
     &__form {
       width: 596px;
       margin-left: auto;
@@ -230,23 +267,29 @@
     &__container {
       padding: 0 50px;
     }
+
     &__left {
       margin-left: -2px;
     }
+
     &__form {
       width: 541px;
     }
+
     &__label {
       & span {
         top: 3px;
+
         &::before {
           top: 2px;
         }
+
         &::after {
           top: 5px;
         }
       }
     }
+
     &__btn {
       padding: 19px 38px 19px 38px;
       margin-right: 21px;
@@ -260,18 +303,22 @@
       flex-direction: column;
       align-items: center;
     }
+
     &__logo {
       margin-bottom: 18px;
     }
+
     &__left {
       width: max-content;
       order: 2;
     }
+
     &__form {
       width: 100%;
       order: 1;
       margin-bottom: 49px;
     }
+
     &__list {
       display: none;
     }
@@ -283,15 +330,18 @@
     &__container {
       align-items: flex-start;
     }
+
     &__form {
       width: 81%;
       margin-left: 0;
     }
+
     &__label {
       & span {
         white-space: nowrap;
       }
     }
+
     &__left {
       width: 100%;
     }
@@ -303,27 +353,33 @@
     &__container {
       align-items: center;
     }
+
     &__label {
       & span {
         white-space: normal;
       }
     }
+
     &__form {
       width: 100%;
     }
+
     &__btn {
       margin-right: 0;
       margin-bottom: 5px;
     }
+
     &__logo {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     &__left {
       width: max-content;
       margin-right: 0;
     }
+
     &__wrp {
       flex-direction: column;
     }
@@ -333,56 +389,70 @@
 @media (max-width: 500px) {
   .footer {
     padding: 32px 0;
+
     &__container {
       padding: 0 15px;
     }
+
     &__title {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 21px;
     }
+
     &__form {
       padding-bottom: 20px;
       margin-bottom: 15px;
       border-bottom: 2px solid #595959;
     }
+
     &__text {
       padding: 27px 25px 25px 20px;
+
       &::placeholder {
         font-size: 14px;
         line-height: 32px;
       }
     }
+
     &__email {
       padding: 27px 25px 25px 20px;
+
       &::placeholder {
         font-size: 14px;
         line-height: 32px;
       }
     }
+
     &__textarea {
       padding: 14px 25px 25px 20px;
       margin-bottom: 21px;
+
       &::placeholder {
         font-size: 14px;
         line-height: 32px;
       }
     }
+
     &__btn {
       font-size: 12px;
       line-height: 15px;
       padding: 12px 28px 12px 28px;
       margin-bottom: 9px;
     }
+
     &__icons {
       margin-left: 4px;
     }
+
     &__iconitem:not(:last-child) {
       margin-right: 4px;
     }
+
     &__svg {
       display: none;
     }
+
     &__svg320 {
       display: block;
     }

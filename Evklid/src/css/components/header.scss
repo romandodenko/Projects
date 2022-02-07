@@ -1,5 +1,6 @@
 .header {
   background-color: var(--color-white);
+
   &__container {
     position: relative;
     display: flex;
@@ -8,13 +9,16 @@
     padding-top: 14px;
     padding-bottom: 14px;
   }
+
   &__right {
     display: flex;
   }
+
   &__nav {
     margin-top: 3px;
     margin-right: 74px;
   }
+
   &__link {
     position: relative;
     font-family: "Montserrat600";
@@ -23,6 +27,7 @@
     color: var(--color-black);
     padding: 1px 3px;
     border: 2px solid transparent;
+
     &::before {
       content: "";
       position: absolute;
@@ -35,9 +40,11 @@
       transition: all .2s linear;
       opacity: 0;
     }
+
     &:active {
       color: var(--color-dark-orange);
       transition-duration: .1s;
+
       &::before {
         background-color: var(--color-dark-orange);
         opacity: 1;
@@ -45,25 +52,31 @@
       }
     }
   }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
   }
+
   &__item:not(:last-child) {
     margin-right: 75px;
   }
+
   &__btn {
     padding: 1px 3px;
     background-color: transparent;
     border: 2px solid transparent;
     margin-right: -3px;
+
     &:active svg path {
       stroke: var(--color-dark-orange);
     }
+
     &:active svg rect {
       fill: var(--color-dark-orange);
     }
   }
+
   &__burger {
     position: relative;
     width: 30px;
@@ -72,6 +85,7 @@
     display: none;
     z-index: 30;
     transition: all .2s ease-in-out;
+
     & span {
       position: absolute;
       top: 45%;
@@ -81,6 +95,7 @@
       background-color: var(--color-black);
       transition: all .2s ease-in-out;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -91,6 +106,7 @@
       background-color: var(--color-black);
       transition: all .2s ease-in-out;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -103,6 +119,7 @@
     }
   }
 }
+
 .searchwrapper {
   display: flex;
   align-items: center;
@@ -120,12 +137,14 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
   transition: all .2s ease-in-out;
   z-index: 1111;
+
   &__form {
     display: flex;
     align-items: center;
     margin-right: 12px;
     margin-left: 30px;
   }
+
   & input {
     width: 412px;
     font-family: "Montserrat500";
@@ -137,6 +156,7 @@
     -webkit-appearance: none;
     outline: none;
     border-radius: 0;
+
     &::placeholder {
       font-family: "Montserrat500";
       font-size: 18px;
@@ -144,41 +164,50 @@
       color: #adadad;
     }
   }
+
   &__exit {
     background-color: transparent;
     border: 2px solid transparent;
     padding: 1px 3px;
+
     & svg rect {
       fill: #999999;
     }
+
     &:active {
       & svg circle {
         stroke: var(--color-black);
       }
-      & svg rect  {
+
+      & svg rect {
         fill: var(--color-black);
       }
     }
   }
+
   &__search {
     background-color: transparent;
     padding: 1px 3px;
     border: 2px solid transparent;
     transition: all .2s ease-in-out;
+
     & svg path {
       stroke: var(--color-orange);
     }
+
     & svg rect {
       fill: var(--color-orange);
     }
+
     &:active {
       & svg path {
         stroke: var(--color-dark-orange);
       }
+
       & svg rect {
         fill: var(--color-dark-orange);
       }
-    } 
+    }
   }
 }
 
@@ -191,15 +220,17 @@
 @media (max-width: 1200px) {
   .header {
     &__container {
+      position: static;
       padding: 25px 50px;
     }
+
     &__nav {
       position: absolute;
-      top: 100%;
+      top: 0;
       left: 0;
       width: 100%;
-      min-height: 420px;
-      padding: 30px 30px 30px 45px;
+      height: 100%;
+      padding: 100px 30px 30px 45px;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
@@ -208,58 +239,76 @@
       margin-top: 0;
       transition: all .2s ease-in-out;
       z-index: 1000;
+      overflow-y: auto;
     }
+
     &__list {
       display: block;
     }
+
     &__item {
       margin: 0;
     }
+
     &__item:not(:last-child) {
       margin: 0 0 40px 0;
     }
+
     &__link {
       display: inline-block;
       width: 100%;
       font-size: 24px;
+
+      &::before {
+        left: 0;
+        transform: translateX(0);
+      }
     }
+
     &__logo {
       order: 2;
     }
+
     &__burger {
       display: block;
       order: 1;
       z-index: 1001;
     }
+
     &__right {
       order: 3;
     }
   }
+
   .nav-active {
     opacity: 1;
     visibility: visible;
     pointer-events: visible;
   }
+
   .burger-active {
     &::before {
-      transform: rotate(45deg) translate(10px,10px);
+      transform: rotate(45deg) translate(10px, 10px);
     }
+
     &::after {
-      transform: rotate(-45deg) translate(4px,-4px);
+      transform: rotate(-45deg) translate(4px, -4px);
     }
+
     & span {
       transform: translateX(-100px);
     }
   }
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
   .header {
     &__container {
       padding-top: 9px;
       padding-bottom: 12px;
     }
   }
+
   .searchwrapper {
     width: 100%;
     height: 100%;
@@ -268,32 +317,38 @@
     border-radius: 0;
     padding-top: 17px;
     transform: translateY(0);
+
     &__form {
       width: 100%;
       margin-left: 20px;
       margin-right: 0;
     }
+
     & input {
       width: 100%;
     }
+
     &__search {
       margin-right: 5px;
     }
+
     &__exit {
       margin-right: 5px;
     }
   }
 }
 
-@media (max-width: 500px)  {
+@media (max-width: 500px) {
   .header {
     &__container {
       padding: 17px 15px;
     }
+
     &__nav {
       width: 100%;
-      padding-left: 20px;
+      padding-left: 15px;
     }
+
     &__link {
       font-family: "Montserrat700";
       line-height: 20px;
