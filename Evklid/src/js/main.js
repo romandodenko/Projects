@@ -7,10 +7,12 @@ const body = document.querySelector("body")
 
 headerBtn.addEventListener("click", function () {
   searchWrapper.classList.add("search-active")
+  body.classList.add("body-block")
 })
 
 searchExitBtn.addEventListener("click", function () {
   searchWrapper.classList.remove("search-active")
+  body.classList.remove("body-block")
 })
 
 burger.addEventListener("click", function () {
