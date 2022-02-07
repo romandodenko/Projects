@@ -1,5 +1,3 @@
-Сайты расположены по мере моего развития во Frontend разработке.
-
 Художественная галерея, Blanchard - http://romand-blanchard.cn25355.tmweb.ru/
 
 Сайт строительной компании, Evklid - http://romand-evklid.cn25355.tmweb.ru/
