@@ -24,6 +24,10 @@ body {
   font-family: 'OpenSans400';
 }
 
+.body-block {
+  overflow: hidden;
+}
+
 main {
   flex: 1 1 auto;
 }
