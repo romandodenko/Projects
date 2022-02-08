@@ -214,6 +214,9 @@ $maxWidthContainer: 1630;
   color: var(--colorWhite);
   border-bottom: 1px solid var(--colorWhite);
   background-color: transparent;
+  -webkit-appearance: none;
+   border-radius: 0;
+   outline: none;
   transition: border-color .2s ease-in-out;
   &::placeholder {
     font-style: normal;
