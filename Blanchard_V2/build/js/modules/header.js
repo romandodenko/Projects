@@ -7,6 +7,7 @@ const searchClicker = document.querySelector(".header__searchclicker");
 const search = document.querySelector(".header-bottom__form");
 const headerLink = document.querySelectorAll(".header__link");
 const entrance = document.querySelector(".header__entrance");
+const main = document.querySelector("main");
 
 export function burgerClick() {
   burger.addEventListener("click", function () {
@@ -17,6 +18,12 @@ export function burgerClick() {
 
   searchClicker.addEventListener("click", function () {
     search.classList.toggle("search-active")
+    body.classList.toggle("body-hidden")
+  })
+
+  main.addEventListener("click", function() {
+    search.classList.remove("search-active")
+    body.classList.remove("body-hidden")
   })
 
   entrance.addEventListener("click", function () {
@@ -28,6 +35,7 @@ export function burgerClick() {
     headerLink.addEventListener("click", function() {
       nav.classList.remove("nav-active")
       body.classList.remove("body-hidden")
+      burger.classList.remove("burger-active")
     })
   })
 }

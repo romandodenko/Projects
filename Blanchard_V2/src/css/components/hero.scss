@@ -32,6 +32,7 @@ $maxWidthContainer: 1630;
   position: relative;
   min-height: 800px;
   overflow: hidden;
+  margin-top: -180px;
   @include adaptive ("margin-bottom", 80, 40, 0);
   z-index: 1;
   &__swiper {
@@ -113,11 +114,14 @@ $maxWidthContainer: 1630;
 }
 
 @media (max-width: 1250px) {
-  .hero__container {
-    padding: 0 30px;
-  }
-  .hero__descr {
-    padding-left: 0;
+  .hero {
+    margin-top: 0;
+    &__container {
+      padding: 0 30px;
+    }
+    &__descr {
+      padding-left: 0;
+    }
   }
   .hero-slide-one {
     background-image: url(/img/hero-1-1024.png);

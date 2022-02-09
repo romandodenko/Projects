@@ -29,7 +29,7 @@ $maxWidthContainer: 1630;
 }
 
 .header {
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 33;
   &__top {
@@ -426,6 +426,7 @@ $maxWidthContainer: 1630;
 
 @media (max-width: 1250px) {
   .header {
+    position: fixed;
     &__container {
       padding: 0 30px;
     }
