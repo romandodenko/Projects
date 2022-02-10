@@ -1,5 +1,5 @@
 $maxWidth: 1920;
-$maxWidthContainer: 1630;
+$maxWidthContainer: 1650;
 
 @mixin adaptive ($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;
@@ -31,14 +31,27 @@ $maxWidthContainer: 1630;
 .contacts {
   max-width: 1920px;
   margin: 0 auto;
+  &__container {
+    padding-right: 0;
+    margin: 0 0 0 auto;
+  }
   &__body {
     display: flex;
     flex-wrap: wrap;
   }
   &__left {
+    position: relative;
     width: 36.3%;
-    padding: 6.5% 8.5%;
-    border: 1px solid var(--colorGray)
+    padding: 8.5% 11% 8.5% 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -53%;
+      width: 170%;
+      height: 100%;
+      border: 1px solid var(--colorGray);
+    }
   }
   &__title {
     @include adaptive ("margin-bottom", 30, 15, 0);
@@ -150,10 +163,11 @@ ymaps .ymaps-2-1-79-copyright {
 @media (max-width: 1250px) {
   .contacts {
     &__container {
-      padding: 0 30px;
+      padding: 0 0 0 30px;
     }
     &__left {
       width: 45%;
+      padding-right: 7%;
     }
     &__map {
       width: 55%;
@@ -174,12 +188,24 @@ ymaps .ymaps-2-1-79-copyright {
 
 @media (max-width: 600px) {
   .contacts {
+    &__container {
+      padding: 0;
+    }
+    &__title {
+      padding: 0 30px;
+    }
     &__body {
       flex-direction: column;
     }
     &__left {
       width: 100%;
       order: 2;
+      padding-left: 30px;
+      padding-right: 30px;
+      &::before {
+        width: 100%;
+        left: 0;
+      }
     }
     &__map {
       width: 100%;
@@ -190,12 +216,13 @@ ymaps .ymaps-2-1-79-copyright {
 
 @media (max-width: 500px) {
   .contacts {
-    &__container {
-      padding: 0 15px;
-    }
     &__title {
       font-size: 28px;
       line-height: 38px;
+    }
+    &__left {
+      padding-left: 15px;
+      padding-right: 15px;
     }
     &__address {
       font-size: 14px;

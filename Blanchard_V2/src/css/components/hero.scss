@@ -1,5 +1,5 @@
 $maxWidth: 1920;
-$maxWidthContainer: 1630;
+$maxWidthContainer: 1650;
 
 @mixin adaptive ($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;
@@ -113,7 +113,7 @@ $maxWidthContainer: 1630;
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1276px) {
   .hero {
     margin-top: 0;
     &__container {
