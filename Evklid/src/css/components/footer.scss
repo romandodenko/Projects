@@ -165,6 +165,7 @@
 
   &__label {
     position: relative;
+    display: block;
 
     & span {
       position: relative;
@@ -236,6 +237,12 @@
     color: #cacaca;
     padding-top: 89px;
   }
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: -21px;
+  left: 0;
 }
 
 @media (max-width: 1481px) {

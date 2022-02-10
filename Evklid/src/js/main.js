@@ -131,3 +131,27 @@ navbarLinks.forEach(function (links) {
     body.classList.remove("body-block")
   })
 })
+
+new JustValidate('.footer__form', {
+  colorWrong: "#FF6972",
+  rules: {
+    name: {
+      required: true,
+      minLength: 2,
+      strength: {
+        custom: '[а-яА-Я\d]',
+      },
+    },
+    mail: {
+      required: true,
+    },
+  },
+  messages: {
+    name: {
+      required: 'Введите ваше имя',
+      minLength: 'Минимальное количество букв - 2',
+      strength: 'Недопустимый формат',
+    },
+    mail: 'Введите вашу почту'
+  },
+})

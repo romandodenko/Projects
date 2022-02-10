@@ -546,9 +546,14 @@
       </div>
       <form class="footer__form" action="#" aria-label="Оставить заявку чтобы связаться с нами">
         <h2 class="footer__title title">Оставить заявку</h2>
-        <input class="footer__text" type="text" placeholder="Фамилия, имя и отчество*"
-          aria-label="Введите имя фамилию и отчество">
-        <input class="footer__email" type="email" placeholder="E-mail*" aria-label="Введите ваш емаил">
+        <label class="footer__label">
+          <input class="footer__text" type="text" placeholder="Фамилия, имя и отчество*"
+          aria-label="Введите имя фамилию и отчество" required
+          data-validate-field="name">
+        </label>
+        <label class="footer__label">
+          <input class="footer__email" type="email" placeholder="E-mail*" aria-label="Введите ваш емаил" data-validate-field="mail" data-validate-rules="mail">
+        </label>
         <textarea class="footer__textarea" placeholder="Сообщение"
           aria-label="Введите комментарий который хотите отправить вместе с инициалами и почтой"></textarea>
         <div class="footer__wrp">
@@ -568,6 +573,7 @@
       </div>
     </div>
   </footer>
+  <script src="./resources/just-validate.min.js"></script>
   <script src="./resources/jquery-3.6.0.js"></script>
   <script src="./resources/jquery-ui.js"></script>
   <script src="./resources/swiper.js"></script>

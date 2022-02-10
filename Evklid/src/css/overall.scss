@@ -21,7 +21,18 @@ body {
 }
 
 .body-block {
+  position: relative;
   overflow: hidden;
+  padding-right: 17px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17px;
+    height: 100px;
+    background-color: var(--color-white);
+  }
 }
 
 .text {

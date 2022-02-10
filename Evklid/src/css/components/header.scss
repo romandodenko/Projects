@@ -305,11 +305,22 @@
     bottom: auto;
     transform: translateY(0);
   }
+  .body-block {
+    &::before {
+      height: 122px;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
   .searchwrapper {
     top: 3%;
+  }
+  .body-block {
+    &::before {
+      display: none;
+      padding-right: 0;
+    }
   }
 }
 
