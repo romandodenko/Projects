@@ -51,6 +51,7 @@ $maxWidthContainer: 1650;
       width: 170%;
       height: 100%;
       border: 1px solid var(--colorGray);
+      z-index: -1;
     }
   }
   &__title {
