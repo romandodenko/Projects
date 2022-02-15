@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('NexaLight'),
+       url("../fonts/NexaLight.woff2") format("woff2"),
+       url("../fonts/NexaLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Coustard-Regular'),
+       url("../fonts/Coustard-Regular.woff2") format("woff2"),
+       url("../fonts/Coustard-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('NexaBold'),
+       url("../fonts/NexaBold.woff2") format("woff2"),
+       url("../fonts/NexaBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Coustard-Black'),
+       url("../fonts/Coustard-Black.woff2") format("woff2"),
+       url("../fonts/Coustard-Black.woff") format("woff");
+}
+
+
+
+
+
+/* Начертания
+
+100 - thin
+200 - extra light
+300 - light
+400 - regular ( normal )
+500 - medium
+600 - semi bold
+700 - bold
+800 - extra bold
+900 - black 
+
+*/

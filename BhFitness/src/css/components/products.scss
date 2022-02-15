@@ -1,0 +1,123 @@
+.products {
+  margin-bottom: 60px;
+  transition: transform .5s ease-in-out;
+  &__list {
+    display: grid;
+    grid-template: repeat(2, 300px) / repeat(4, minmax(0, 270px));
+    grid-auto-rows: 300px;
+    gap: 25px;
+    border-top: 1px solid #cacaca;
+    padding-top: 20px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__shadow {
+    box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 20%);
+  }
+  &__links {
+    position: relative;
+    display: block;
+    height: 260px;
+    z-index: 3;
+    & img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
+  &__topcart {
+    position: relative;
+    overflow: hidden;
+  }
+  &__link {
+    display: inline-block;
+    font-family: "Nexa";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--colorBurgundy);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transition: opacity .2s ease-in-out;
+  }
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 99%;
+    font-family: "Nexa";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--colorWhite);
+    background-color: var(--colorBurgundy);
+    padding: 5px 0;
+    transform: translate(-50%,110%);
+    transition: transform .2s ease-in-out;
+    z-index: 4;
+  }
+  &__title {
+    padding: 15px 0;
+    margin-top: 5px;
+    text-align: center;
+    background-color: var(--colorWhite);
+    transition: all .2s ease-in-out;
+  }
+  &__element {
+    position: relative;
+    display: inline-block;
+    font-family: "Nexa";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--colorBurgundy);
+    text-align: center;
+    z-index: 2;
+    transition: color .2s ease-in-out;
+  }
+}
+
+@media (max-width: 1220px) {
+  .products {
+    &__list {
+      grid-template: repeat(2, minmax(300px,1fr)) / repeat(3, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .products {
+    &__btn {
+      width: 100px;
+      left: 0;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 856px) {
+  .products {
+    &__list {
+      grid-template: repeat(2, minmax(300px,1fr)) / repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    &__list {
+      grid-template: repeat(2, minmax(300px,1fr)) / repeat(1, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    &__container {
+      padding: 0 15px;
+    }
+  }
+}
