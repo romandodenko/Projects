@@ -44,12 +44,17 @@ export function gallery() {
       document.querySelector(`[data-target3="${path3}"]`).classList.add("popup-active")
     })
   })
+  document.querySelectorAll(".gallery-swiper__popup").forEach(function (popupItems) {
+    popupItems.addEventListener("click", function () {
+      body.classList.add("hidden-body")
+    })
+  })
 
   popupExit.forEach(function (popupExit) {
     popupExit.addEventListener("click", function () {
       popup.forEach(function (popup) {
         popup.classList.remove("popup-active")
-        body.classList.remove("body-hidden")
+        body.classList.remove("hidden-body")
       })
     })
   })
@@ -57,13 +62,8 @@ export function gallery() {
     popupBtn.addEventListener("click", function () {
       popup.forEach(function (popup) {
         popup.classList.remove("popup-active")
-        body.classList.remove("body-hidden")
+        body.classList.remove("hidden-body")
       })
-    })
-  })
-  popupItem.forEach(function (popupItem) {
-    popupItem.addEventListener("click", function () {
-      body.classList.add("body-hidden")
     })
   })
 }
