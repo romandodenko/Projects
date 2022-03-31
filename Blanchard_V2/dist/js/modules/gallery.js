@@ -1,10 +1,5 @@
 "use strict"
 
-import Swiper, {
-  Navigation,
-  Pagination
-} from 'swiper';
-
 const element = document.querySelector('.gallery-select__select');
 const popup = document.querySelectorAll(".popup")
 const popupItem = document.querySelectorAll(".gallery-swiper__popup")
@@ -13,7 +8,6 @@ const popupBtn = document.querySelectorAll(".popup__btn")
 const body = document.querySelector("body")
 
 export function gallery() {
-  Swiper.use([Navigation, Pagination]);
   const swiper = new Swiper('.gallery__swiper', {
     slidesPerView: "auto",
     direction: 'horizontal',

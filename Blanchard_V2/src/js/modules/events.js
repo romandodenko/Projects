@@ -1,10 +1,6 @@
 "use strict"
 
 import gsap from 'gsap';
-import Swiper, {
-  Navigation,
-  Pagination
-} from 'swiper';
 
 const body = document.querySelector("body")
 const btnAll = document.querySelector(".events__all")
@@ -43,7 +39,6 @@ export function events() {
   })
 
   if (body.offsetWidth < 768) {
-    Swiper.use([Navigation, Pagination]);
     const swiper = new Swiper('.events__swiper', {
       slidesPerView: "auto",
       direction: 'horizontal',

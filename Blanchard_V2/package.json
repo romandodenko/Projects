@@ -32,7 +32,6 @@
     "gulp-webpcss": "^1.1.1",
     "just-validate": "^3.4.0",
     "sass": "^1.46.0",
-    "swiper": "^8.0.3",
     "webp-converter": "2.2.3",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
