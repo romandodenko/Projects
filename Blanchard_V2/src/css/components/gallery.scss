@@ -202,6 +202,9 @@ $maxWidthContainer: 1650;
 
 .gallery-swiper {
   overflow: hidden;
+  &__wrapper {
+    // transition-property:none;
+  }
   &__slide {
     max-width: 30.4%;
     background-color: transparent;

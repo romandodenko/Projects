@@ -14,6 +14,7 @@ export function gallery() {
     navigation: {
       nextEl: '.gallery__next',
       prevEl: '.gallery__prev',
+      hideOnClick: false,
     },
     pagination: {
       el: '.gallery__pagination',
