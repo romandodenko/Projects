@@ -43,7 +43,7 @@ $maxWidthContainer: 1740;
 
 .company {
   position: relative;
-  padding-bottom: 25px;
+  @include adaptive ("padding-bottom", 170, 30, 0);
 
   &__container {
     overflow: hidden;
@@ -275,12 +275,9 @@ $maxWidthContainer: 1740;
 }
 
 .complete {
-  opacity: 0;
+  display: none;
   height: 100%;
-  visibility: hidden;
-  pointer-events: none;
   text-align: center;
-  transition: opacity .2s ease-in-out, visibility .2s ease-in-out, pointer-events .2s ease-in-out;
 
   &__okay {
     position: relative;

@@ -7,11 +7,14 @@ export function popup() {
     const popupFormClose = document.querySelector(".popup-form__close");
     const popupFormExit = document.querySelector(".popup-form__exit");
     const body = document.querySelector("body");
+    const headerWrapperNav = document.querySelector(".header__bottom");
 
     popupButton.forEach(function(popupButton) {
       popupButton.addEventListener("click", function() {
         popupForm.classList.add("popup-form-active")
         body.classList.add("body-block")
+        headerWrapperNav.classList.remove("nav-active")
+        body.classList.remove("body-block")
       })
     })
 

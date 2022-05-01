@@ -43,7 +43,16 @@
               <span class="burger__line"></span>
             </button>
           </div>
-          <div class="header__middle">
+          <div class="header__middle" data-da=".header__bottom, 1220, 1">
+            <button class="header__burger-exit"></button>
+            <div class="header__wrapper-logo burger-logo">
+              <a class="header__logo" href="index.html">
+                <picture>
+                  <source media="(min-width: 1000px)" srcset="./img/svg/logo.svg" type="image/svg+xml">
+                  <img src="./img/svg/logo.svg" alt="Grevs логотип">
+                </picture>
+              </a>
+            </div>
             <nav class="header__nav">
               <ul class="header__list">
                 <li class="header__item">
@@ -58,13 +67,6 @@
                 <li class="header__item">
                   <a class="header__link link link-anchor" href="#contacts">Контакты</a>
                 </li>
-                <li class="header__item">
-                  <button class="header__loup" data-da=".header__right, 1220, 0">
-                    <svg width="21" height="21">
-                      <use xlink:href="./img/svg/sprites.svg#search"></use>
-                    </svg>
-                  </button>
-                </li>
               </ul>
             </nav>
             <div class="header__wrapper-select">
@@ -76,15 +78,36 @@
                 <option value="perm">Пермь</option>
               </select>
             </div>
+            <button class="header__button button-2 burger-button popup-button"><span>Заказать звонок</span></button>
+            <ul class="header__soc-list header-soc">
+              <li class="header-soc__item">
+                <a class="header-soc__link" href="#">
+                  <svg width="30" height="30">
+                    <use xlink:href="./img/svg/sprites.svg#skype"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc__item">
+                <a class="header-soc__link" href="#">
+                  <svg width="30" height="30">
+                    <use xlink:href="./img/svg/sprites.svg#whatsupp"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc__item">
+                <a class="header-soc__link" href="#">
+                  <svg width="30" height="30">
+                    <use xlink:href="./img/svg/sprites.svg#telegram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="header__right">
             <button class="header__button button-2 popup-button"><span>Заказать звонок</span></button>
           </div>
-          <div class="header__wrapper-search search">
-            <input class="search__input" type="text" placeholder="Поиск">
-            <button class="search__btn button">Найти</button>
-          </div>
         </div>
+        <div class="header__bottom"></div>
       </div>
     </div>
   </header>

@@ -18,6 +18,10 @@ import * as aosInit from './modules/aos-init.js'
 
 aosInit.aosInit()
 
+import * as inputTel from './modules/input-tel.js'
+
+inputTel.inputTel()
+
 import * as gsapScript from './modules/gsap.js'
 
 gsapScript.gsapScript()

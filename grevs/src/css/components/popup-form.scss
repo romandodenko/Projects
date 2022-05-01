@@ -275,6 +275,7 @@ $maxWidthContainer: 1740;
 }
 
 .popup-form-complete {
+  display: none;
   position: relative;
   z-index: 2;
   max-width: 462px;
@@ -288,10 +289,6 @@ $maxWidthContainer: 1740;
   @include adaptive ("padding-right", 75, 30, 0);
   border-radius: 80px 0 80px 0;
   text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity .2s ease-in-out, visibility .2s ease-in-out, pointer-events .2s ease-in-out;
 
   @media (max-width: 520px) {
     max-width: none;

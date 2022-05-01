@@ -42,8 +42,11 @@ $maxWidthContainer: 1740;
 }
 
 .hero {
-  @include adaptive ("padding-top", 170, 100, 0);
+  @include adaptive ("padding-top", 170, 150, 0);
   @include adaptive ("padding-bottom", 170, 50, 0);
+  @media (max-width: 830px) {
+    @include adaptive ("padding-top", 150, 90, 0);
+  }
   position: relative;
   &::before {
     content: "";

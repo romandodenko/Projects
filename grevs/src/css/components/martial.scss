@@ -57,8 +57,8 @@ $maxWidthContainer: 1740;
     background-image: url(../../img/circle.png);
     background-repeat: no-repeat;
     z-index: -1;
-    @media (max-width: 1355px) {
-      display: none;
+    @media (max-width: 1680px) {
+     display: none;
     }
   }
   &::after {

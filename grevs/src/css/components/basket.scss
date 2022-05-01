@@ -54,16 +54,21 @@ $maxWidthContainer: 1740;
     content: "";
     position: absolute;
     top: -100%;
-    right: -42px;
+    right: -40px;
     width: 713px;
     height: 1197px;
     background-image: url(../../img/basket_1.png);
     background-repeat: no-repeat;
     z-index: -1;
-    @media (max-width: 1600px) {
+    @media (max-width: 1900px) {
       width: 550px;
+      right: 1px;
     }
-    @media (max-width: 1355px) {
+    @media (max-width: 1680px) {
+      width: 350px;
+      right: 1px;
+    }
+    @media (max-width: 1420px) {
       display: none;
     }
   }

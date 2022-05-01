@@ -210,31 +210,12 @@ main {
 @media (min-width: 1024px) {
   .header__link {
     &:hover {
-      color: var(--white);
+      color: var(--hover);
     }
   }
 
-  .header__loup {
+  .header__burger-exit {
     &:hover {
-      & svg {
-        fill: var(--white);
-      }
-    }
-
-    @media (max-width: 1220px) {
-      &:hover {
-        & svg {
-          fill: var(--hover);
-        }
-      }
-    }
-  }
-
-  .burger {
-    &:hover {
-      & .burger__line {
-        background-color: var(--hover);
-      }
 
       &::before {
         background-color: var(--hover);
@@ -248,7 +229,7 @@ main {
 
   .choices__item--selectable {
     &:hover {
-      color: var(--white);
+      color: var(--hover);
     }
   }
 
@@ -269,19 +250,6 @@ main {
       }
     }
   }
-
-  .search__input {
-    &:hover {
-      border-color: var(--hover);
-    }
-  }
-
-  .search__btn {
-    &:hover {
-      box-shadow: 0 2px 30px #5675b566;
-    }
-  }
-
   .hero__button {
     &:hover {
       background-color: transparent;
