@@ -42,16 +42,15 @@ $maxWidthContainer: 1740;
 }
 
 .hero {
-  @include adaptive ("padding-top", 170, 150, 0);
-  @include adaptive ("padding-bottom", 170, 50, 0);
-  @media (max-width: 830px) {
-    @include adaptive ("padding-top", 150, 90, 0);
+  @include adaptive ("padding-top", 70, 50, 0);
+  @include adaptive ("padding-bottom", 200, 50, 0);
+  @media (max-width: 1700px) {
+    @include adaptive ("padding-bottom", 100, 50, 0);
   }
-  position: relative;
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -107px;
     right: 47.8%;
     background-image: url(../../img/hero-img.png);
     background-repeat: no-repeat;
@@ -64,7 +63,7 @@ $maxWidthContainer: 1740;
   &::after {
     content: "";
     position: absolute;
-    top: 22%;
+    top: 55px;
     right: 37.8%;
     background-image: url(../../img/hero-img-line.png);
     background-repeat: no-repeat;
@@ -75,9 +74,13 @@ $maxWidthContainer: 1740;
     }
   }
 
+  &__container {
+    overflow: visible;
+  }
+
   &__body {
     max-width: 725px;
-    @include adaptive ("margin-left", 195, 0, 0);
+    @include adaptive ("margin-left", 250, 0, 0);
     @media (max-width: 900px) {
       margin-left: 0;
       max-width: none;

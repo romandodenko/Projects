@@ -10,10 +10,6 @@ import * as dynamic from './modules/dynamic-adaptive.js'
 
 dynamic.dynamic()
 
-import * as scrollAddClass from './modules/add-class-for-scroll.js'
-
-scrollAddClass.scrollAddClass()
-
 import * as aosInit from './modules/aos-init.js'
 
 aosInit.aosInit()
@@ -33,3 +29,7 @@ smooth.smooth()
 import * as popup from './modules/popup.js'
 
 popup.popup()
+
+import * as dropdown from './modules/dropdown.js'
+
+dropdown.dropdown()

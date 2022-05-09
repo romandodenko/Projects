@@ -19,7 +19,6 @@
   <link rel="preload" href="./fonts/Inter-Bold.woff" as="font">
   <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font">
   <link rel="stylesheet" href="./resources/aos.css">
-  <link rel="stylesheet" href="./resources/choices.min.css">
   <link rel="stylesheet" href="./css/main-min.css">
   <title>GREVS - Спортивная экипировка и снаряжение</title>
 </head>
@@ -69,14 +68,20 @@
                 </li>
               </ul>
             </nav>
-            <div class="header__wrapper-select">
-              <select class="header__select region-select" name="city">
-                <option value="reg" selected>Выбрать регион</option>
-                <option value="moscow">Москва</option>
-                <option value="kazan">Казань</option>
-                <option value="yfa">Уфа</option>
-                <option value="perm">Пермь</option>
-              </select>
+            <div class="header__wrapper-select header-select">
+              <button class="header-select__btn" data-path="one">
+                Выбрать регион
+              </button>
+              <div class="header-select__dropdown" data-target="one">
+                <div class="header-select__dropdown-wrap" data-simplebar>
+                  <ul class="header-select__drop-list">
+                    <li class="header-select__dropdown-item">Москва</li>
+                    <li class="header-select__dropdown-item">Казань</li>
+                    <li class="header-select__dropdown-item">Уфа</li>
+                    <li class="header-select__dropdown-item">Пермь</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <button class="header__button button-2 burger-button popup-button"><span>Заказать звонок</span></button>
             <ul class="header__soc-list header-soc">
@@ -138,966 +143,891 @@
         </div>
       </div>
     </section>
-    <section class="basket">
-      <div class="basket__container container">
-        <h2 class="basket__title subtitle">
-          Спортивная экипировка и снаряжение
-        </h2>
-        <div class="basket__wrapper-body">
-          <div class="basket__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/basket_2-1024.png" type="image/png">
-              <source media="(min-width: 769px)" srcset="./img/basket_2-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/basket_2-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/basket_2-768.webp" type="image/webp">
-              <img src="./img/basket_2-1024.png" alt="Баскетбол">
-            </picture>
-          </div>
-          <div class="basket__body" data-aos="fade-left">
-            <h3 class="basket__subtitle subtitle-2">
-              Баскетбол
-            </h3>
-            <div class="basket__lists">
-              <ul class="basket__list">
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Мячи баскетбольные
-                  </p>
-                </li>
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Баскетбольная ферма
-                  </p>
-                </li>
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Баскетбольные кольца
-                  </p>
-                </li>
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Баскетбольные щиты
-                  </p>
-                </li>
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Стойки для баскетбола
-                  </p>
-                </li>
-              </ul>
-              <ul class="basket__list">
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Сетки, сумки для баскетбольных мячей
-                  </p>
-                </li>
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Протектор, защита баскетбольного щита
-                  </p>
-                </li>
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Баскетбольная форма
-                  </p>
-                </li>
-                <li class="basket__item">
-                  <p class="basket__text text-2">
-                    Баскетбольные сетки
-                  </p>
-                </li>
-              </ul>
+    <section class="items">
+      <div class="items__inner">
+        <div class="items__body">
+          <div class="items__item basket-item _blue">
+            <div class="items__item-container container">
+              <div class="items__item-image">
+                <img src="./img/basket_2.png" alt="Баскетбол">
+              </div>
+              <div class="items__item-body basket-item-body" data-aos="fade-left">
+                <h2 class="items__title subtitle" data-da=".items__body, 1355, 0">
+                  Спортивная экипировка и снаряжение
+                </h2>
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Баскетбол
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Мячи баскетбольные
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Баскетбольная ферма
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Баскетбольные кольца
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Баскетбольные щиты
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Стойки для баскетбола
+                      </p>
+                    </li>
+                  </ul>
+
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сетки, сумки для баскетбольных мячей
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Протектор, защита баскетбольного щита
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Баскетбольная форма
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Баскетбольные сетки
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
             </div>
-            <button class="basket__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
           </div>
+          <div class="items__item edinoborstva-item _white">
+            <div class="items__item-container reverse-row container">
+              <div class="items__item-image reverse-image">
+                <img src="./img/edinoborstva.png" alt="Единоборства">
+              </div>
+              <div class="items__item-body edinoborstva-item-body reverse-body" data-aos="fade-right">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Единоборства
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Защита для единоборств
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Кимоно
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Бокс
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Пояса для единоборств
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Бинты
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Обувь для единоборств (боксерки, самбовки)
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Шорты для единоборств и бокса
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Тренировочное оружие
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Майки, футболки для бокса и единоборств
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item pingpong-item _blue">
+            <div class="items__item-container container">
+              <div class="items__item-image">
+                <img src="./img/pingpong.png" alt="Пинг понг">
+              </div>
+              <div class="items__item-body pingpong-item-body" data-aos="fade-left">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Настольный теннис
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Теннисные столы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Ракетки для настольного тенниса
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Комплекты
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Мячи для настольного тенниса
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Роботы
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="ping-pong__text text-2">
+                        Сетки для настольного тенниса
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Чехлы для столов
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Чехлы для ракеток для настольного тенниса
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item velosport-item _white">
+            <div class="items__item-container reverse-row container">
+              <div class="items__item-image reverse-image">
+                <img src="./img/velik.png" alt="Велоспорт">
+              </div>
+              <div class="items__item-body reverse-body velosport-item-body" data-aos="fade-right">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Велоспорт
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Велосипеды
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Велопарковка
+                      </p>
+                    </li>
+                  </ul>
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Аксессуары для велосипеда
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Велозапчасти
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Велоодежда
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item skeitboards-item _blue">
+            <div class="items__item-container container">
+              <div class="items__item-image">
+                <img src="./img/skeit.png" alt="Скейтборд">
+              </div>
+              <div class="items__item-body skeitboards-body skeitboards-item-body" data-aos="fade-left">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Ролики, скейтборды, самокаты
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Теннисные столы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Ракетки для настольного тенниса
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Комплекты
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Мячи для настольного тенниса
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Роботы
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сетки для настольного тенниса
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Чехлы для столов
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Чехлы для ракеток для настольного тенниса
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item team-sports-item _white">
+            <div class="items__item-container reverse-row container">
+              <div class="items__item-image reverse-image">
+                <img src="./img/beisbol.png" alt="Мячики для бейсбола">
+              </div>
+              <div class="items__item-body reverse-body team-sports-item-body" data-aos="fade-right">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Игровые виды спорта
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Большой теннис
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Бейсбол
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Флорбол
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Регби
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Другие командные виды спорта
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item water-sport-item _blue">
+            <div class="items__item-container container">
+              <div class="items__item-image">
+                <img src="./img/plavanie.png" alt="Водный спорт">
+              </div>
+              <div class="items__item-body water-sport-item-body" data-aos="fade-left">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Водный спорт
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Аквааэробика и плавание
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Водное поло
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Водные аттракционы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Игры на воде
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Оснащение бассейна
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Тренажеры для пловцов
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Одежда для бассейна
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        SUP-борды
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item billiards-item _white">
+            <div class="items__item-container reverse-row container">
+              <div class="items__item-image reverse-image">
+                <img src="./img/bilyard.png" alt="Бильярд">
+              </div>
+              <div class="items__item-body reverse-body billiards-item-body" data-aos="fade-right">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Бильярд
+                </h3>
+                <div class="items__item-lists billiards-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Бильярдные столы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Бильярдные кии
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Шары бильярдные
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Аксессуары для бильярда
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Настольный бильярд
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Киевницы и полки для шаров
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Комплектующие для столов
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Лампы и светильники
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Комплектующие для бильярдных светильников
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Уход за киями и наклейками
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Литература и DVD для бильярда
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Мел и тальк
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Наклейки и колпачки
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Перчатки для бильярда
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Покрывала для столов
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Средства по уходу
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Треугольники
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сукно бильярдное
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Постеры и репродукции
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Чехлы, кейсы, тубусы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Часы
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item gandbol-item _blue">
+            <div class="items__item-container container">
+              <div class="items__item-image">
+                <img src="./img/gandbol.png" alt="Гандбол">
+              </div>
+              <div class="items__item-body gandbol-item-body" data-aos="fade-left">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Гандбол
+                </h3>
+                <div class="items__item-lists gandbol-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Мячи гандбольные
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item footbal-item _white">
+            <div class="items__item-container reverse-row container">
+              <div class="items__item-image reverse-image">
+                <img src="./img/footbal.png" alt="Футбол">
+              </div>
+              <div class="items__item-body reverse-body footbal-item-body" data-aos="fade-right">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Футбол
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Мячи футбольные
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Ворота футбольные
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сетки для футбольных ворот
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Гетры футбольные
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Форма для футбола
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Бутсы
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Щитки футбольные
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Одежда для вратарей
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Перчатки вратарские
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Прочее футбол
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сетки, сумки для футбольных мячей
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item badminton-item _blue">
+            <div class="items__item-container container">
+              <div class="items__item-image">
+                <img src="./img/badminton.png" alt="Бадминтон">
+              </div>
+              <div class="items__item-body badminton-item-body" data-aos="fade-left">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Бадминтон
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Наборы для бадминтона
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Воланы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Ракетки для бадминтона
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сетки для бадминтона
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="badminton__text text-2">
+                        Аксессуары для бадминтона
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Стойки для бадминтона
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Судейские вышки для бадминтона
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item sports-equipment-item _white">
+            <div class="items__item-container reverse-row container">
+              <div class="items__item-image reverse-image">
+                <img src="./img/clock.png" alt="Часы">
+              </div>
+              <div class="items__item-body reverse-body sports-equipment-item-body" data-aos="fade-right">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Оборудование для спорта
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Манишки
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Судейство
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Насосы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Вышки судейские
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сетка заградительная
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Наградная продукция
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Доски тактические
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Оборудование для соревнований
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Сетки, сумки для мячей
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Трибуны, скамейки для игроков и зрителей
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Секундомеры
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Скалодром
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Подставки под мячи
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Акробатические дорожки
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Пьедесталы
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Свистки
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Барьеры, конусы, фишки и прочее
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Стойки Старт-Финиш
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="items__item winter-sports-item _blue">
+            <div class="items__item-container container">
+              <div class="items__item-image">
+                <img src="./img/hockey.png" alt="Хоккей">
+              </div>
+              <div class="items__item-body winter-sports-item-body" data-aos="fade-left">
+                <h3 class="items__item-subtitle basket-subtitle subtitle-2">
+                  Зимний спорт
+                </h3>
+                <div class="items__item-lists">
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Беговые лыжи
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Хоккей
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Горнолыжный спорт
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Фигурное катание
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Хранение лыж и сноубордов
+                      </p>
+                    </li>
+                  </ul>
+                  
+                  <ul class="items__item-list">
+                    <li class="items__item-item">
+                      <p class="winter-sports__text text-2">
+                        Смазки и инструменты
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Хоккей с мячом
+                      </p>
+                    </li>
+                    <li class="items__item-item">
+                      <p class="items__item-text text-2">
+                        Чехлы для лыж и сноубордов
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="items__item-button button popup-button">
+                  <span>Отправить заявку</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
-    </section>
-    <section class="martial">
-      <div class="martial__container container">
-        <div class="martial__wrapper-body">
-          <div class="martial__body" data-aos="fade-right">
-            <h3 class="martial__subtitle subtitle-2">
-              Единоборства
-            </h3>
-            <div class="martial__lists">
-              <ul class="martial__list">
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Защита для единоборств
-                  </p>
-                </li>
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Кимоно
-                  </p>
-                </li>
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Бокс
-                  </p>
-                </li>
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Пояса для единоборств
-                  </p>
-                </li>
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Бинты
-                  </p>
-                </li>
-              </ul>
-              <ul class="martial__list">
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Обувь для единоборств (боксерки, самбовки)
-                  </p>
-                </li>
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Шорты для единоборств и бокса
-                  </p>
-                </li>
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Тренировочное оружие
-                  </p>
-                </li>
-                <li class="martial__item">
-                  <p class="martial__text text-2">
-                    Майки, футболки для бокса и единоборств
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="martial__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-          <div class="martial__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/edinoborstva-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/edinoborstva-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/edinoborstva-768.webp" type="image/webp">
-              <img src="./img/edinoborstva-1024." alt="Единоборства">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="ping-pong">
-      <div class="ping-pong__container container">
-        <div class="ping-pong__wrapper-body">
-          <div class="ping-pong__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/pingpong-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/pingpong-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/pingpong-768.webp" type="image/webp">
-              <img src="./img/pingpong-1024.png" alt="Пинг понг">
-            </picture>
-          </div>
-          <div class="ping-pong__body" data-aos="fade-left">
-            <h3 class="ping-pong__subtitle subtitle-2">
-              Настольный теннис
-            </h3>
-            <div class="ping-pong__lists">
-              <ul class="ping-pong__list">
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Теннисные столы
-                  </p>
-                </li>
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Ракетки для настольного тенниса
-                  </p>
-                </li>
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Комплекты
-                  </p>
-                </li>
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Мячи для настольного тенниса
-                  </p>
-                </li>
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Роботы
-                  </p>
-                </li>
-              </ul>
-              <ul class="ping-pong__list">
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Сетки для настольного тенниса
-                  </p>
-                </li>
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Чехлы для столов
-                  </p>
-                </li>
-                <li class="ping-pong__item">
-                  <p class="ping-pong__text text-2">
-                    Чехлы для ракеток для настольного тенниса
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="ping-pong__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="ping-pong__image-circle">
-        <img src="./img/ping-pong_circle.png" alt="Круг">
-      </div>
-    </section>
-    <section class="cycling">
-      <div class="cycling__container container">
-        <div class="cycling__wrapper-body">
-          <div class="cycling__body" data-aos="fade-right">
-            <h3 class="cycling__subtitle subtitle-2">
-              Велоспорт
-            </h3>
-            <div class="cycling__lists">
-              <ul class="cycling__list">
-                <li class="cycling__item">
-                  <p class="cycling__text text-2">
-                    Велосипеды
-                  </p>
-                </li>
-                <li class="cycling__item">
-                  <p class="cycling__text text-2">
-                    Велопарковка
-                  </p>
-                </li>
-              </ul>
-              <ul class="cycling__list">
-                <li class="cycling__item">
-                  <p class="cycling__text text-2">
-                    Аксессуары для велосипеда
-                  </p>
-                </li>
-                <li class="cycling__item">
-                  <p class="cycling__text text-2">
-                    Велозапчасти
-                  </p>
-                </li>
-              </ul>
-              <ul class="cycling__list">
-                <li class="cycling__item">
-                  <p class="cycling__text text-2">
-                    Велоодежда
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="cycling__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-          <div class="cycling__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/velik-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/velik-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/velik-768.webp" type="image/webp">
-              <img src="./img/velik-1024.png" alt="Велоспорт">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="skateboards">
-      <div class="skateboards__container container">
-        <div class="skateboards__wrapper-body">
-          <div class="skateboards__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/skeit-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/skeit-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/skeit-768.webp" type="image/webp">
-              <img src="./img/skeit-1024.png" alt="Скейтборд">
-            </picture>
-          </div>
-          <div class="skateboards__body" data-aos="fade-left">
-            <h3 class="skateboards__subtitle subtitle-2">
-              Ролики, скейтборды, самокаты
-            </h3>
-            <div class="skateboards__lists">
-              <ul class="skateboards__list">
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Теннисные столы
-                  </p>
-                </li>
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Ракетки для настольного тенниса
-                  </p>
-                </li>
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Комплекты
-                  </p>
-                </li>
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Мячи для настольного тенниса
-                  </p>
-                </li>
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Роботы
-                  </p>
-                </li>
-              </ul>
-              <ul class="skateboards__list">
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Сетки для настольного тенниса
-                  </p>
-                </li>
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Чехлы для столов
-                  </p>
-                </li>
-                <li class="skateboards__item">
-                  <p class="skateboards__text text-2">
-                    Чехлы для ракеток для настольного тенниса
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="skateboards__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="team-sports">
-      <div class="team-sports__container container">
-        <div class="team-sports__wrapper-body">
-          <div class="team-sports__body" data-aos="fade-right">
-            <h3 class="team-sports__subtitle subtitle-2">
-              Игровые виды спорта
-            </h3>
-            <div class="team-sports__lists">
-              <ul class="team-sports__list">
-                <li class="team-sports__item">
-                  <p class="team-sports__text text-2">
-                    Большой теннис
-                  </p>
-                </li>
-                <li class="team-sports__item">
-                  <p class="team-sports__text text-2">
-                    Бейсбол
-                  </p>
-                </li>
-                <li class="team-sports__item">
-                  <p class="team-sports__text text-2">
-                    Флорбол
-                  </p>
-                </li>
-              </ul>
-              <ul class="team-sports__list">
-                <li class="team-sports__item">
-                  <p class="team-sports__text text-2">
-                    Регби
-                  </p>
-                </li>
-                <li class="team-sports__item">
-                  <p class="team-sports__text text-2">
-                    Другие командные виды спорта
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="team-sports__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-          <div class="team-sports__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/beisbol-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/beisbol-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/beisbol-768.webp" type="image/webp">
-              <img src="./img/beisbol-1024.png" alt="Мячики для бейсбола">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="water-sports">
-      <div class="water-sports__container container">
-        <div class="water-sports__wrapper-body">
-          <div class="water-sports__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/plavanie-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/plavanie-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/plavanie-768.webp" type="image/webp">
-              <img src="./img/plavanie-1024.png" alt="Водный спорт">
-            </picture>
-          </div>
-          <div class="water-sports__body" data-aos="fade-left">
-            <h3 class="water-sports__subtitle subtitle-2">
-              Водный спорт
-            </h3>
-            <div class="water-sports__lists">
-              <ul class="water-sports__list">
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    Аквааэробика и плавание
-                  </p>
-                </li>
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    Водное поло
-                  </p>
-                </li>
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    Водные аттракционы
-                  </p>
-                </li>
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    Игры на воде
-                  </p>
-                </li>
-              </ul>
-              <ul class="water-sports__list">
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    Оснащение бассейна
-                  </p>
-                </li>
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    Тренажеры для пловцов
-                  </p>
-                </li>
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    Одежда для бассейна
-                  </p>
-                </li>
-                <li class="water-sports__item">
-                  <p class="water-sports__text text-2">
-                    SUP-борды
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="water-sports__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="billiards">
-      <div class="billiards__container container">
-        <div class="billiards__wrapper-body">
-          <div class="billiards__body" data-aos="fade-right">
-            <h3 class="billiards__subtitle subtitle-2">
-              Бильярд
-            </h3>
-            <div class="billiards__lists">
-              <ul class="billiards__list">
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Бильярдные столы
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Бильярдные кии
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Шары бильярдные
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Аксессуары для бильярда
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Настольный бильярд
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Киевницы и полки для шаров
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Комплектующие для столов
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Лампы и светильники
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Комплектующие для бильярдных светильников
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Уход за киями и наклейками
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Литература и DVD для бильярда
-                  </p>
-                </li>
-              </ul>
-              <ul class="billiards__list">
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Мел и тальк
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Наклейки и колпачки
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Перчатки для бильярда
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Покрывала для столов
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Средства по уходу
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Треугольники
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Сукно бильярдное
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Постеры и репродукции
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Чехлы, кейсы, тубусы
-                  </p>
-                </li>
-                <li class="billiards__item">
-                  <p class="billiards__text text-2">
-                    Часы
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="billiards__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-          <div class="billiards__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/bilyard-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/bilyard-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/bilyard-768.webp" type="image/webp">
-              <img src="./img/bilyard-1024.png" alt="Бильярд">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="gandbol">
-      <div class="gandbol__container container">
-        <div class="gandbol__wrapper-body">
-          <div class="gandbol__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/gandbol-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/gandbol-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/gandbol-768.webp" type="image/webp">
-              <img src="./img/gandbol-1024.png" alt="Гандбол">
-            </picture>
-          </div>
-          <div class="gandbol__body" data-aos="fade-left">
-            <h3 class="gandbol__subtitle subtitle-2">
-              Гандбол
-            </h3>
-            <div class="gandbol__lists">
-              <ul class="gandbol__list">
-                <li class="gandbol__item">
-                  <p class="gandbol__text text-2">
-                    Мячи гандбольные
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="gandbol__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="footbal">
-      <div class="footbal__container container">
-        <div class="footbal__wrapper-body">
-          <div class="footbal__body" data-aos="fade-right">
-            <h3 class="footbal__subtitle subtitle-2">
-              Футбол
-            </h3>
-            <div class="footbal__lists">
-              <ul class="footbal__list">
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Мячи футбольные
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Ворота футбольные
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Сетки для футбольных ворот
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Гетры футбольные
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Форма для футбола
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Бутсы
-                  </p>
-                </li>
-              </ul>
-              <ul class="footbal__list">
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Щитки футбольные
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Одежда для вратарей
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Перчатки вратарские
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Прочее футбол
-                  </p>
-                </li>
-                <li class="footbal__item">
-                  <p class="footbal__text text-2">
-                    Сетки, сумки для футбольных мячей
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="footbal__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-          <div class="footbal__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/footbal-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/footbal-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/footbal-768.webp" type="image/webp">
-              <img src="./img/footbal-1024.png" alt="Футбол">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="badminton">
-      <div class="badminton__container container">
-        <div class="badminton__wrapper-body">
-          <div class="badminton__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/badminton-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/badminton-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/badminton-768.webp" type="image/webp">
-              <img src="./img/badminton-1024.png" alt="Бадминтон">
-            </picture>
-          </div>
-          <div class="badminton__body" data-aos="fade-left">
-            <h3 class="badminton__subtitle subtitle-2">
-              Бадминтон
-            </h3>
-            <div class="badminton__lists">
-              <ul class="badminton__list">
-                <li class="badminton__item">
-                  <p class="badminton__text text-2">
-                    Наборы для бадминтона
-                  </p>
-                </li>
-                <li class="badminton__item">
-                  <p class="badminton__text text-2">
-                    Воланы
-                  </p>
-                </li>
-                <li class="badminton__item">
-                  <p class="badminton__text text-2">
-                    Ракетки для бадминтона
-                  </p>
-                </li>
-                <li class="badminton__item">
-                  <p class="badminton__text text-2">
-                    Сетки для бадминтона
-                  </p>
-                </li>
-              </ul>
-              <ul class="badminton__list">
-                <li class="badminton__item">
-                  <p class="badminton__text text-2">
-                    Аксессуары для бадминтона
-                  </p>
-                </li>
-                <li class="badminton__item">
-                  <p class="badminton__text text-2">
-                    Стойки для бадминтона
-                  </p>
-                </li>
-                <li class="badminton__item">
-                  <p class="badminton__text text-2">
-                    Судейские вышки для бадминтона
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="badminton__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="sports-equipment">
-      <div class="sports-equipment__container container">
-        <div class="sports-equipment__wrapper-body">
-          <div class="sports-equipment__body" data-aos="fade-right">
-            <h3 class="sports-equipment__subtitle subtitle-2">
-              Оборудование для спорта
-            </h3>
-            <div class="sports-equipment__lists">
-              <ul class="sports-equipment__list">
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Манишки
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Судейство
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Насосы
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Вышки судейские
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Сетка заградительная
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Наградная продукция
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Доски тактические
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Оборудование для соревнований
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Сетки, сумки для мячей
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Трибуны, скамейки для игроков и зрителей
-                  </p>
-                </li>
-              </ul>
-              <ul class="sports-equipment__list">
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Секундомеры
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Скалодром
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Подставки под мячи
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Акробатические дорожки
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Пьедесталы
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Свистки
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Барьеры, конусы, фишки и прочее
-                  </p>
-                </li>
-                <li class="sports-equipment__item">
-                  <p class="sports-equipment__text text-2">
-                    Стойки Старт-Финиш
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="sports-equipment__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-          <div class="sports-equipment__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/clock-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/clock-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/clock-768.webp" type="image/webp">
-              <img src="./img/clock-1024.png" alt="Часы">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="winter-sports">
-      <div class="winter-sports__container container">
-        <div class="winter-sports__wrapper-body">
-          <div class="winter-sports__image">
-            <picture>
-              <source media="(min-width: 769px)" srcset="./img/hockey-1024.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./img/hockey-768.png" type="image/png">
-              <source media="(max-width: 768px)" srcset="./img/hockey-768.webp" type="image/webp">
-              <img src="./img/hockey-1024.png" alt="Хоккей">
-            </picture>
-          </div>
-          <div class="winter-sports__body" data-aos="fade-left">
-            <h3 class="winter-sports__subtitle subtitle-2">
-              Зимний спорт
-            </h3>
-            <div class="winter-sports__lists">
-              <ul class="winter-sports__list">
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Беговые лыжи
-                  </p>
-                </li>
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Хоккей
-                  </p>
-                </li>
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Горнолыжный спорт
-                  </p>
-                </li>
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Фигурное катание
-                  </p>
-                </li>
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Хранение лыж и сноубордов
-                  </p>
-                </li>
-              </ul>
-              <ul class="winter-sports__list">
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Смазки и инструменты
-                  </p>
-                </li>
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Хоккей с мячом
-                  </p>
-                </li>
-                <li class="winter-sports__item">
-                  <p class="winter-sports__text text-2">
-                    Чехлы для лыж и сноубордов
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button class="winter-sports__button button popup-button">
-              <span>Отправить заявку</span>
-            </button>
-          </div>
-        </div>
-      </div>
+
     </section>
     <section class="company" id="company">
       <div class="company__container container">
@@ -1292,7 +1222,6 @@
   </footer>
   <script src="./resources/aos.js"></script>
   <script src="./resources/gsap.min.js"></script>
-  <script src="./resources/choices.min.js"></script>
   <script src="./js/main.min.js"></script>
 </body>
 

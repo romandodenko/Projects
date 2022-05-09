@@ -8,14 +8,19 @@ export function popup() {
     const popupFormExit = document.querySelector(".popup-form__exit");
     const body = document.querySelector("body");
     const headerWrapperNav = document.querySelector(".header__bottom");
+    const burgerButton = document.querySelector(".burger-button");
 
     popupButton.forEach(function(popupButton) {
       popupButton.addEventListener("click", function() {
         popupForm.classList.add("popup-form-active")
         body.classList.add("body-block")
-        headerWrapperNav.classList.remove("nav-active")
-        body.classList.remove("body-block")
       })
+    })
+
+    burgerButton.addEventListener("click", function() {
+      popupForm.classList.add("popup-form-active")
+      body.classList.add("body-block")
+        headerWrapperNav.classList.remove("nav-active")
     })
 
     popupFormClose.addEventListener("click", function() {

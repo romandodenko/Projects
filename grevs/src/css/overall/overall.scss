@@ -174,7 +174,6 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
 
   & img {
     max-width: 100%;
@@ -184,12 +183,14 @@ main {
     position: absolute;
     top: 25%;
     left: 0;
+    z-index: 1;
   }
 
   &__third {
     position: absolute;
     top: 52%;
     left: 18px;
+    z-index: 1;
   }
 
   @media (max-width: 1400px) {
@@ -213,6 +214,17 @@ main {
       color: var(--hover);
     }
   }
+  .header__button {
+    &:hover {
+      & span {
+        color: var(--white);
+      }
+
+      &::before {
+        transform: translateY(0);
+      }
+    }
+  }
 
   .header__burger-exit {
     &:hover {
@@ -226,23 +238,21 @@ main {
       }
     }
   }
-
-  .choices__item--selectable {
+  .header-select__dropdown-item {
+    &:hover {
+      color: var(--hover);
+    }
+  }
+  .header-select__btn {
     &:hover {
       color: var(--hover);
     }
   }
 
-  .choices .is-highlighted {
-    &:hover {
-      color: var(--white);
-    }
-  }
-
-  .header__button {
+  .items__item-button {
     &:hover {
       & span {
-        color: var(--white);
+        color: var(--hover);
       }
 
       &::before {
@@ -251,188 +261,6 @@ main {
     }
   }
   .hero__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .basket__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .martial__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .ping-pong__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .cycling__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .skateboards__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .team-sports__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .water-sports__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .billiards__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .gandbol__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .footbal__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .badminton__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .sports-equipment__button {
-    &:hover {
-      background-color: transparent;
-
-      & span {
-        color: var(--hover);
-      }
-
-      &::before {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  .winter-sports__button {
     &:hover {
       background-color: transparent;
 

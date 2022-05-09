@@ -41,6 +41,58 @@ $maxWidthContainer: 1740;
   }
 }
 
+.header-select {
+  position: relative;
+  @media (max-width: 830px) {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__btn {
+    @include adaptiv-font(18, 16);
+    @include adaptive ("line-height", 21, 26, 0);
+    font-style: normal;
+    font-weight: 600;
+    color: var(--black);
+    background-color: transparent;
+    transition: color .2s ease-in-out;
+    &:active {
+      color: var(--hover);
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: -7px;
+    width: 110%;
+    height: 100%;
+  }
+
+  &__dropdown-wrap {
+    padding: 15px 10px;
+    background-color: var(--white);
+  }
+
+  &__drop-list {
+  }
+
+  &__dropdown-item {
+    @include adaptiv-font(18, 16);
+    @include adaptive ("line-height", 21, 26, 0);
+    font-style: normal;
+    font-weight: 600;
+    color: var(--black);
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+  }
+  &__dropdown-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+
 .choices {
   min-width: 145px;
   text-align: center;
@@ -119,38 +171,22 @@ $maxWidthContainer: 1740;
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  
-  &__wrapper {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    @include adaptive ("padding-top", 18, 10, 0);
-    @include adaptive ("padding-bottom", 18, 10, 0);
-    background-color: transparent;
-    transition: background-color .2s ease-in-out;
-
-    @media (max-width: 830px) {
-      background-color: rgba(0, 0, 0, .5);
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      right: 31.8%;
-      background-image: url(../../img/header_treg.png);
-      background-repeat: no-repeat;
-      width: 183px;
-      height: 154px;
-      transition: opacity .2s ease-in-out;
-      @media (max-width: 1355px) {
-        display: none;
-      }
+  position: relative;
+  z-index: 100;
+  @include adaptive ("padding-top", 18, 10, 0);
+  @include adaptive ("padding-bottom", 18, 10, 0);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 31.8%;
+    background-image: url(../../img/header_treg.png);
+    background-repeat: no-repeat;
+    width: 183px;
+    height: 154px;
+    transition: opacity .2s ease-in-out;
+    @media (max-width: 1355px) {
+      display: none;
     }
   }
 
@@ -225,6 +261,7 @@ $maxWidthContainer: 1740;
       pointer-events: none;
       transition: opacity .2s ease-in-out, visibility .2s ease-in-out, pointer-events .2s ease-in-out;
       padding: 57px 30px 30px 30px;
+      z-index: 100;
       &::before {
         content: "";
         position: absolute;
@@ -492,17 +529,34 @@ $maxWidthContainer: 1740;
   pointer-events: visible;
 }
 
-.scroll {
-  & .header__wrapper {
-    background-color: rgba(255, 255, 255, .7);
-    &::before {
-      opacity: 0;
-    }
-  }
 
-  @media (max-width: 830px) {
-    & .header__wrapper {
-      background-color: rgba(0, 0, 0, .5);
-    }
+
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdownClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.header-select__dropdown.is-active {
+  display: block;
+  animation-name: dropdownOpen;
+  animation-duration: 0.4s;
+}
+
+.header-select__dropdown.is-disabled {
+  display: block;
+  animation-name: dropdownClose;
+  animation-duration: 0.4s;
 }

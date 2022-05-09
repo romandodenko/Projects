@@ -1,0 +1,754 @@
+$maxWidth: 1920;
+$maxWidthContainer: 1740;
+
+@mixin adaptive ($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+
+  @if $type==1 {
+    // Только если меньше контейнера
+    #{$property}: $startSize + px;
+
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+    }
+  }
+
+  @else if $type==2 {
+    // Только если больше контейнера 
+    #{$property}: $startSize + px;
+
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  }
+
+  @else {
+    // Всегда
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+.items {
+  &__title {
+    position: relative;
+    max-width: 600px;
+    left: -200px;
+    @include adaptive ("margin-bottom", 70, 30, 0);
+    text-align: center;
+
+    @media (max-width: 1555px) {
+      max-width: 500px;
+    }
+
+    @media (max-width: 1355px) {
+      max-width: none;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -520px;
+      right: -79px;
+      width: 713px;
+      height: 1197px;
+      background-image: url(../../img/basket_1.png);
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      @media (max-width: 1900px) {
+        width: 550px;
+        right: 1px;
+      }
+
+      @media (max-width: 1795px) {
+        width: 350px;
+        right: 1px;
+      }
+
+      @media (max-width: 1550px) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 421px;
+      right: 0;
+      width: 166px;
+      height: 334px;
+      background-image: url(../../img/circle.png);
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      @media (max-width: 1795px) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    margin-left: 0;
+    overflow: visible;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    @media (max-width: 1700px) {
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      padding-left: 30px;
+    }
+    @media (max-width: 600px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 3;
+    margin-top: -100px;
+    padding-bottom: 30px;
+
+    @media (max-width: 1700px) {
+      padding-bottom: 0;
+    }
+  }
+  &__item:not(:last-child) {
+    @media (max-width: 1355px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item-image {
+    position: relative;
+    width: 49%;
+    @include adaptive ("margin-right", 90, 30, 0);
+    // margin-top: -130px;
+    // border-radius: 0 450px  450px  0;
+    height: 670px;
+    // overflow: hidden;
+
+      & img {
+        // position: absolute;
+        top: 0;
+        left: 0;
+        // max-width: 100%;
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+        // object-position: center;
+      }
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+      width: 100%;
+      height: 300px;
+      border-radius: 0;
+    }
+  }
+
+  &__item-body {
+    width: 49%;
+    padding-top: 50px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__item-subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__item-lists {
+    display: grid;
+    grid-template: auto / .5fr 1fr;
+    gap: 10px 30px;
+    margin-bottom: 30px;
+
+    @media (max-width: 1355px) {
+      grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item-list {
+    @media (max-width: 1355px) {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__item-item {
+    position: relative;
+    padding-left: 19px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      @include adaptive ("top", 6, 2, 0);
+      left: 0;
+      width: 9px;
+      height: 9px;
+      border-radius: 10px;
+      background: linear-gradient(179.12deg, #4D5758 32.21%, #4B5659 77.9%);
+    }
+  }
+
+  &__item-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__item-button {
+    position: relative;
+    overflow: hidden;
+    transition: background-color .2s ease-in-out;
+
+    & span {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      transition: color .2s ease-in-out;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--white);
+      z-index: 1;
+      transform: translateY(-100%);
+      transition: transform .2s ease-in-out;
+    }
+  }
+}
+
+.reverse-row {
+  flex-direction: row-reverse;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 30px;
+
+  @media (max-width: 1700px) {
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.reverse-image {
+  margin-right: 0;
+  // border-radius: 450px 0 0 450px;
+  @include adaptive ("margin-left", 90, 30, 0);
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    border-radius: 0;
+  }
+}
+
+.reverse-body {
+  @include adaptive ("margin-left", 130, 30, 0);
+
+  @media (max-width: 1450px) {
+    margin-left: 0;
+  }
+}
+
+.billiards-lists {
+  grid-template-columns: repeat(2,1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.basket-item {
+  position: relative;
+  z-index: 13;
+
+  @media (max-width: 1700px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.basket-item-body {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.edinoborstva-item {
+  position: relative;
+  z-index: 12;
+  margin-top: -150px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.edinoborstva-item-body {
+  padding-top: 85px;
+  padding-bottom: 250px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.pingpong-item {
+  position: relative;
+  z-index: 11;
+  margin-top: -230px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    right: 55%;
+    transform: translateX(40%);
+    width: 249px;
+    height: 249px;
+    background-image: url(../../img/ping-pong_circle.png);
+    z-index: -1;
+
+    @media (max-width: 1700px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.pingpong-item-body {
+  padding-top: 190px;
+  padding-bottom: 200px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.velosport-item {
+  position: relative;
+  z-index: 10;
+  margin-top: -240px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.velosport-item-body {
+  padding-top: 200px;
+  padding-bottom: 100px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.skeitboards-item {
+  position: relative;
+  z-index: 9;
+  margin-top: -100px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.skeitboards-item-body {
+  padding-top: 100px;
+  padding-bottom: 180px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.team-sports-item {
+  position: relative;
+  z-index: 8;
+  margin-top: -180px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.team-sports-item-body {
+  padding-top: 210px;
+  padding-bottom: 180px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.water-sport-item {
+  position: relative;
+  z-index: 7;
+  margin-top: -150px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.water-sport-item-body {
+  padding-top: 180px;
+  padding-bottom: 200px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.billiards-item {
+  position: relative;
+  z-index: 6;
+  margin-top: -110px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+
+.billiards-item-body {
+  padding-top: 140px;
+  padding-bottom: 170px;
+
+  @media (max-width: 1700px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.gandbol-item {
+  position: relative;
+  z-index: 4;
+  margin-top: -100px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: 25px;
+    width: 699px;
+    height: 699px;
+    background-image: url(../../img/gandbol_circle.png);
+    background-repeat: no-repeat;
+    z-index: -2;
+
+    @media (max-width: 1550px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.gandbol-item-body {
+  padding-top: 230px;
+  padding-bottom: 230px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.gandbol-lists {
+  grid-template-columns: repeat(2,1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footbal-item {
+  position: relative;
+  z-index: 5;
+  margin-top: -120px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.footbal-item-body {
+  padding-top: 150px;
+  padding-bottom: 200px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.badminton-item {
+  position: relative;
+  z-index: 3;
+  margin-top: -140px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.badminton-item-body {
+  padding-top: 170px;
+  padding-bottom: 180px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.sports-equipment-item {
+  position: relative;
+  z-index: 2;
+
+  margin-top: -30px;
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.sports-equipment-item-body {
+  padding-top: 70px;
+  padding-bottom: 170px;
+
+  @media (max-width: 1700px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.winter-sports-item {
+  position: relative;
+  z-index: 1;
+  margin-top: -150px;
+
+  @media (max-width: 1700px) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: 1355px) {
+    margin-top: 0;
+  }
+}
+
+.winter-sports-item-body {
+  padding-top: 160px;
+  padding-bottom: 150px;
+
+  @media (max-width: 1700px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1355px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
+}

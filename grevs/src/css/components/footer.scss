@@ -42,9 +42,11 @@ $maxWidthContainer: 1740;
 }
 
 .footer {
+  position: relative;
   @include adaptive ("padding-top", 50, 25, 0);
   @include adaptive ("padding-bottom", 17, 15, 0);
   background-color: #9da4b4;
+  z-index: 6;
 
   &__container {}
 

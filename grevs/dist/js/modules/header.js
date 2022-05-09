@@ -26,9 +26,5 @@ export function burgerOpen() {
       body.classList.remove("body-block")
     })
 
-    const choices = new Choices(headerSelectRegion, {
-      searchEnabled: false,
-    });
-
   })
 }
