@@ -1,0 +1,130 @@
+.error-page {
+  padding: 80px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 517px;
+    height: 390px;
+
+    & img {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1280px) {
+      width: 431px;
+      height: 325px;
+    }
+
+    @media (max-width: 768px) {
+      width: 345px;
+      height: 260px;
+    }
+
+    @media (max-width: 500px) {
+      width: 259px;
+      height: 195px;
+
+    }
+
+  }
+
+  &__page-nofound {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    color: var(--main_color);
+    margin-bottom: 20px;
+
+    @media (max-width: 1280px) {
+      font-size: 36px;
+      line-height: 47px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--main_color);
+    max-width: 360px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 1280px) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    & a {
+      display: inline-block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      text-align: center;
+      color: #0000FF;
+      margin-left: 10px;
+      transition: color .2s ease-in-out, opacity .2s ease-in-out;
+
+      @media (max-width: 1280px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--main_color);
+        }
+      }
+
+      &:active {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+
+.header-error-bottom {
+display: none;
+@media (max-width: 767px) {
+  display: block;
+}
+}
+.header-container-middle-error {
+  @media (max-width: 767px) {
+    padding-top: 19px;
+    padding-bottom: 11px;
+  }
+}

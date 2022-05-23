@@ -1,0 +1,189 @@
+.block-9 {
+  overflow: hidden;
+  padding: 100px 0;
+  background-color: var(--white);
+}
+@media (max-width: 1160px) {
+  .block-9 {
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 1600));
+  }
+}
+@media (max-width: 1024px) {
+  .block-9 {
+    padding-top: calc(50px + 50 * ((100vw - 320px) / 1600));
+  }
+}
+.block-9__title {
+  font-weight: 700;
+  font-style: normal;
+  line-height: calc(32px + 18 * ((100vw - 320px) / 1600));
+  color: var(--black);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .block-9__title {
+    font-size: calc(22px + 30.6 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .block-9__title {
+    font-size: calc(22px + 18 * (100vw / 1920));
+  }
+}
+.block-9__text-top {
+  font-weight: 500;
+  font-style: normal;
+  line-height: calc(26px + 8 * ((100vw - 320px) / 1600));
+  color: var(--black);
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 90px auto;
+}
+@media (max-width: 767px) {
+  .block-9__text-top {
+    font-size: calc(16px + 13.6 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .block-9__text-top {
+    font-size: calc(16px + 8 * (100vw / 1920));
+  }
+}
+@media (max-width: 1024px) {
+  .block-9__text-top {
+    margin-bottom: 50px;
+  }
+}
+.block-9__bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: minmax(200px, 260px) 20px 1fr 20px minmax(200px, 260px);
+  grid-template: auto/minmax(200px, 260px) 1fr minmax(200px, 260px);
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+@media (max-width: 1024px) {
+  .block-9__bottom {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+    grid-template: auto/1fr;
+    row-gap: calc(20px + 20 * ((100vw - 320px) / 1600));
+  }
+}
+.block-9__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .block-9__item {
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+  }
+}
+.block-9__item:not(:last-child) {
+  margin-bottom: 80px;
+}
+@media (max-width: 1024px) {
+  .block-9__item:not(:last-child) {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / 1600));
+  }
+}
+.block-9__item_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+@media (max-width: 1024px) {
+  .block-9__item_reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+.block-9__span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
+  height: 50px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: calc(19px + 2 * ((100vw - 320px) / 1600));
+  color: var(--white);
+  border-radius: 50%;
+  background-color: #ffb269;
+}
+@media (max-width: 767px) {
+  .block-9__span {
+    font-size: calc(14px + 3.4 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .block-9__span {
+    font-size: calc(14px + 2 * (100vw / 1920));
+  }
+}
+.block-9__columns {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .block-9__columns {
+    display: -ms-grid;
+    display: grid;
+    grid-template: auto/repeat(auto-fit, minmax(280px, 1fr));
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: calc(20px + 20 * ((100vw - 320px) / 1600));
+  }
+}
+.block-9__text {
+  font-weight: 500;
+  font-style: normal;
+  line-height: calc(19px + 2 * ((100vw - 320px) / 1600));
+  color: var(--black);
+}
+@media (max-width: 767px) {
+  .block-9__text {
+    font-size: calc(14px + 3.4 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .block-9__text {
+    font-size: calc(14px + 2 * (100vw / 1920));
+  }
+}
+.block-9__text_right {
+  text-align: right;
+}
+@media (max-width: 1024px) {
+  .block-9__text_right {
+    text-align: left;
+  }
+}
+.block-9__image {
+  text-align: center;
+}
+.block-9__image img {
+  max-width: 100%;
+}

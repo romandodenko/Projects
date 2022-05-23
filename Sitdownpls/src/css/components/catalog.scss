@@ -25,6 +25,10 @@
     flex-direction: column;
     margin-bottom: 23px;
   }
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+
   &__form {
     display: flex;
     flex-direction: column;

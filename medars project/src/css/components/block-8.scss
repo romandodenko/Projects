@@ -1,0 +1,200 @@
+$maxWidth: 1920;
+$maxWidthContainer: 1340;
+
+@mixin adaptive ($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+
+  @if $type==1 {
+    // Только если меньше контейнера
+    #{$property}: $startSize + px;
+
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+    }
+  }
+
+  @else if $type==2 {
+    // Только если больше контейнера 
+    #{$property}: $startSize + px;
+
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  }
+
+  @else {
+    // Всегда
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+.block-8 {
+  overflow: hidden;
+  position: relative;
+  background-image: url(../../img/8/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include adaptive ("padding-top", 150, 50, 0);
+  @media (max-width: 1235px) {
+    @include adaptive ("padding-top", 100, 50, 0);
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    max-width: 1595px;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 986px) {
+      flex-direction: column;
+    }
+  }
+
+  &__images {
+    display: none;
+    @media (max-width: 986px) {
+      display: block;
+      & img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__left-image {
+    position: relative;
+    right: -10%;
+    bottom: -180px;
+    @media (max-width: 1400px) {
+      bottom: -145px;
+    }
+    @media (max-width: 1135px) {
+      right: -4%;
+      bottom: -155px;
+    }
+    @media (max-width: 986px) {
+      display: none;
+    }
+
+    & img {
+      max-width: 100%;
+    }
+  }
+
+  &__right-image {
+    position: relative;
+    bottom: -97px;
+
+    & img {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1400px) {
+      bottom: -79px;
+    }
+
+    @media (max-width: 1135px) {
+      bottom: -116px;
+    }
+    @media (max-width: 986px) {
+      display: none;
+    }
+  }
+
+  &__body {
+    max-width: 500px;
+     @include adaptive ("padding-bottom", 140, 50, 0);
+     @media (max-width: 1245px) {
+      @include adaptive ("padding-bottom", 100, 50, 0);
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-style: normal;
+    @include adaptiv-font(60, 30);
+    @include adaptive ("line-height", 65, 40, 0);
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    & img {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    width: 80%;
+    @include adaptiv-font(21, 14);
+    @include adaptive ("line-height", 28, 21, 0);
+    font-style: normal;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      // font-size: 18px;
+      // line-height: 28px;
+    }
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__wrapper-link {
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    @include adaptiv-font(16, 12);
+    @include adaptive ("line-height", 24, 20, 0);
+    font-style: normal;
+    font-weight: 700;
+    color: var(--black);
+    background-color: var(--gold);
+    border-radius: 5px;
+    text-transform: uppercase;
+    @include adaptive ("padding-top", 15, 10, 0);
+    @include adaptive ("padding-bottom", 15, 10, 0);
+    @include adaptive ("padding-left", 40, 20, 0);
+    @include adaptive ("padding-right", 40, 20, 0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    transition: box-shadow .2s ease-in-out;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding-right: 50px;
+      padding-left: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 5px 10px transparent;
+      }
+    }
+
+    &:active {
+      box-shadow: 0 5px 10px transparent;
+    }
+  }
+}
