@@ -36,26 +36,39 @@
   }
 
   &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     padding: 41px 101px 36px 101px;
     border: 1px solid #8CA4B5;
     margin-right: 15px;
     text-align: center;
+    max-width: 469px;
+    height: 347px;
 
     & img {
       max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
 
     @media (max-width: 1350px) {
+      max-width: 390px;
+      height: 284px;
       padding: 35px 85px 25px 80px;
-
-      & img {
-        width: 223px;
-      }
     }
 
     @media (max-width: 1135px) {
+      max-width: 422px;
+      height: 308px;
       margin-right: 0;
+    }
+
+    @media (max-width: 650px) {
+      max-width: 100%;
+      height: 234px;
     }
   }
 
