@@ -1,0 +1,248 @@
+.hero {
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 0;
+    margin-bottom: 18px;
+  }
+}
+.hero__container {
+  position: relative;
+  max-width: 1450px;
+}
+@media (max-width: 600px) {
+  .hero__container {
+    padding: 0;
+  }
+}
+.hero__wrapper {
+  position: relative;
+}
+@media (max-width: 991px) {
+  .hero__wrapper {
+    padding-bottom: 25px;
+  }
+}
+.hero__body {
+  position: relative;
+  z-index: 1;
+  min-height: 717px;
+}
+@media (max-width: 991px) {
+  .hero__body {
+    min-height: 550px;
+  }
+}
+@media (max-width: 600px) {
+  .hero__body {
+    min-height: 620px;
+  }
+}
+@media (max-width: 400px) {
+  .hero__body {
+    min-height: 500px;
+  }
+}
+.hero__background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 95%;
+  height: 95%;
+  background-color: #4BB5A2;
+  border: 1px solid #474747;
+}
+@media (max-width: 1200px) {
+  .hero__background {
+    bottom: 5px;
+  }
+}
+@media (max-width: 991px) {
+  .hero__background {
+    display: none;
+  }
+}
+.hero__circle {
+  position: absolute;
+  width: 194px;
+  height: 158px;
+  right: 0;
+  top: -35px;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .hero__circle {
+    width: 106px;
+    height: 115px;
+    top: -58px;
+  }
+}
+.hero__circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.hero-swiper {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 95%;
+  height: 94%;
+  z-index: 3;
+  border: 1px solid #474747;
+}
+@media (max-width: 991px) {
+  .hero-swiper {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: navajowhite;
+  }
+}
+.hero-swiper__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: (1fr)[3];
+  grid-template: auto/repeat(3, 1fr);
+}
+@media (max-width: 991px) {
+  .hero-swiper__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.hero-swiper__slide {
+  position: relative;
+}
+@media (max-width: 991px) {
+  .hero-swiper__slide {
+    border: 1px solid #474747;
+  }
+}
+.hero-swiper__slide_1 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+@media (max-width: 991px) {
+  .hero-swiper__slide_1 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+.hero-swiper__slide_2 {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+@media (max-width: 991px) {
+  .hero-swiper__slide_2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+.hero-swiper__slide_3 {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+}
+.hero-swiper__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.hero-swiper__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.hero-swiper__button {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #FDF9FA;
+  background-color: transparent;
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .hero-swiper__button {
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+  }
+}
+.hero-swiper__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10.5px 0 10.5px 20px;
+  border-color: transparent transparent transparent #FDF9FA;
+}
+.hero-swiper__pagination {
+  position: absolute;
+  bottom: 0 !important;
+  left: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero-slide-swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-slide-swiper__slide {
+  width: 100%;
+  height: 100%;
+}
+.hero-slide-swiper__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.hero__wrapper .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 5px !important;
+}
+
+.hero__wrapper .swiper-pagination-bullet-active {
+  background-color: #4BB5A2;
+}

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('NunitoSans-Regular'),
+       url("../../fonts/NunitoSans-Regular.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('NunitoSans-SemiBold'),
+       url("../../fonts/NunitoSans-SemiBold.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Raleway-SemiBold'),
+       url("../../fonts/Raleway-SemiBold.woff2") format("woff2"),
+       url("../../fonts/Raleway-SemiBold.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('NunitoSans-Bold'),
+       url("../../fonts/NunitoSans-Bold.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Mak';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Mak-Bold'),
+       url("../../fonts/Mak-Bold.woff2") format("woff2"),
+       url("../../fonts/Mak-Bold.woff") format("woff");
+}

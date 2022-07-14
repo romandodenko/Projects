@@ -1,0 +1,30 @@
+.container {
+  max-width: 1635px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: 'inter';
+  background-color: #EFEEEC;
+  background-image: url(../../img/back.png);
+  // background-position: center;
+  background-size: cover;
+  // height: 4380px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @media (max-width: 600px) {
+    background-image: url(../../img/back_mobile.png);
+     background-size: cover;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.body-block {
+  overflow: hidden;
+}

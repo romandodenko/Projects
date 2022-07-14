@@ -1,0 +1,226 @@
+.popular {
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #474747;
+    margin-bottom: 25px;
+
+    @media (max-width: 991px) {
+      font-size: 29px;
+      line-height: 37px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    background-image: url(../../img/popular/popular-setka.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__body {
+    position: relative;
+    padding: 65px 0 69px 0;
+    @media (max-width: 991px) {
+      padding: 51px 0 49px 0;
+    }
+    @media (max-width: 600px) {
+      padding: 43px 0 30px 0;
+    }
+  }
+}
+
+.popular-swiper {
+  @media (max-width: 991px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media (max-width: 600px) {
+    width: 76.5%;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    gap: 95px;
+    @media (max-width: 1550px) {
+      gap: 30px;
+    }
+    @media (max-width: 1100px) {
+      gap: 15px;
+    }
+    @media (max-width: 991px) {
+      display: flex;
+      gap: 0;
+    }
+  }
+
+  &__image {
+    border: 2px solid #474747;
+    height: 324px;
+    @media (max-width: 991px) {
+      height: 265px;
+    }
+    @media (max-width: 600px) {
+      height: 211px;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__wrapper-btn {
+    text-align: center;
+    margin-top: -25px;
+    @media (max-width: 991px) {
+      margin-top: -20px;
+    }
+    @media (max-width: 600px) {
+      margin-top: -17px;
+    }
+  }
+
+  &__btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background-color: #E73C18;
+    border: 1px solid #474747;
+    padding: 9px 18px;
+    border-radius: 2px;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 7.5px 14.5px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 6px 12px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #E73C18;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+
+  &__prev {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    transform: translate(0,-50%);
+    transition: opacity .2s ease-in-out;
+    @media (max-width: 991px) {
+      display: block;
+    }
+    @media (max-width: 600px) {
+      width: 30px;
+      height: 30px;
+      left: -5px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-left: 2px solid #474747;
+      border-bottom: 2px solid #474747;
+      @media (max-width: 600px) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      top: 50%;
+      left: 45%;
+      background-color: #474747;
+      transform: translate(-50%, -50%);
+      @media (max-width: 600px) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    transform: translate(0,-50%);
+    transition: opacity .2s ease-in-out;
+    @media (max-width: 991px) {
+      display: block;
+    }
+    @media (max-width: 600px) {
+      width: 30px;
+      height: 30px;
+      right: -5px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border-right: 2px solid #474747;
+      border-bottom: 2px solid #474747;
+      @media (max-width: 600px) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      top: 50%;
+      right: 45%;
+      background-color: #474747;
+      transform: translate(50%, -50%);
+      @media (max-width: 600px) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.swiper-button-disabled {
+  opacity: .5;
+}

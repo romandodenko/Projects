@@ -1,0 +1,28 @@
+.electronics {
+  position: relative;
+  z-index: 10;
+  background: radial-gradient(105.83% 105.83% at 50% 0%, #111111 0%, #192331 100%);
+}
+
+.electronics-swiper {
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    & img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
