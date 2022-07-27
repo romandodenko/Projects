@@ -5,140 +5,47 @@ export function swiper() {
     const body = document.querySelector("body");
     const swiper = new Swiper('.hero__swiper', {
       loop: true,
-      // loopAdditionalSlides: 3, // Добавляет количество слайдов которые будут склонированы после создания цикла
-      // centeredSlides: true, // центрирует активный слайд по центру а не слева
       observer: true,
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 1,
-      // spaceBetween: 32,
-      // slidesPerGroup: 1, 
       direction: 'horizontal',
       speed: 1000, // Автовоспроизведение
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
       },
-      // thumbs: { // Читаем ниже что даёт эта настройка
-      //   swiper: thumbsSwiper,
-      // },
-      // scrollbar: {
-      //   el: '.hero__scrollbar',
-      //   draggable: true, // позволяет сделать полосу прокрутки перетаскиваемой
-      // },
-      // breakpoints: {
-      //   320: {
-      //     slidesPerView: 2,
-      //     spaceBetween: 20
-      //   },
-      //   480: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 30
-      //   },
-      //   640: {
-      //     slidesPerView: 4,
-      //     spaceBetween: 40
-      //   }
-      // }
     });
     const swiperItemOhta = new Swiper('.ohta-item-swiper', {
-      // loopAdditionalSlides: 3, // Добавляет количество слайдов которые будут склонированы после создания цикла
-      // centeredSlides: true, // центрирует активный слайд по центру а не слева
       observer: true,
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 1,
-      // spaceBetween: 32,
-      // slidesPerGroup: 1, 
       direction: 'horizontal',
       pagination: {
         el: '.ohta-item-swiper__pagination',
         clickable: true,
       },
-      // thumbs: { // Читаем ниже что даёт эта настройка
-      //   swiper: thumbsSwiper,
-      // },
-      // scrollbar: {
-      //   el: '.hero__scrollbar',
-      //   draggable: true, // позволяет сделать полосу прокрутки перетаскиваемой
-      // },
-      // breakpoints: {
-      //   320: {
-      //     slidesPerView: 2,
-      //     spaceBetween: 20
-      //   },
-      //   480: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 30
-      //   },
-      //   640: {
-      //     slidesPerView: 4,
-      //     spaceBetween: 40
-      //   }
-      // }
     });
     if (body.offsetWidth <= 670) {
       const swiperComplex = new Swiper('.complex-swiper', {
-        // loopAdditionalSlides: 3, // Добавляет количество слайдов которые будут склонированы после создания цикла
-        // centeredSlides: true, // центрирует активный слайд по центру а не слева
         observer: true,
         observeParents: true,
         watchOverflow: true,
         slidesPerView: 1,
-        // spaceBetween: 32,
-        // slidesPerGroup: 1, 
         direction: 'horizontal',
         pagination: {
           el: '.complex-swiper__pagination',
           clickable: true,
-          // dynamicBullets: true, // Если много кружков пагинации
-          // dynamicMainBullets: 3, // Показывает количество отображаемых кружков пагинаии при включеном dynamicBullets
         },
-        // thumbs: { // Читаем ниже что даёт эта настройка
-        //   swiper: thumbsSwiper,
-        // },
-        // scrollbar: {
-        //   el: '.hero__scrollbar',
-        //   draggable: true, // позволяет сделать полосу прокрутки перетаскиваемой
-        // },
-        // breakpoints: {
-        //   320: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20
-        //   },
-        //   480: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30
-        //   },
-        //   640: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 40
-        //   }
-        // }
       });
     }
     if (body.offsetWidth <= 1405) {
       const heroSwiperColumn = new Swiper('.hero-swiper-column', {
-        // loopAdditionalSlides: 3, // Добавляет количество слайдов которые будут склонированы после создания цикла
-        // centeredSlides: true, // центрирует активный слайд по центру а не слева
         observer: true,
         observeParents: true,
         watchOverflow: true,
-        // spaceBetween: 32,
-        // slidesPerGroup: 1, 
         direction: 'horizontal',
-        // speed: 1000, // Автовоспроизведение
-        // autoplay: {
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // },
-        // thumbs: { // Читаем ниже что даёт эта настройка
-        //   swiper: thumbsSwiper,
-        // },
-        // scrollbar: {
-        //   el: '.hero__scrollbar',
-        //   draggable: true, // позволяет сделать полосу прокрутки перетаскиваемой
-        // },
         breakpoints: {
           320: {
             slidesPerView: 3,
@@ -154,27 +61,16 @@ export function swiper() {
     }
     const swiperColumnOne = new Swiper('.column-swiper', {
       loop: true,
-      // loopAdditionalSlides: 3, // Добавляет количество слайдов которые будут склонированы после создания цикла
-      // centeredSlides: true, // центрирует активный слайд по центру а не слева
       observer: true,
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 1,
-      // spaceBetween: 32,
-      // slidesPerGroup: 1, 
       direction: 'vertical',
       speed: 500, // Автовоспроизведение
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
       },
-      // thumbs: { // Читаем ниже что даёт эта настройка
-      //   swiper: thumbsSwiper,
-      // },
-      // scrollbar: {
-      //   el: '.hero__scrollbar',
-      //   draggable: true, // позволяет сделать полосу прокрутки перетаскиваемой
-      // },
       breakpoints: {
         320: {
           direction: 'horizontal',
@@ -196,13 +92,6 @@ export function swiper() {
         el: '.reviews-swiper__pagination',
         clickable: true,
       },
-      // thumbs: { // Читаем ниже что даёт эта настройка
-      //   swiper: thumbsSwiper,
-      // },
-      // scrollbar: {
-      //   el: '.hero__scrollbar',
-      //   draggable: true, // позволяет сделать полосу прокрутки перетаскиваемой
-      // },
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -271,10 +160,10 @@ export function swiper() {
         401: {
           slidesPerView: 4,
         },
-        531: {
+        501: {
           slidesPerView: 5,
         },
-        768: {
+        631: {
           slidesPerView: 3,
         },
         901: {
@@ -305,57 +194,3 @@ export function swiper() {
 
   })
 }
-
-// Обычная разметка слайдера
-
-// <div class="swiper">
-//   <div class="swiper-wrapper">
-//     <div class="swiper-slide">Slide 1</div>
-//     <div class="swiper-slide">Slide 2</div>
-//     <div class="swiper-slide">Slide 3</div>
-//   </div>
-//   <div class="swiper-pagination"></div>
-
-//   <div class="swiper-button-prev"></div>
-//   <div class="swiper-button-next"></div>
-
-//   <div class="swiper-scrollbar"></div>
-// </div>
-
-// Разметка слайдера с thumb. Этот слайдер выглядит как обычный слайдер в карточках товара в интернет магазине. Т.е один верхний слайдер с большой картинкой, и снизу под ним маленький слайдер с маленькими картинками. Так вот, каталог свайпер это основной, а thumbs свайпер второй слайдер. Инициализируем два слайдера, первому слайдеру пишем консту thumbsSwiper(можно и поменять) а второму слайдеру пишем в настройках thumb, другими словами связываем их. и все, всё работает
-
-/* <div class="wrapper">
-<div class="swiper catalog__swiper catalog-swiper">
-  <div class="swiper-wrapper catalog-swiper__wrapper">
-    <div class="swiper-slide catalog-swiper__slide">
-      <img src="./img/01.jpg" alt="">
-    </div>
-    <div class="swiper-slide catalog-swiper__slide">
-      <img src="./img/02.jpg" alt="">
-    </div>
-    <div class="swiper-slide catalog-swiper__slide">
-      <img src="./img/03.jpg" alt="">
-    </div>
-    <div class="swiper-slide catalog-swiper__slide">
-      <img src="./img/04.jpg" alt="">
-    </div>
-
-  </div>
-</div>
-<div class="swiper__thumbs swiper thumbs-swiper">
-  <div class="swiper-wrapper thumbs-swiper__wrapper">
-    <div class="swiper-slide thumbs-swiper__slide">
-      <img src="./img/01.jpg" alt="">
-    </div>
-    <div class="swiper-slide catalog-swiper__slide">
-      <img src="./img/02.jpg" alt="">
-    </div>
-    <div class="swiper-slide catalog-swiper__slide">
-      <img src="./img/03.jpg" alt="">
-    </div>
-    <div class="swiper-slide catalog-swiper__slide">
-      <img src="./img/04.jpg" alt="">
-    </div>
-  </div>
-</div>
-</div> */

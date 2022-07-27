@@ -94,6 +94,7 @@
           <h1 class="cottage__title">Коттедж №1</h1>
           <div class="cottage__content">
             <div class="cottage__left">
+              <div class="cottage__left-left">
               <div class="cottage__swipers">
                 <div class="cottage__main-swiper">
                   <div class="cottage__swiper cottage-main-swiper swiper">
@@ -270,7 +271,16 @@
                   <button class="cottage-thumb-swiper__next"></button>
                 </div>
               </div>
-              <div class="cottage__info">
+              <div class="cottage__video">
+                <a class="cottage__video-link" data-fslightbox="galleryVideo" href="./video/about/video.mp4">
+                  <div class="cottage__btn">
+                    <span> <img src="./img/about/play.png" alt="Проигрывать видеозапись"></span>
+                  </div>
+                </a>
+                <video loop preload="metadata" poster="./img/about/image-2.jpg" muted src="./video/about/video.mp4"></video>
+              </div>
+            </div>
+              <div class="cottage__info" data-da=".cottage__wrapper-descr, 1150, 1">
                 <ul class="cottage__list">
                   <li class="cottage__item">
                     <p class="cottage__text">
@@ -324,6 +334,7 @@
                 </div>
               </div>
             </div>
+           <div class="cottage__wrapper-descr">
             <div class="cottage__descr">
               <strong class="cottage__strong">
                 Описание
@@ -376,6 +387,7 @@
                 </li>
               </ul>
             </div>
+           </div>
           </div>
         </div>
       </section>
