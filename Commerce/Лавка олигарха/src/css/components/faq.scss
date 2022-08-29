@@ -1,0 +1,220 @@
+.faq {
+
+  &__content {
+    background-color: var(--white);
+    border-radius: 0 0 20px 20px;
+    padding: 0 30px 60px 30px;
+
+    @media (max-width: 991px) {
+      padding: 0 20px 40px 20px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 15px 30px 15px;
+
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: 991px) {
+        margin-bottom: 35px;
+      }
+      @media (max-width: 600px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 44px;
+      @media (max-width: 991px) {
+        margin-bottom: 35px;
+      }
+      @media (max-width: 600px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__subtitle {
+    position: relative;
+    font-family: 'daysone';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: var(--main);
+    @media (max-width: 991px) {
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
+    & span {
+      position: relative;
+      z-index: 2;
+    }
+
+    & img {
+      position: absolute;
+      top: -24px;
+      left: -30px;
+      display: block;
+      width: 63px;
+      height: 68px;
+      object-fit: contain;
+      object-position: center;
+      z-index: 1;
+      @media (max-width: 991px) {
+        top: -25px;
+        width: 54px;
+height: 68px;
+left: -20px;
+      }
+      @media (max-width: 600px) {
+        width: 40px;
+        height: 50px;
+        left: -15px;
+        top: -18px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @media (max-width: 991px) {
+          margin-bottom: 25px;
+      }
+      @media (max-width: 600px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__accordion-body {
+    padding-left: 38px;
+    @media (max-width: 991px) {
+      padding-left: 0;
+    }
+    @media (max-width: 600px) {
+
+    }
+  }
+
+  &__accordion-initial {
+    position: relative;
+    background-color: transparent;
+    font-style: normal;
+    text-align: start;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.37;
+    color: var(--main);
+    padding: 10px 0 10px 34px;
+    transition: color .2s ease-in-out;
+    @media (max-width: 991px) {
+      padding: 5px 0 5px 24px;
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      padding: 5px 0 5px 25px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #EFB75D;
+
+        &::before {
+          background-color: #EFB75D;
+        }
+
+        &::after {
+          background-color: #EFB75D;
+        }
+      }
+    }
+
+    &:active {
+      color: #F9E2BE;
+      transition-duration: .1s;
+
+      &::before {
+        background-color: #F9E2BE;
+        transition-duration: .1s;
+      }
+
+      &::after {
+        background-color: #F9E2BE;
+        transition-duration: .1s;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 6px;
+      width: 2px;
+      height: 14px;
+      background-color: var(--main);
+      transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+      @media (max-width: 991px) {
+        top: 9px;
+        height: 10px;
+        left: 4px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 0;
+      width: 14px;
+      height: 2px;
+      background-color: var(--main);
+      transition: background-color .2s ease-in-out;
+      @media (max-width: 991px) {
+        top: 13px;
+        width: 10px;
+      }
+    }
+  }
+
+  &__accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease-in-out, margin .3s ease-in-out;
+    max-width: 979px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: rgba(39, 46, 69, 0.8);
+    @media (max-width: 991px) {
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.accordion-open .faq__accordion-initial {
+  &::before {
+    opacity: 0;
+  }
+}
+
+.accordion-open .faq__accordion-content {
+  margin: 10px 0;
+  @media (max-width: 991px) {
+    margin: 5px 0;
+  }
+}

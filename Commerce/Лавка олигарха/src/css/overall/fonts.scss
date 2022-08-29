@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'nunitosans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('NunitoSans-Bold'),
+       url("../../fonts/NunitoSans-Bold.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'nunitosans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('NunitoSans-SemiBold'),
+       url("../../fonts/NunitoSans-SemiBold.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'daysone';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DaysOne-Regular'),
+       url("../../fonts/DaysOne-Regular.woff2") format("woff2"),
+       url("../../fonts/DaysOne-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'nunitosans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('NunitoSans-Regular'),
+       url("../../fonts/NunitoSans-Regular.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'nunitosans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('NunitoSans-Regular-Italic'),
+       url("../../fonts/NunitoSans-Regular-Italic.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-Regular-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'nunitosans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('NunitoSans-Light'),
+       url("../../fonts/NunitoSans-Light.woff2") format("woff2"),
+       url("../../fonts/NunitoSans-Light.woff") format("woff");
+}

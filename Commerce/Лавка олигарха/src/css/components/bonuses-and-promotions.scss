@@ -1,0 +1,266 @@
+.bonuses-promotions {
+  &__content {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 0 0 20px 20px;
+    padding: 0 30px 60px 30px;
+
+    @media (max-width: 991px) {
+      padding: 0 20px 40px 20px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 15px 30px 15px;
+
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 28px;
+      }
+
+      @media (max-width: 600px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template: auto / repeat(12, 1fr);
+    width: 82.75%;
+    gap: 30px;
+    grid-template-areas: "item1 item1 item1 item1 item2 item2 item2 item2 item3 item3 item3 item3""item4 item4 item4 item4 item4 item4 item5 item5 item5 item5 item5 item5";
+
+    @media (max-width: 1435px) {
+      width: 79%;
+    }
+
+    @media (max-width: 1200px) {
+      width: 75%;
+    }
+
+    @media (max-width: 1050px) {
+      grid-template-areas: "item1 item1 item1 item1 item1 item1 item2 item2 item2 item2 item2 item2""item4 item4 item4 item4 item4 item4 item4 item4 item4 item4 . .""item3 item3 item3 item3 item3 item5 item5 item5 item5 item5 item5 item5";
+      width: 80%;
+    }
+
+    @media (max-width: 830px) {
+      width: 100%;
+      grid-template: auto / repeat(16, 1fr);
+      grid-template-areas: "item1 item1 item1 item1 item1 item1 item2 item2 item2 item2 item2 item2 . . . .""item4 item4 item4 item4 item4 item4 item4 item4 item4 . . . . . . .""item3 item3 item3 item3 item3 item3 item5 item5 item5 item5 item5 item5 item5 item5 item5 item5";
+      gap: 20px;
+    }
+
+    @media (max-width: 750px) {
+      grid-template-areas: "item1 item1 item1 item1 item1  item2 item2 item2 item2 item2 . .  . . . .""item4 item4 item4 item4 item4 item4 item4 item4 item4 . . . . . . .""item3 item3 item3 item3 item3 item3 item5 item5 item5 item5 item5 item5 item5 item5 item5 item5";
+    }
+
+    @media (max-width: 600px) {
+      grid-template: auto / repeat(12, 1fr);
+      grid-template-areas: "item1 item1 item1 item1 item1 item1 item1 item1 item1 . . .""item2 item2 item2 item2 item2 item2 item2 item2 item2 . . .""item4 item4 item4 item4 item4 item4 item4 item4 item4 item4 item4 item4""item3 item3 item3 item3 item3 item3 item3 item3 item3 . . .""item5 item5 item5 item5 item5 item5 item5 item5 item5 item5 item5 item5";
+      gap: 10px;
+    }
+
+    @media (max-width: 400px) {
+      grid-template-areas: "item1 item1 item1 item1 item1 item1 item1 item1 . . . .""item2 item2 item2 item2 item2 item2 item2 item2 . . . .""item4 item4 item4 item4 item4 item4 item4 item4 item4 item4 item4 item4""item3 item3 item3 item3 item3 item3 item3 item3 item3 . . .""item5 item5 item5 item5 item5 item5 item5 item5 item5 item5 item5 item5";
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    height: 228px;
+    transition: border-color .2s ease-in-out;
+    grid-column: span 6;
+
+    @media (max-width: 991px) {
+      height: 160px;
+      // border-color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      height: 128px;
+    }
+
+    @media (max-width: 400px) {
+      height: 105px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: var(--gold);
+
+        & .bonuses-promotions__link {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &_1 {
+      grid-area: item1;
+    }
+
+    &_2 {
+      grid-area: item2;
+    }
+
+    &_3 {
+      grid-area: item3;
+
+      @media (max-width: 768px) {
+        height: 140px;
+      }
+
+      @media (max-width: 400px) {
+        height: 105px;
+      }
+    }
+
+    &_4 {
+      grid-area: item4;
+
+      @media (max-width: 400px) {
+        height: 101px;
+      }
+    }
+
+    &_5 {
+      grid-area: item5;
+
+      @media (max-width: 768px) {
+        height: 140px;
+      }
+
+      @media (max-width: 400px) {
+        height: 101px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, .2);
+      transition: opacity .2s ease-in-out;
+    }
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+
+    // @media (max-width: 991px) {
+    //   opacity: 1;
+    //   visibility: visible;
+    // }
+
+    & span {
+      display: inline-block;
+      background-color: var(--gold);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1;
+      color: var(--white);
+      border-radius: 6px;
+      padding: 10px 20px;
+
+      @media (max-width: 991px) {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 12px;
+        padding: 6px 14px;
+      }
+    }
+  }
+
+  &__dekor {
+    position: absolute;
+    top: -74px;
+    right: 30px;
+    width: 245px;
+    height: 643px;
+
+    @media (max-width: 1600px) {
+      right: 0;
+    }
+
+    @media (max-width: 1050px) {
+      width: 165px;
+      height: 386px;
+    }
+
+    @media (max-width: 991px) {
+      top: -49px;
+    }
+
+    @media (max-width: 830px) {
+      right: 20px;
+    }
+
+    @media (max-width: 600px) {
+      width: 96px;
+      height: 309px;
+      top: -23px;
+      right: 0;
+    }
+
+    @media (max-width: 400px) {
+      top: -47px;
+    }
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+
+      @media (max-width: 600px) {
+        transform: scaleY(1.388);
+      }
+
+      @media (max-width: 400px) {
+        transform: scaleY(1.2);
+      }
+    }
+  }
+}
