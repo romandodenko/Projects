@@ -1,4 +1,6 @@
 .hero {
+  position: relative;
+  z-index: 50;
   &:not(:last-child) {
     margin-bottom: 23px;
   @media (max-width: 991px) {
