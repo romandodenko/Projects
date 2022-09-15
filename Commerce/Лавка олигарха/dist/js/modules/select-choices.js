@@ -9,6 +9,8 @@ export function selectChoices() {
   const selectSix = document.querySelector('.select-6'); // элемент choices
   const selectSeven = document.querySelector('.select-7'); // элемент choices
   const selectEight = document.querySelector('.select-8'); // элемент choices
+  const selectNine = document.querySelector('.select-9'); // элемент choices
+  const selectTen = document.querySelector('.select-10'); // элемент choices
   if (selectOne) {
     const choices = new Choices(selectOne, {
       searchEnabled: false,
@@ -173,6 +175,52 @@ export function selectChoices() {
           group: 'choices__group8',
           groupHeading: 'choices__heading8',
           button: 'choices__button8',
+      },
+    });
+  }
+  if (selectNine) {
+    const choices3 = new Choices(selectNine, {
+      searchEnabled: false,
+      classNames: {
+        containerOuter: 'choices9',
+          containerInner: 'choices__inner9',
+          input: 'choices__input9',
+          inputCloned: 'choices__input--cloned9',
+          list: 'choices__list9',
+          listItems: 'choices__list--multiple9',
+          listSingle: 'choices__list--single9',
+          listDropdown: 'choices__list--dropdown9',
+          item: 'choices__item9',
+          itemSelectable: 'choices__item--selectable9',
+          itemDisabled: 'choices__item--disabled9',
+          itemChoice: 'choices__item--choice9',
+          placeholder: 'choices__placeholder9',
+          group: 'choices__group9',
+          groupHeading: 'choices__heading9',
+          button: 'choices__button9',
+      },
+    });
+  }
+  if (selectTen) {
+    const choices3 = new Choices(selectTen, {
+      searchEnabled: false,
+      classNames: {
+        containerOuter: 'choices10',
+          containerInner: 'choices__inner10',
+          input: 'choices__input10',
+          inputCloned: 'choices__input--cloned10',
+          list: 'choices__list10',
+          listItems: 'choices__list--multiple10',
+          listSingle: 'choices__list--single10',
+          listDropdown: 'choices__list--dropdown10',
+          item: 'choices__item10',
+          itemSelectable: 'choices__item--selectable10',
+          itemDisabled: 'choices__item--disabled10',
+          itemChoice: 'choices__item--choice10',
+          placeholder: 'choices__placeholder10',
+          group: 'choices__group10',
+          groupHeading: 'choices__heading10',
+          button: 'choices__button10',
       },
     });
   }

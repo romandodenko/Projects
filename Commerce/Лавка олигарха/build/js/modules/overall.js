@@ -632,7 +632,7 @@ export function overall() {
     const timer = document.querySelector(".timer")
     const timerValue = document.querySelector(".timer-value")
     const formLinkRepeat = document.querySelector(".link-repeat")
-    if (forms) {
+    if (formLinkRepeat) {
       function timer() {
         if (timerValue.innerHTML > 0) {
           timerValue.innerHTML -= 1
@@ -645,8 +645,11 @@ export function overall() {
         formLinkRepeat.classList.remove("link-repeat-visible")
       })
       setInterval(timer, 1000)
+    }
 
+    const openpass = document.querySelector(".openpass1");
 
+    if(openpass) {
       function seePass(openpass, closepass, input, parent) {
         document.querySelector(`${openpass}`).addEventListener("click", function () {
           document.querySelector(`${input}`).setAttribute("type", "text")
@@ -657,9 +660,11 @@ export function overall() {
           document.querySelector(`${parent}`).classList.remove("openpass-active")
         })
       }
-      seePass(".openpass1", ".closepass1", ".input1", ".openpass-parent1")
-      seePass(".openpass2", ".closepass2", ".input2", ".openpass-parent2")
+      seePass(".openpass1", ".closepass1", ".input-see1", ".openpass-parent1")
+      seePass(".openpass2", ".closepass2", ".input-see2", ".openpass-parent2")
     }
+
+
     // Форма
 
     // Конструктор документов
