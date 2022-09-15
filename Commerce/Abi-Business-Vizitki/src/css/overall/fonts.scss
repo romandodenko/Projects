@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'avenirnextcyr';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('AvenirNextCyr-Bold'),
+       url("../../fonts/AvenirNextCyr-Bold.woff2") format("woff2"),
+       url("../../fonts/AvenirNextCyr-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'avenirnextcyr';
+  font-style: normal;
+  font-weight: 750;
+  font-display: swap;
+  src: local('AvenirNextCyr-Demi'),
+       url("../../fonts/AvenirNextCyr-Demi.woff2") format("woff2"),
+       url("../../fonts/AvenirNextCyr-Demi.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'avenirnextcyr';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('AvenirNextCyr-Regular'),
+       url("../../fonts/AvenirNextCyr-Regular.woff2") format("woff2"),
+       url("../../fonts/AvenirNextCyr-Regular.woff") format("woff");
+}

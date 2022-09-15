@@ -1,0 +1,12 @@
+<svg width="97" height="97" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  
+<g id="facebook" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.1996 13.1977H44.3996V4.01286C43.5404 3.89886 39.5984 3.59766 36.1688 3.59766C28.7996 3.59766 23.9996 8.01366 23.9996 16.0393V22.7977H15.5996V32.3977H23.9996V56.3977H33.5996V32.3977H43.1996L44.3996 22.7977H33.5996V16.7977C33.5996 14.8093 35.2112 13.1977 37.1996 13.1977Z" stroke="#191919" stroke-width="4" stroke-miterlimit="10" stroke-linejoin="round"/>
+</g>
+
+  
+</svg>
+
+* Как работает *
+
+* В теге SVG в width и height пишется размеры самого большого SVG в спрайте. SVG которые в спрайте, им нужно поменять тег svg на g*
