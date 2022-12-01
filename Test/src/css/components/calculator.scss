@@ -194,7 +194,6 @@
   &__wrapper-procent {
     display: flex;
     align-items: center;
-    justify-content: center;
     position: absolute;
     bottom: 7px;
     right: 7px;
@@ -203,7 +202,7 @@
     background-color: #EBEBEC;
     border-radius: 16px;
     overflow: hidden;
-
+    padding-left: 5px;
     @media (max-width: 991px) {}
 
     @media (max-width: 600px) {
@@ -211,6 +210,7 @@
       height: 48px;
       bottom: 6px;
       right: 6px;
+      padding-left: 5px;
     }
   }
 
@@ -247,6 +247,9 @@
     position: relative;
   }
   &__procent {
+    position: absolute;
+    top: 15px;
+    right: 14px;
     display: block;
     font-family: "Nekst";
     font-weight: 900;
@@ -254,12 +257,13 @@
     line-height: 1.20;
     text-align: center;
     color: #575757;
-    transform: translateX(-10px);
 
     @media (max-width: 991px) {}
 
     @media (max-width: 600px) {
       font-size: 22px;
+      top: 11px;
+      right: 10px;
     }
   }
 
