@@ -1,6 +1,5 @@
 "use strict"
 
-export function swiper() {
   document.addEventListener("DOMContentLoaded", function () {
     const body = document.querySelector("body");
     const swiper = new Swiper('.electronics-swiper', {
@@ -86,4 +85,3 @@ export function swiper() {
       });
     }
   })
-}

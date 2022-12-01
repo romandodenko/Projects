@@ -1,6 +1,5 @@
 "use strict"
 
-export function header() {
   document.addEventListener("DOMContentLoaded", function () {
     const burger = document.querySelector(".header__burger");
     const menu = document.querySelector(".header__menu");
@@ -25,4 +24,3 @@ export function header() {
       body.style.overflow = "visible"
     })
   })
-}

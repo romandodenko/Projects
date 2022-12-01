@@ -1,6 +1,5 @@
 "use strict";
 
-export function tabs() {
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".works__button").forEach(function (tabsBtn) {
       tabsBtn.addEventListener("click", function (event) {
@@ -57,4 +56,3 @@ export function tabs() {
       })
     })
   })
-}

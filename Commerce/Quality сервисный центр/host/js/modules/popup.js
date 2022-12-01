@@ -1,6 +1,5 @@
 "use strict"
 
-export function popup() {
   document.addEventListener("DOMContentLoaded", function () {
     const clicker = document.querySelectorAll(".popup-form-clicker") // класс вызывающий попапы
     const popup = document.querySelector(".popup-form");
@@ -59,4 +58,3 @@ export function popup() {
 
 
   })
-}

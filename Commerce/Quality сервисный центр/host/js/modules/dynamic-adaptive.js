@@ -1,6 +1,5 @@
 "use strict";
 
-export function dynamic() {
   document.addEventListener("DOMContentLoaded", function() {
     function DynamicAdapt(type) {
       this.type = type;
@@ -156,4 +155,3 @@ export function dynamic() {
     const da = new DynamicAdapt("max");
     da.init();
   })
-}

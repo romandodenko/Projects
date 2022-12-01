@@ -1,6 +1,5 @@
 "use strict"
 
-export function scrollAddClass() {
   document.addEventListener("DOMContentLoaded", function() {
     const headerElement = document.querySelector(".header")
     const button = document.querySelector(".link-up")
@@ -16,4 +15,3 @@ export function scrollAddClass() {
     const headerObserver = new IntersectionObserver(callback);
     headerObserver.observe(headerElement);
   })
-}

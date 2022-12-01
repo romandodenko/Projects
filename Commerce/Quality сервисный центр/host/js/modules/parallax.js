@@ -1,6 +1,5 @@
 "use strict"
 
-export function parallax() {
 
   window.onload = function () {
     const parallax = document.querySelector(".images-parallax__item")
@@ -51,4 +50,3 @@ export function parallax() {
       });
     }
   }
-}

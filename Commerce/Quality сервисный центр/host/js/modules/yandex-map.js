@@ -1,6 +1,5 @@
 "use strict";
 
-export function contactsMap() {
   document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -31,4 +30,3 @@ export function contactsMap() {
       }
     }
   })
-}

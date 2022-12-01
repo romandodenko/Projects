@@ -1,6 +1,5 @@
 "use strict"
 
-export function show() {
   function showCode(showBtn, itemsNum, collapseBtn, listItem, lists) {
     const show = document.querySelector(`.${showBtn}`); // кнопка показать ещё
     const collapse = document.querySelector(`.${collapseBtn}`); // кнопка скрывает показанные элементы
@@ -48,4 +47,3 @@ export function show() {
   showCode("android-show", 15, "android-collapse", "works-item-android", "works-list-android")
   showCode("laptop-show", 15, "laptop-collapse", "works-item-laptop", "works-list-laptop")
   showCode("computers-show", 15, "computers-collapse", "works-item-computers", "works-list-computers")
-}
