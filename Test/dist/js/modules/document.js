@@ -125,6 +125,10 @@ document.querySelector(".cost-input").addEventListener("change", function () {
 
 function createAmountDeal() {
   document.querySelector(".calculator-form__payment").innerHTML = Math.round(Number(document.querySelector(".installment-symm-input").value) + (parseInt(document.querySelector(".calculator-form__amount").innerText) * Number(document.querySelector(".term-input").value))) + " ₽";
+
+  if (parseInt(document.querySelector(".calculator-form__payment").innerHTML) < document.querySelector(".cost-input").value || parseInt(document.querySelector(".calculator-form__payment").innerHTML) > document.querySelector(".cost-input").value) {
+    document.querySelector(".calculator-form__payment").innerHTML = document.querySelector(".cost-input").value + " ₽";
+  }
 }
 
 // Функция сумма договора лизинга
@@ -277,7 +281,7 @@ inputName.addEventListener("change", function () {
 })
 
 document.querySelector(".input-tel").addEventListener("change", function () {
-  if ((document.querySelector(".input-tel").value.indexOf('_') == -1)) {
+  if ((document.querySelector(".input-tel").value.indexOf('_') == -1) && document.querySelector(".input-tel").value != 0) {
     document.querySelector(".label-tel").classList.add("form-label-done");
   } else {
     document.querySelector(".label-tel").classList.remove("form-label-done");

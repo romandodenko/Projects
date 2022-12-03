@@ -9,6 +9,7 @@ const termRangeSlider = document.querySelector(".term-range");
 noUiSlider.create(costRangeSlider, {
   start: [0],
   animationDuration: 100,
+  connect: [true,true],
   step: 1,
   handleAttributes: [{
       'aria-label': 'уменьшить цену'
@@ -59,6 +60,7 @@ costInput.addEventListener('change', function () {
 noUiSlider.create(installmentRangeSlider, {
   start: [0],
   animationDuration: 100,
+  connect: [true,true],
   step: 1,
   handleAttributes: [{
       'aria-label': 'уменьшить цену'
@@ -213,6 +215,7 @@ installmentInput.addEventListener('change', function () {
 noUiSlider.create(termRangeSlider, {
   start: [0],
   animationDuration: 100,
+  connect: [true,true],
   step: 1,
   handleAttributes: [{
       'aria-label': 'уменьшить цену'

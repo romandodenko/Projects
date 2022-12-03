@@ -172,6 +172,7 @@
   }
 
   &__info {
+    font-family: "Nekst";
     position: absolute;
     top: 16px;
     right: 24px;
@@ -270,7 +271,7 @@
   &__bottom {
     display: flex;
     align-items: center;
-    gap: 44px 20px;
+    gap: 44px 33px;
     flex-wrap: wrap;
 
     @media (max-width: 991px) {}
@@ -350,7 +351,7 @@
     font-size: 30px;
     line-height: 1;
     color: var(--white);
-
+    padding-bottom: 15px;
     @media (max-width: 1220px) {
       flex: 0 0 345px;
     }
@@ -417,9 +418,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 .noUi-connects {
   height: 2px;
+  background-color: #E1E1E1;
+}
+.noUi-connects .noUi-connect {
   background-color: #FF9514;
 }
-
+.noUi-connects .noUi-connect:last-child {
+  display: none;
+}
 .noUi-base {
   height: 100%;
 }
