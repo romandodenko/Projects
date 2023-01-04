@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'SourceSansPro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('SourceSansPro-Regular'),
+       url("../../fonts/SourceSansPro-Regular.woff2") format("woff2"),
+       url("../../fonts/SourceSansPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inter-Regular'),
+       url("../../fonts/Inter-Regular.woff2") format("woff2"),
+       url("../../fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'TrebuchetMS';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('TrebuchetMS-Bold'),
+       url("../../fonts/TrebuchetMS-Bold.woff2") format("woff2"),
+       url("../../fonts/TrebuchetMS-Bold.woff") format("woff");
+}

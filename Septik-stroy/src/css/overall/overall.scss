@@ -1,0 +1,113 @@
+:root {
+  --main: #042128;
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #0170F3;
+  --blue-2: #01C1F3;
+  --dark-blue: #0D4B94;
+  --hover: #0170F3;
+  --hover-2: #0A60C5;
+  --hover-3: #E5E8F6;
+  --hover-4: #0D557D;
+  --hover-5: #E0F9FF;
+  --active: #0D4B94;
+  --active-2: #01C1F3;
+  --gray: #F0F4F5;
+  --gray-2: #E5E8F6;
+  --gray-3: #F3F3F3;
+  --background-site: #E5E8F7;
+}
+
+.container {
+  max-width: 1390px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @media (max-width: 991px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 10px;
+  }
+}
+
+body {
+  background-color: var(--background-site);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: 'SourceSansPro';
+  min-height: 100%;
+  overflow: hidden;
+}
+
+main {
+  flex: 1 1 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 95px;
+
+    @media (max-width: 1439px) {}
+
+    @media (max-width: 1220px) {}
+
+    @media (max-width: 991px) {
+      margin-bottom: 90px;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.title-v1 {
+  font-family: 'TrebuchetMS';
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 57px;
+  color: var(--main);
+
+  @media (max-width: 1439px) {}
+
+  @media (max-width: 1220px) {}
+
+  @media (max-width: 991px) {}
+
+  @media (max-width: 600px) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  & span {
+    color: var(--blue);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+
+    @media (max-width: 1439px) {}
+
+    @media (max-width: 1220px) {}
+
+    @media (max-width: 991px) {}
+
+    @media (max-width: 600px) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--main);
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
