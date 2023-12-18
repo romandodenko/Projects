@@ -1,0 +1,468 @@
+:root {
+  // Шрифты
+  --font-main: "Gilroy", sans-serif; // главный шрифт на странице
+  --font-second: "PlayfairDisplay", sans-serif; // второй шрифт на странице
+  --font-triple: "KasteloSouthern", sans-serif; // третий шрифт на странице
+  --font-four: "OpenSans", sans-serif; // четвертый шрифт на странице
+  --font-five: "Cormorant", sans-serif; // четвертый шрифт на странице
+
+  // Контейнер
+  --container-width: 1335px; // ширина контейнера
+  --container-step: 20px; // падинги по бокам на пк
+  --container-step-tablet: 15px; // падинги по бокам на планшетах
+  --container-step-mobile: 10px; // падинги по бокам на мобилках
+  --container: calc(var(--container-width) + (var(--container-step) * 2)); // сам контейнер
+
+  // Цвета
+  --background-page: #FFF9F9; // бекграунд страницы
+  --main: #000000;
+  --black-opacity: rgba(0, 0, 0, .5);
+  --black: #000000;
+  --white: #ffffff;
+  --pink: #ffbaba;
+  --l-pink: #F6C1B0;
+  --d-pink: #e2cece;
+  --pinch: #f6e2d7;
+  --l-pinch: #fbe1d8;
+  --m-pinch: #ffeee9;
+  --gray: #f6efef;
+  --gray2: #f7efef;
+  --gray3: #3a2424;
+  --gray3-opacity: rgba(58, 36, 36, .1);
+  --hero-background: #fcf3f2;
+  --dark: #555555;
+  --dark2: #434650;
+  --error: #a71515;
+  --m-pink: #ffdfdf;
+  --e-pink: #fff1f1;
+
+  --hover: #f6e2d7; // цвет при ховере
+  --active: #f6e2d7; // цвет при активе
+  --hover2: #f6c1b0; // цвет при ховере
+  --active2: #f6c1b0; // цвет при активе 
+  --hover3: #eccaca;
+  --active3: #ffdfdf;
+}
+
+// font-size: calc(var(--i) * 2); пример адаптивного шрифта
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--container-step);
+
+  @media (max-width: 991px) {
+    padding: 0 var(--container-step-tablet);
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 var(--container-step-mobile);
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--main);
+  background-color: var(--background-page);
+}
+
+main {
+  flex: 1 1 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.tt-96-49 {
+  font-family: var(--font-triple);
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1;
+
+  @media (max-width: 1440px) {
+    font-size: 76px;
+  }
+
+  @media (max-width: 1220px) {
+    font-size: 62px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 54px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 49px;
+  }
+}
+
+.tt-60-37 {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+
+  @media (max-width: 1440px) {
+    font-size: 54px;
+  }
+
+  @media (max-width: 1220px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 44px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 37px;
+  }
+}
+
+.tt-54-34 {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 120%;
+
+  @media (max-width: 1440px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 1220px) {
+    font-size: 44px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 34px;
+  }
+}
+
+.tt-54 {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 120%;
+}
+
+.tt-48-30 {
+  font-family: var(--font-triple);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 150%;
+
+  @media (max-width: 1440px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
+}
+
+.tt-36-28 {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 130%;
+
+  @media (max-width: 991px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 28px;
+  }
+}
+
+.tt-30-25 {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
+}
+
+.tt-24-20 {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+
+  @media (max-width: 991px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.tt-24 {
+  font-family: var(--font-second);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.tx-17 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+}
+
+.tx-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.tx-20 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--black);
+  width: fit-content;
+  border-radius: 38px;
+  min-width: 140px;
+  min-height: 56px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, opacity .3s ease-in-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--black);
+      background-color: var(--hover);
+    }
+  }
+
+  &:focus-visible {
+    color: var(--black);
+    background-color: var(--hover);
+  }
+
+  &:active {
+    color: var(--black);
+    background-color: var(--active);
+    transition-duration: .1s;
+  }
+
+  &_background-pinch {
+    color: var(--black);
+    background-color: var(--pinch);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--white);
+        background-color: var(--hover2);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--white);
+      background-color: var(--hover2);
+    }
+
+    &:active {
+      color: var(--white);
+      background-color: var(--active2);
+      transition-duration: .1s;
+    }
+  }
+
+  &_change {
+    border-radius: 54px;
+    min-width: 135px;
+    min-height: 50px;
+    background-color: var(--l-pinch);
+
+    @media (max-width: 991px) {
+      min-height: 44px;
+    }
+
+    @media (max-width: 600px) {
+      min-height: 38px;
+      padding: 4px 10px;
+    }
+
+    & span {
+      opacity: .5;
+      transition: opacity .3s ease-in-out;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--hover2);
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--hover2);
+    }
+
+    &:active {
+      background-color: var(--active2);
+      transition-duration: .1s;
+    }
+
+    &.active {
+      background-color: var(--pink);
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: var(--hover);
+        }
+      }
+
+      &:focus-visible {
+        background-color: var(--hover);
+      }
+
+      &:active {
+        background-color: var(--active);
+        transition-duration: .1s;
+      }
+
+      & span {
+        opacity: 1;
+      }
+    }
+
+  }
+
+}
+
+.input {
+  display: block;
+  padding: 0 24px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1;
+  color: var(--black);
+  border-radius: 38px;
+  width: 100%;
+  background-color: transparent;
+  min-height: 58px;
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::placeholder {
+        opacity: .3;
+      }
+    }
+  }
+
+  &:focus-visible {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &::placeholder {
+    opacity: .5;
+    transition: opacity .3s ease-in-out;
+  }
+}
+
+.tt-but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--l-pinch);
+  width: fit-content;
+  border-radius: 54px;
+  min-width: 200px;
+  min-height: 62px;
+
+  @media (max-width: 1440px) {
+    min-height: 58px;
+  }
+
+  @media (max-width: 991px) {
+    min-height: 52px;
+  }
+
+  @media (max-width: 600px) {
+    min-height: 46px;
+  }
+
+  &_change-height {
+    @media (max-width: 600px) {
+      min-height: 34px;
+      padding: 4px 8px;
+      font-size: 17px;
+    }
+  }
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: "";
+    border-radius: 100%;
+    width: 10px;
+    flex-shrink: 0;
+    height: 10px;
+    background-color: var(--pink);
+  }
+}
+
+.num {
+  font-family: var(--font-four);
+  font-weight: 600;
+  font-size: 128px;
+  line-height: 1;
+}
+
+.just-validate-error-label {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--error);
+}
