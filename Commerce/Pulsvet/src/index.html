@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta name="language" content="Russian">
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="ПульсВет - ветеринарная клиника">
+  <meta property="og:site_name" content="Ветеринарная клиника сложного клинического случая в Новороссийске">
+  <meta property="og:url" content="https://pulsvetnvrsk.ru/">
+  <meta property="og:image" content="https://pulsvetnvrsk.ru/main.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Главная">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ПульсВет - ветеринарная клиника">
+  <meta name="twitter:description" content="Ветеринарная клиника сложного клинического случая в Новороссийске">
+  <meta name="twitter:site" content="https://pulsvetnvrsk.ru/">
+  <meta name="twitter:image" content="https://pulsvetnvrsk.ru/main.png">
+  <meta name="description" content="Ветеринарная клиника сложного клинического случая в Новороссийске">
+  <title>ПульсВет - ветеринарная клиника</title>
+  <link rel="canonical" href="https://pulsvetnvrsk.ru/">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Play-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Play-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./resources/swiper/swiper.css">
+  <link rel="stylesheet" href="./css/main-min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=91917327-f7a2-42ba-b391-62f86c9c6dee&lang=ru_RU"></script>
+  <script defer src="./resources/swiper/swiper.js"></script>
+  <script defer src="./resources/gsap/gsap.min.js"></script>
+  <script defer src="./resources/validate/inputmask.js"></script>
+  <script defer src="./resources/validate/new/just-validate.min.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <!-- Начало header -->
+    <header class="header" id="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <a class="header__logo rd-upload" href="/" aria-label="Главная страница">
+            <img src="." data-rd-image="./img/svg/logo.svg" width="283" height="58" alt="Логотип сайта">
+          </a>
+          <button class="burger" aria-label="Показать скрытое меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="header__top-right">
+            <a class="header__link header__link_menu but but_border" href="/#recording" aria-label="Запись на прием">
+              Запись на прием
+            </a>
+            <a class="header__link header__link_bottom but" href="tel:+79310096465" aria-label="+7 931 009 64 65">
+              +7 931 009 64 65
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__container header__container_bottom container">
+          <div class="header__menu">
+            <nav class="nav" aria-label="Навигация сайта">
+              <ul class="nav__list" aria-label="Список навигации сайта">
+                <li class="nav__item">
+                  <a class="nav__link tx-17-16 fw-700" href="/#services" aria-label="Услуги">
+                    Услуги
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link tx-17-16 fw-700" href="/#benefits" aria-label="Преимущества">
+                    Преимущества
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link tx-17-16 fw-700" href="/#specialists" aria-label="Врачи">
+                    Врачи
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link tx-17-16 fw-700" href="/#faq" aria-label="Полезное">
+                    Полезное
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link tx-17-16 fw-700" href="/#recording" aria-label="Запись на прием">
+                    Запись на прием
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link tx-17-16 fw-700" href="/#contacts" aria-label="Контакты">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button class="header__exit-menu"></button>
+          </div>
+          <address class="header__address rd-upload fw-700 tx-17-12 text-right">
+            <svg width="22" height="26" fill="currentColor">
+              <use xlink:href="./img/sprites/sprites.svg#geo"></use>
+            </svg>
+            ул. Вишневского,<br> 18Б, Цемдолина
+          </address>
+        </div>
+      </div>
+      <a class="upper rd-upload" href="#header" aria-label="Перейти к верху сайта">
+        <svg width="24" height="24" fill="currentColor">
+          <use xlink:href="./img/sprites/sprites.svg#arrow"></use>
+        </svg>
+      </a>
+    </header>
+    <!-- Конец header -->
+    <main class="main">
+      <!-- Начало wrapper-states -->
+      <section class="wrapper-states">
+        <h2 class="visually-hidden">
+          Статусы отправки формы
+        </h2>
+        <div class="wrapper-states__close"></div>
+        <div class="wrapper-states__content">
+          <button class="wrapper-states__exit" aria-label="Закрыть попап">
+            <svg width="32" height="32" fill="currentColor">
+              <use xlink:href="./img/sprites/sprites.svg#exit"></use>
+            </svg>
+          </button>
+          <div class="wrapper-states__item status-okay">
+            <div class="wrapper-states__text text-center tt-26-20">
+              Успешно отправлено!
+            </div>
+            <div class="wrapper-states__icon">
+              <svg width="100" height="100" fill="currentColor">
+                <use xlink:href="./img/sprites/sprites.svg#okay"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="wrapper-states__item status-error">
+            <div class="wrapper-states__text text-center tt-26-20">
+              Ошибка при отправке!
+            </div>
+            <div class="wrapper-states__icon">
+              <svg width="100" height="100" fill="currentColor">
+                <use xlink:href="./img/sprites/sprites.svg#error"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="wrapper-states__item status-send">
+            <div class="wrapper-states__text text-center tt-26-20">
+              Отправляется...
+            </div>
+            <div class="wrapper-states__icon rd-upload">
+              <img src="." data-rd-image="./img/svg/spinner.svg" width="100" height="100" alt="Спиннер">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Конец wrapper-states -->
+
+      <!-- Начало hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content rd-upload">
+            <picture>
+              <source media="(min-width: 601px)" srcset="." type="image/webp" data-rd-image="./img/hero-back.webp">
+              <source media="(max-width: 600px)" srcset="." type="image/webp"
+                data-rd-image="./img/hero-back-mobile.webp">
+              <img src="." width="337" height="337"
+                alt="Ветеринарная клиника сложного клинического случая в Новороссийске">
+            </picture>
+            <div class="hero__descr">
+              <h1 class="hero__title tt-53-24">
+                Ветеринарная клиника сложного клинического случая в Новороссийске
+              </h1>
+              <a class="hero__link but but_border-white" href="/#recording">
+                Запись на прием
+              </a>
+            </div>
+            <div class="hero__image">
+              <img src="." data-rd-image="./img/hero.webp" width="444" height="504"
+                alt="Ветеринарная клиника сложного клинического случая в Новороссийске">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Конец hero -->
+
+      <!-- Начало services -->
+      <section class="services" id="services">
+        <div class="services__container container">
+          <h2 class="services__title tt-53-24">
+            Услуги
+          </h2>
+        </div>
+        <div class="services__content rd-background rd-upload" data-rd-image="./img/service-background.webp">
+          <div class="services__container services__container_nopadding container">
+            <ul class="services__list" aria-label="Список услуг">
+              <li class="services__item">
+                <div class="services__decor">
+                  <img src="." data-rd-image="./img/service-background-mobile.webp" width="336" height="336"
+                    alt="Декоративное изображение">
+                </div>
+                <div class="services__descr rd-background" data-rd-image="./img/service-1.webp">
+                  <h3 class="services__subtitle text-center tt-26-20">
+                    Лабораторная диагностика
+                  </h3>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services__decor">
+                  <img src="." data-rd-image="./img/service-background-mobile.webp" width="336" height="336"
+                    alt="Декоративное изображение">
+                </div>
+                <div class="services__descr rd-background" data-rd-image="./img/service-2.webp">
+                  <h3 class="services__subtitle text-center tt-26-20">
+                    Терапия
+                  </h3>
+                </div>
+              </li>
+              <li class="services__item" data-rd-image="./img/service-3.webp">
+                <div class="services__decor">
+                  <img src="." data-rd-image="./img/service-background-mobile.webp" width="336" height="336"
+                    alt="Декоративное изображение">
+                </div>
+                <div class="services__descr rd-background" data-rd-image="./img/service-3.webp">
+                  <h3 class="services__subtitle text-center tt-26-20">
+                    Визуальная диагностика
+                  </h3>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services__decor">
+                  <img src="." data-rd-image="./img/service-background-mobile.webp" width="336" height="336"
+                    alt="Декоративное изображение">
+                </div>
+                <div class="services__descr rd-background" data-rd-image="./img/service-4.webp">
+                  <h3 class="services__subtitle text-center tt-26-20">
+                    Хирургия
+                  </h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Конец services -->
+
+      <!-- Начало benefits -->
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <h2 class="benefits__title tt-53-24">
+            Преимущества
+          </h2>
+          <ul class="benefits__list" aria-label="Список преимуществ">
+            <li class="benefits__item">
+              <div class="benefits__icon rd-upload">
+                <img src="." data-rd-image="./img/svg/benefits.svg" width="24" height="24" alt="Иконка преимуществ">
+              </div>
+              <p class="benefits__text tt-26-16">
+                Широкий спектр диагностического оборудования
+              </p>
+            </li>
+            <li class="benefits__item tt-26-16">
+              <div class="benefits__icon rd-upload">
+                <img src="." data-rd-image="./img/svg/benefits.svg" width="24" height="24" alt="Иконка преимуществ">
+              </div>
+              <p class="benefits__text tt-26-16">
+                Команда специалистов
+              </p>
+            </li>
+            <li class="benefits__item tt-26-16">
+              <div class="benefits__icon rd-upload">
+                <img src="." data-rd-image="./img/svg/benefits.svg" width="24" height="24" alt="Иконка преимуществ">
+              </div>
+              <p class="benefits__text tt-26-16">
+                Еще год назад ежемесячно обращалось 200 человек, сейчас мы обслуживаем уже 1000 человек в месяц
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Конец benefits -->
+
+      <!-- Начало specialists -->
+      <section class="specialists" id="specialists">
+        <div class="container">
+          <h2 class="specialists__title tt-53-24">
+            Наши специалисты
+          </h2>
+          <div class="specialists__content">
+            <div class="specialists__left">
+              <button class="specialists__button specialists-slider-prev" aria-label="Слайдер назад">
+                <svg width="30" height="19" fill="currentColor">
+                  <use xlink:href="./img/sprites/sprites.svg#arrow"></use>
+                </svg>
+              </button>
+              <div class="specialists-slider swiper rd-upload">
+                <ul class="swiper-wrapper" aria-label="Список специалистов">
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn active" href="#asanova-anastasiya" data-path="asanovaAnastasiya"
+                      aria-label="Асанова Анастасия Михайловна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/asanova-anastasiya.webp" width="116" height="167"
+                          alt="Асанова Анастасия Михайловна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Асанова Анастасия Михайловна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ветеринарный врач - хирург, терапевт, онколог
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#machylskaya-anastasiya" data-path="machylskayaAnastasiya"
+                      aria-label="Мачульская Анастасия Дмитриевна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/machylskaya-anastasiya.webp" width="116" height="167"
+                          alt="Мачульская Анастасия Дмитриевна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Мачульская Анастасия Дмитриевна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ветеринарный врач терапевт, дерматолог, эндокринолог
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#drondina-elizaveta" data-path="drondinaElizaveta"
+                      aria-label="Дрондина Елизавета Алексеевна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/drondina-elizaveta.webp" width="116" height="167"
+                          alt="Дрондина Елизавета Алексеевна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Дрондина Елизавета Алексеевна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ассистент ветеринарного врача
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#savenkova-anastasiya" data-path="savenkovaAnastasiya"
+                      aria-label="Савенкова Анастасия Игоревна">
+                      <div class="specialists-slider__image"></div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Савенкова Анастасия Игоревна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ассистент ветеринарного врача
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#ykolova-rimma" data-path="ykolovaRimma"
+                      aria-label="Уколова Римма Александровна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/ykolova-rimma.webp" width="116" height="167"
+                          alt="Уколова Римма Александровна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Уколова Римма Александровна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ветеринарный врач хирург, терапевт
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#merzlyakova-dawa" data-path="merzlyakovaDawa"
+                      aria-label="Мерзлякова Дарья Дмитриевна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/merzlyakova-dawa.webp" width="116" height="167"
+                          alt="Мерзлякова Дарья Дмитриевна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Мерзлякова Дарья Дмитриевна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Врач визуальной диагностики, кардиолог, анестезиолог
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#kyzmina-anastasiya" data-path="kyzminaAnastasiya"
+                      aria-label="Кузьмина Анастасия Игоревна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/kyzmina-anastasiya.webp" width="116" height="167"
+                          alt="Кузьмина Анастасия Игоревна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Кузьмина Анастасия Игоревна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Главный врач, врач визуальной диагностики-кардиолог
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#albanova-anastasiya" data-path="albanovaAnastasiya"
+                      aria-label="Албанова Анастасия Александровна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/albanova-anastasiya.webp" width="116" height="167"
+                          alt="Албанова Анастасия Александровна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Албанова Анастасия Александровна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Администратор
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#valikova-anna" data-path="valikovaAnna"
+                      aria-label="Валикова Анна Николаевна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/valikova-anna.webp" width="116" height="167"
+                          alt="Валикова Анна Николаевна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Валикова Анна Николаевна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Администратор
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#batarev-denis" data-path="batarevDenis"
+                      aria-label="Батарев Денис Сергеевич">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/batarev-denis.webp" width="116" height="167"
+                          alt="Батарев Денис Сергеевич">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Батарев Денис Сергеевич
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ветеринарный врач хирург-ортопед
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#willer-diana" data-path="willerDiana" aria-label="Шиллер Диана Игоревна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/willer-diana.webp" width="116" height="167"
+                          alt="Шиллер Диана Игоревна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Шиллер Диана Игоревна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Главный терапевт-гастроэнтеролог
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#chirkova-tatyana" data-path="chirkovaTatyana"
+                      aria-label="Чиркова Татьяна Александровна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/chirkova-tatyana.webp" width="116" height="167"
+                          alt="Чиркова Татьяна Александровна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Чиркова Татьяна Александровна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ассистент ветеринарного врача-продавец зоотоваров
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#makarevich-janna" data-path="makarevichJanna"
+                      aria-label="Макаревич Жанна Витальевна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/makarevich-janna.webp" width="116" height="167"
+                          alt="Макаревич Жанна Витальевна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Макаревич Жанна Витальевна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ветеринарный врач терапевт-гастроэнтеролог
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="specialists-slider__slide swiper-slide">
+                    <a class="tabs-btn" href="#neznakomka" data-path="neznakomka"
+                      aria-label="Девятка Надежда Валерьевна">
+                      <div class="specialists-slider__image">
+                        <img src="." data-rd-image="./img/neznakomka.webp" width="116" height="167"
+                          alt="Девятка Надежда Валерьевна">
+                      </div>
+                      <div class="specialists-slider__right">
+                        <div class="specialists-slider__name tt-26-16">
+                          Девятка Надежда Валерьевна
+                        </div>
+                        <div class="specialists-slider__info tx-17-12">
+                          Ассистент ветеринарного врача
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <div class="specialists-slider__pagination specialists-slider-pagination pagination"></div>
+              </div>
+              <button class="specialists__button specialists-slider-next" aria-label="Слайдер вперед">
+                <svg width="30" height="19" fill="currentColor">
+                  <use xlink:href="./img/sprites/sprites.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="specialists__list" aria-label="Список специалистов">
+              <li class="specialists__item tabs-content active" id="asanova-anastasiya" data-target="asanovaAnastasiya">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/asanova-anastasiya.webp" width="352" height="472"
+                    alt="Асанова Анастасия">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Асанова Анастасия Михайловна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ветеринарный врач - хирург, терапевт, онколог.
+                    </p>
+                    <p class="specialists__text tx-16">
+                      Опыт работы 15 лет. Основные направления: хирургия (мягких тканей, абдоминальная, пластическая),
+                      стоматология, онкология, паразитология, гастроэнтерология, лечение грызунов, и на этом я не
+                      останавливаюсь, продолжаю учиться, открывать новые горизонты, регулярно посещаю семинары и
+                      мастер-классы по различным специализациям.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Асанова Анастасия">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="machylskaya-anastasiya"
+                data-target="machylskayaAnastasiya">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/machylskaya-anastasiya.webp" width="352" height="472"
+                    alt="Мачульская Анастасия">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Мачульская Анастасия Дмитриевна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Стаж более 6 лет. На данный момент работаю в клинике «Пульс Вет», в направлении терапия,
+                      дерматология и эндокринология. Окончила в 2018г КубГАУ, по специальности ветеринария. С 2018г
+                      занимаюсь ветеринарной практикой, сразу выбрала специализацию-дерматология. Создатель собственного
+                      курса по паразитарным заболеваниям кошек и собак, совместно с ветеринарной школой рентгенологии
+                      (SVR)
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Мачульская Анастасия">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="drondina-elizaveta" data-target="drondinaElizaveta">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/drondina-elizaveta.webp" width="352" height="472"
+                    alt="Дрондина Елизавета">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Дрондина Елизавета Алексеевна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ассистент ветеринарного врача Работаю с 13 лет, начинала с листовок,потом начала работать в
+                      компании кока кола,опыт работы большой и навыков тоже много . Всегда мечтала быть связанной с
+                      медициной, но не смогла поступить на бюджет в медицинский ,рада что попала в ветеринарную клинику
+                      пульс вет где смогу воплотить свою мечту в реальность .
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Дрондина Елизавета">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="savenkova-anastasiya" data-target="savenkovaAnastasiya">
+                <div class="specialists__image rd-upload"></div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Савенкова Анастасия Игоревна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ассистент ветеринарного врача, студент НГАТУ, в скором времени получаю диплом ветеринарного
+                      специалиста. В планах стать врачом-орнитологом, но мне интересны многие животные, так что активно
+                      изучаю все направления в ветеринарии, в особенности: гастроэнтерологию, нутриоциологию и
+                      акушерство Мечтаю помочь как можно большему количеству хвостиков
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Савенкова Анастасия">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="ykolova-rimma" data-target="ykolovaRimma">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/ykolova-rimma.webp" width="352" height="472" alt="Уколова Римма">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Уколова Римма Александровна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ветеринарный врач хирург, терапевт. Опыт 10 лет. Не важно сколько трудностей нужно преодолеть, но
+                      важно с кем. Образование: ветеринарная медицина Всэ Зоотехния Курс базовая хирургия Курс швы в
+                      ветеринарной хирургии Курс инфекционные болезни Курс абдоминальная хирургия
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Уколова Римма">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="merzlyakova-dawa" data-target="merzlyakovaDawa">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/merzlyakova-dawa.webp" width="352" height="472"
+                    alt="Мерзлякова Дарья">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Мерзлякова Дарья Дмитриевна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Врач визуальной диагностики, кардиолог, анестезиолог. Закончила ДонГАУ в 2015 году, несколько лет
+                      работала опер сестрой, ассистентом терапии, затем была повышена до ассистента отделения ОРИТ,
+                      через 1.5 года стала врачом ОРИТ. В поисках ответов на вопросы начала заниматься узи-диагностикой,
+                      кардиологей, лабораторной диагностикой, цитологией. Ушла в лаб диагностику, УЗИ диагностику,
+                      постепенно развивалась и совершенствовалась , дружба и желание работать среди единомышленников
+                      привели меня в ПульсВет.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Мерзлякова Дарья">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="kyzmina-anastasiya" data-target="kyzminaAnastasiya">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/kyzmina-anastasiya.webp" width="352" height="472"
+                    alt="Кузьмина Анастасия">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Кузьмина Анастасия Игоревна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Главный врач, врач визуальной диагностики-кардиолог. Закончила рязанский РГАТУ в 2015, работать
+                      начала с 2014 в роли ассистента, практика врача-кардиолога началась с 2016 года. Мой девиз факты,
+                      факты, всему основа факты. В работе придерживаюсь принципов доказательной медицины и здравого
+                      смысла.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Кузьмина Анастасия">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="albanova-anastasiya" data-target="albanovaAnastasiya">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/albanova-anastasiya.webp" width="352" height="472"
+                    alt="Албанова Анастасия">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Албанова Анастасия Александровна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Администратор -4года -высшее образование(КУБГАУ, факультет ветеринарной медицины, специальность
+                      ветеринарный врач), опыт работы в ветеринарии 17лет.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Албанова Анастасия">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="valikova-anna" data-target="valikovaAnna">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/valikova-anna.webp" width="352" height="472" alt="Валикова Анна">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Валикова Анна Николаевна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Администратор. Опыт работы в ветеринарии год, пришла в ПульсВет с момента открытия в 2023г, с того
+                      момента активно развиваюсь в качестве коммуникатора между клиентом и врачом, умею идеально
+                      организовать запись и найти подход к любому клиенту.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Валикова Анна">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="batarev-denis" data-target="batarevDenis">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/batarev-denis.webp" width="352" height="472" alt="Батарев Денис">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Батарев Денис Сергеевич
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ветеринарный врач. Опыт работы 13 лет. Вологодская государственная молочнохозяйственная академия
+                      имени Н.В.Верещагина. Врач общей практики с ведением терапевтического приёма, дерматологического
+                      приёма, репродуктологии, экзотических животных. Специализация - мягкотканная хирургия,
+                      травматология.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Батарев Денис">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="willer-diana" data-target="willerDiana">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/willer-diana.webp" width="352" height="472" alt="Шиллер Диана">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Шиллер Диана Игоревна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Заведующая терапевтическим отделением, ветеринарный врач терапевт-гастроэнтеролог. Опыт работы 5-6
+                      лет. Специализируюсь на терапевтическом лечении мелких домашних животных , так же веду
+                      узконаправленные приемы в области гастроэнтерологии, выполняю плановые кардиологические
+                      исследования. Регулярно прохожу курсы повышения квалификации. Моя главная задача - помочь
+                      маленьким и большим хвостикам жить более качественно и комфортно.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Шиллер Диана">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="chirkova-tatyana" data-target="chirkovaTatyana">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/chirkova-tatyana.webp" width="352" height="472"
+                    alt="Чиркова Татьяна">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Чиркова Татьяна Александровна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ассистент ветеринарного врача-продавец зоотоваров
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Чиркова Татьяна">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="makarevich-janna" data-target="makarevichJanna">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/makarevich-janna.webp" width="352" height="472"
+                    alt="Макаревич Жанна">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Макаревич Жанна Витальевна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ветеринарный врач. Опыт работы 8 лет. Высшее образование, ветеринарный врач, закончила КубГАУ .
+                      Специализация терапевт, гастроэнтеролог. Прошла 2 курса школы гастроэнтерологии у Калашниковой
+                      О.В. Всегда докопаюсь до истины, постоянно развиваюсь, потому-что знаю, что в медицине иначе
+                      нельзя.
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Макаревич Жанна">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+              <li class="specialists__item tabs-content" id="neznakomka" data-target="neznakomka">
+                <div class="specialists__image rd-upload">
+                  <img src="." data-rd-image="./img/neznakomka.webp" width="352" height="472" alt="Девятка Надежда">
+                </div>
+                <div class="specialists__right">
+                  <div class="specialists__name tt-26-16">
+                    Девятка Надежда Валерьевна
+                  </div>
+                  <div class="specialists__texts">
+                    <p class="specialists__text tx-16">
+                      Ассистент ветеринарного врача. Опыт работы 8 мес. Из бухгалтера в ветеринарию, из работы с
+                      компьютером и документацией в работу с животными. Никогда не поздно открыть в себе новое, и
+                      научиться. Есть диплом о переквалификации в Кинологи, очень люблю собак)
+                    </p>
+                  </div>
+                  <a class="specialists__link but but_border" href="#recording" aria-label="Запись на прием"
+                    data-name="Девятка Надежда">
+                    Запись на прием
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Конец specialists -->
+
+      <!-- Начало rating -->
+      <section class="rating">
+        <div class="rating__container container">
+          <div class="rating__content rd-upload">
+            <picture>
+              <source media="(min-width: 601px)" srcset="." type="image/webp"
+                data-rd-image="./img/rating-background.webp">
+              <source media="(max-width: 600px)" srcset="." type="image/webp"
+                data-rd-image="./img/rating-background-mobile.webp">
+              <img src="." width="337" height="337" alt="Рейтинг">
+            </picture>
+            <h2 class="rating__title tt-53-24">
+              Рейтинг
+            </h2>
+            <ul class="rating__list" aria-label="Список рейтинга">
+              <li class="rating__item">
+                <a href="https://yandex.ru/profile/1784632794" target="_blank" aria-label="Посмотреть рейтинг">
+                  <img src="." data-rd-image="./img/rating-1.webp" width="52" height="52" alt="Рейтинг Яндекс ">
+                </a>
+              </li>
+              <li class="rating__item">
+                <a href="https://2gis.ru/novorossiysk/firm/10415102419328746/tab/reviews?m=37.729696%2C44.743689%2F15.35"
+                  target="_blank" aria-label="Посмотреть рейтинг">
+                  <img src="." data-rd-image="./img/rating-2.webp" width="52" height="52" alt="Рейтинг 2гис">
+                </a>
+              </li>
+              <li class="rating__item">
+                <a href="https://www.google.cat/maps/place/ПульсВет+%7C+Ветеринарная+клиника+Центральный+район+%7C+Стерилизация+кошки,+ветаптека/@44.7458617,37.7262532,17z/data=!3m1!4b1!4m6!3m5!1s0x40f1fe934427e2c9:0x5c56b861d87f3eb0!8m2!3d44.7458617!4d37.7288281!16s%2Fg%2F11bc7148lm?entry=ttu"
+                  target="_blank" aria-label="Посмотреть рейтинг">
+                  <img src="." data-rd-image="./img/rating-3.webp" width="52" height="52" alt="Рейтинг Гугл">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="rating__decor rating__decor_1 rd-upload">
+            <img src="." data-rd-image="./img/svg/decorative-icon.svg" width="250" height="250"
+              alt="Декоративное изображение">
+          </div>
+          <div class="rating__decor rating__decor_2 rd-upload">
+            <img src="." data-rd-image="./img/svg/decorative-icon.svg" width="250" height="250"
+              alt="Декоративное изображение">
+          </div>
+        </div>
+      </section>
+      <!-- Конец rating -->
+
+      <!-- Начало faq -->
+      <section class="faq" id="faq">
+        <div class="container">
+          <h2 class="faq__title tt-53-24">
+            Вопросы и ответы
+          </h2>
+          <ul class="faq__list" aria-label="Список полезной информации">
+            <li class="faq__item">
+              <div class="faq__top">
+                <button class="faq__button rd-upload" aria-label="Отрыть аккордеон">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use xlink:href="./img/sprites/sprites.svg#arrow"></use>
+                  </svg>
+                </button>
+                <h3 class="faq__subtitle tt-26-16">
+                  Что нужно учесть при первом походе в клинику?
+                </h3>
+              </div>
+              <div class="faq__bottom">
+                <div class="faq__bottom-item">
+                  <div class="faq__texts">
+                    <p class="faq__text tx-17-16">
+                      Животные вакцинируются с 8 недельного возраста, но бывают индивидуальные случаи, в таком случае
+                      необходима консультация специалиста.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__top">
+                <button class="faq__button rd-upload" aria-label="Отрыть аккордеон">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use xlink:href="./img/sprites/sprites.svg#arrow"></use>
+                  </svg>
+                </button>
+                <h3 class="faq__subtitle tt-26-16">
+                  Какие виды оплаты вы принимаете?
+                </h3>
+              </div>
+              <div class="faq__bottom">
+                <div class="faq__bottom-item">
+                  <ul class="faq__sublist" aria-label="Дополнительный список полезной информации">
+                    <li class="faq__subitem circle tx-17-16">
+                      Соберите информацию: на приеме нужно будет рассказать все о возрасте, происхождении, перенесенных
+                      ранее заболеваниях, вакцинации, питании, самочувствии вашего питомца.
+                    <li class="faq__subitem circle tx-17-16">
+                      Заранее познакомьте питомца с переноской, в которой повезете его на прием.
+                    </li>
+                    <li class="faq__subitem circle tx-17-16">
+                      Будьте готовы, что в клинике вам нужно будет не переживать, а наоборот, своим спокойствием
+                      помогать
+                      любимцу, для которого визит в клинику это стресс.
+                    </li>
+                    <li class="faq__subitem circle tx-17-16">
+                      Подготовить животное дав ему за 2 часа успокоительный препарат.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__top">
+                <button class="faq__button rd-upload" aria-label="Отрыть аккордеон">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use xlink:href="./img/sprites/sprites.svg#arrow"></use>
+                  </svg>
+                </button>
+                <h3 class="faq__subtitle tt-26-16">
+                  Как подготовиться к анализам и процедурам?
+                </h3>
+              </div>
+              <div class="faq__bottom">
+                <div class="faq__bottom-item">
+                  <div class="faq__texts">
+                    <p class="faq__text tx-17-16">
+                      Для получения подробной информации по подготовке животного к лабораторным исследованиям
+                      рекомендуется обратиться к ветеринарному врачу.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__top">
+                <button class="faq__button rd-upload" aria-label="Отрыть аккордеон">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use xlink:href="./img/sprites/sprites.svg#arrow"></use>
+                  </svg>
+                </button>
+                <h3 class="faq__subtitle tt-26-16">
+                  С какого возраста нужно вакцинировать животных?
+                </h3>
+              </div>
+              <div class="faq__bottom">
+                <div class="faq__bottom-item">
+                  <div class="faq__texts">
+                    <p class="faq__text tx-17-16">
+                      Животные вакцинируются с 8 недельного возраста, но бывают индивидуальные случаи, в таком случае
+                      необходима консультация специалиста.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Конец faq -->
+
+      <!-- Начало recording -->
+      <section class="recording" id="recording">
+        <div class="recording__container container">
+          <div class="recording__image rd-upload">
+            <img src="." data-rd-image="./img/myr.webp" width="506" height="447"
+              alt="Заполните форму и мы Вам перезвоним">
+          </div>
+          <div class="recording__right">
+            <h2 class="recording__title tt-48-24 text-center">
+              Заполните форму и мы Вам перезвоним
+            </h2>
+            <form class="recording-form" method="POST" action="mail.php" name="Форма записи на приём"
+              autocomplete="off">
+              <div class="recording-form__inputs">
+                <input class="recording-form__input recording-form__input_hidden specialists-name" type="text"
+                  name="Имя специалиста:" value="Специалист не выбран" id="specialists_name">
+                <label class="recording-form__label" for="recording_name">
+                  <input class="recording-form__input input" type="text" name="Имя пользователя:" id="recording_name"
+                    placeholder="Ваше имя...">
+                </label>
+                <label class="recording-form__label" for="recording_phone">
+                  <input class="recording-form__input input" type="tel" name="Телефон пользователя:"
+                    id="recording_phone" placeholder="Контактный телефон...">
+                </label>
+              </div>
+              <div class="recording-form__bottom">
+                <button class="recording-form__button but but_white disabled" type="submit" aria-label="Отправить">
+                  Отправить
+                </button>
+                <div class="wrapper-checkbox">
+                  <input class="wrapper-checkbox__checkbox" type="checkbox" name="Условия политики конфиденциальности:"
+                    id="recording_checkbox">
+                  <span class="wrapper-checkbox__figure"></span>
+                  <p class="wrapper-checkbox__text tx-17-12">
+                    Я принимаю условия <a href="policy.html" aria-label="Политика конфиденциальности">политики
+                      конфиденциальности</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Конец recording -->
+
+      <!-- Начало contacts -->
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <div class="contacts__content">
+            <div class="contacts__left">
+              <h2 class="contacts__title tt-48-24">
+                Контакты
+              </h2>
+              <address class="contacts__address">
+                <ul class="contacts__address-info" aria-label="Список контактной информации">
+                  <li class="contacts__address-item tx-17-16">
+                    <svg width="24" height="24" fill="currentColor">
+                      <use xlink:href="./img/sprites/sprites.svg#geo"></use>
+                    </svg>
+                    ул. Вишневского, 18Б, Цемдолина
+                  </li>
+                  <li class="contacts__address-item tx-17-16">
+                    <svg width="24" height="24" fill="currentColor">
+                      <use xlink:href="./img/sprites/sprites.svg#time"></use>
+                    </svg>
+                    Ежедневно 09:00–21:00
+                  </li>
+                  <li class="contacts__address-item tx-17-16">
+                    <a href="tel:+79310096465">
+                      <svg width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprites/sprites.svg#phone"></use>
+                      </svg>
+                      +7 931 009 64 65
+                    </a>
+                  </li>
+                </ul>
+              </address>
+              <ul class="contacts__icons" aria-label="Список социальных сетей">
+                <li class="contacts__icon">
+                  <a href="https://t.me/PulsVet_nvrsk" target="_blank" aria-label="Телеграмм">
+                    <svg width="32" height="32" fill="currentColor">
+                      <use xlink:href="./img/sprites/sprites.svg#tg"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contacts__icon">
+                  <a href="https://www.instagram.com/pulsvet_nvrsk?igsh=bHdsbWUzdzNieDZp" target="_blank"
+                    aria-label="Инстаграм">
+                    <svg width="32" height="32" fill="currentColor">
+                      <use xlink:href="./img/sprites/sprites.svg#inst"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contacts__icon">
+                  <a href="https://vk.com/pulsvet_nvrsk" target="_blank" aria-label="Вконтакте">
+                    <svg width="32" height="32" fill="currentColor">
+                      <use xlink:href="./img/sprites/sprites.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__map" id="map"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Конец contacts -->
+    </main>
+    <!-- Начало footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a class="footer__logo rd-upload" href="/" aria-label="Главная страница">
+            <img src="." data-rd-image="./img/svg/logo.svg" width="164" height="29" alt="Логотип сайта">
+          </a>
+          <nav class="nav nav_footer" aria-label="Навигация сайта">
+            <ul class="nav__list nav__list_footer" aria-label="Список навигации сайта">
+              <li class="nav__item nav__item_footer">
+                <a class="nav__link tx-17-16 fw-700" href="/#services" aria-label="Услуги">
+                  Услуги
+                </a>
+              </li>
+              <li class="nav__item nav__item_footer">
+                <a class="nav__link tx-17-16 fw-700" href="/#benefits" aria-label="Преимущества">
+                  Преимущества
+                </a>
+              </li>
+              <li class="nav__item nav__item_footer">
+                <a class="nav__link tx-17-16 fw-700" href="/#specialists" aria-label="Врачи">
+                  Врачи
+                </a>
+              </li>
+              <li class="nav__item nav__item_footer">
+                <a class="nav__link tx-17-16 fw-700" href="/#faq" aria-label="Полезное">
+                  Полезное
+                </a>
+              </li>
+              <li class="nav__item nav__item_footer">
+                <a class="nav__link tx-17-16 fw-700" href="/#recording" aria-label="Запись на прием">
+                  Запись на прием
+                </a>
+              </li>
+              <li class="nav__item nav__item_footer">
+                <a class="nav__link tx-17-16 fw-700" href="/#contacts" aria-label="Контакты">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__text tx-17-16 fw-700">
+            Информация на сайте носит ознакомительный характер и не является публичной офертой
+          </p>
+          <a class="footer__link tx-17-16 fw-700" href="policy.html">
+            Политика конфиденциальности
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Конец footer -->
+  </div>
+</body>
+
+</html>

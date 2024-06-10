@@ -1,0 +1,403 @@
+:root {
+  // Шрифты
+  --font-main: "Play", sans-serif; // 1 шрифт на странице
+  --font-second: "Inter", sans-serif; // 2 шрифт на странице
+
+  // Контейнер
+  --container-width: 1120px; // ширина контейнера
+  --container-step: 24px; // падинги по бокам на пк
+  --container-step-tablet: 24px; // падинги по бокам на планшетах
+  --container-step-mobile: 10px; // падинги по бокам на мобилках
+  --container: calc(var(--container-width) + (var(--container-step) * 2)); // сам контейнер
+
+  // Цвета
+  --background-page: #ffffff; // бекграунд страницы
+  --main: #0a0f74;
+  --menu: #f7f7f7;
+  --black: #000000;
+  --white: #ffffff;
+  --l-gray: #f7f7f7;
+  --gray: #c8c8c8;
+  --gray2: #d9d9d9; 
+  --gray-2-020: rgba(217, 217, 217, .2);
+  --blue: #536fff;
+  --l-blue: #d6dcf9;
+  --d-blue: #0a0f74;
+  --blue-040: rgba(83, 111, 255, .4);
+  --blue-020: rgba(83, 111, 255, .2);
+  --blue-056: rgba(41, 49, 93, 0.56);
+  --red: #c00000;
+
+  --hover: #536fff; // цвет при ховере
+  --hover2: #3b50bf; // цвет при ховере
+  --active: #3b50bf; // цвет при активе
+}
+
+// font-size: calc(var(--i) * 2); пример адаптивного шрифта
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--container-step);
+
+  @media (max-width: 991px) {
+    padding: 0 var(--container-step-tablet);
+  }
+
+  @media (max-width: 374px) {
+    padding: 0 var(--container-step-mobile);
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--main);
+  background-color: var(--background-page);
+
+  &_change {}
+}
+
+.main {
+  flex: 1 1 auto;
+
+  &_no-margin {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  & .swiper-pagination-bullet {
+    width: 23px;
+    height: 4px;
+    opacity: .3;
+    border-radius: 30px;
+    margin: 0 !important;
+    background-color: var(--blue);
+  }
+
+  & .swiper-pagination-bullet-active {
+    width: 40px;
+    height: 4px;
+    opacity: 1;
+  }
+}
+
+// swiper-button-disabled
+
+.tx-17-16 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.tx-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.tx-17-12 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 93%;
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.tt-53-24 {
+  font-weight: 700;
+  font-size: 53px;
+  line-height: 93%;
+
+  @media (max-width: 1220px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.tt-48-24 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 93%;
+
+  @media (max-width: 1220px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.tt-26-20 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 93%;
+
+  @media (max-width: 1220px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.tt-26-16 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 93%;
+
+  @media (max-width: 1220px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 400;
+  font-family: var(--font-second);
+  color: var(--white);
+  background-color: var(--blue);
+  width: fit-content;
+  border-radius: 30px;
+  min-width: 220px;
+  min-height: 50px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, opacity .3s ease-in-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--hover2);
+    }
+  }
+
+  &:focus-visible {
+    background-color: var(--hover2);
+  }
+
+  &:active {
+    background-color: var(--active);
+    transition-duration: .1s;
+  }
+
+  &_border {
+    border: 3px solid var(--blue);
+    color: var(--blue);
+    background-color: transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--hover);
+        color: var(--white);
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--hover);
+      color: var(--white);
+    }
+
+    &:active {
+      color: var(--white);
+      background-color: var(--active);
+      transition-duration: .1s;
+    }
+  }
+
+  &_border-white {
+    border: 3px solid var(--white);
+    color: var(--white);
+  }
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    border-radius: 21px;
+    min-width: 152px;
+    min-height: 35px;
+    font-size: 12px;
+  }
+
+  &_white {
+    font-size: 17px;
+    font-family: var(--font-main);
+    background-color: var(--white);
+    min-height: 55px;
+    color: var(--d-blue);
+  }
+}
+
+.circle {
+  display: flex;
+  gap: 12px;
+
+  @media (max-width: 600px) {
+    gap: 8px;
+  }
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--d-blue);
+    margin-top: 9px;
+  }
+}
+
+.input {
+  display: block;
+  padding: 0 24px;
+  border: 3px solid var(--white);
+  border-radius: 30px;
+  width: 100%;
+  height: 55px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1;
+  color: var(--white);
+  background-color: transparent;
+  transition: border-color .3s ease-in-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: var(--hover2);
+    }
+  }
+
+  &:focus-visible {
+    border-color: var(--hover2);
+  }
+
+  &::placeholder {
+    opacity: .5;
+  }
+}
+
+.just-validate-error-label {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--red) !important;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+// Универсальные классы
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}

@@ -31,15 +31,15 @@ if (!error_get_last()) {
     
     // Настройки вашей почты
     $mail->Host = 'smtp.yandex.ru';
-    $mail->Username   = 'medcams';
-    $mail->Password   = 'soqxgqdplqxjrosy';
+    $mail->Username   = '';
+    $mail->Password   = '';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
   
-    $mail->setFrom('medcams@yandex.ru', 'MЁD - премиум вебкам студия');
+    $mail->setFrom('', 'MЁD - премиум вебкам студия');
   
     // Получатель письма
-    $mail->addAddress('creed6695@mail.ru');
+    $mail->addAddress('');
     
     // Прикрипление файлов к письму
     if (!empty($file['name'][0])) {
